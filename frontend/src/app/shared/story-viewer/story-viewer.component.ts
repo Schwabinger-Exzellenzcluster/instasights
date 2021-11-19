@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { StoryItem } from 'src/app/services/story/story.model';
 import { StoryItemComponent } from './story-item/story-item.component';
 
@@ -22,9 +23,12 @@ export class StoryViewerComponent implements OnInit {
 
   public activeStoryItem: number = 1;
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(params => {
+      console.log(params.get("userId") +" " + params.get("storyItemId"));
+    });
   }
 
 }
