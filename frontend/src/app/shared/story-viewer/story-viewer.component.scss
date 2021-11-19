@@ -1,14 +1,21 @@
-#story-viewer {
+.story-viewer {
     height: 100vh;
     aspect-ratio: 9/16;
     background-color: #000;
-    animation: grow .1s;
+    animation: grow 0.1s;
+    .timeline {
+        height: 5px;
+        width: calc(100% - 20px);
+        background-color: red;
+        margin: 0px 10px;
+    }
 }
 
 @keyframes grow {
     from {
-        transform: scale(.95);
-    } to {
+        transform: scale(0.95);
+    }
+    to {
         transform: scale(1);
     }
 }
