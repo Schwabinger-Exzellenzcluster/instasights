@@ -5,7 +5,7 @@
     background-color: #000;
     margin: 5px;
     &.highlighted {
-        border: 5px solid red;
+        border: 5px solid var(--accent-color);
         margin: 0px;
     }
 }

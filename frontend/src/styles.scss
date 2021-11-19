@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --accent-color: #ff2323;
+    --bg-color: rgb(246, 246, 246);
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    background-color: var(--bg-color);
 }
