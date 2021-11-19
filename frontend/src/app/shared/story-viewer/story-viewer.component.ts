@@ -20,6 +20,8 @@ export class StoryViewerComponent implements OnInit {
     duration: 1
   }];
 
+  public activeStoryItem: number = 1;
+
   constructor() { }
 
   ngOnInit(): void {
