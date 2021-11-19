@@ -2,5 +2,5 @@
     <div class="timeline">
         <div class="timeline-item" *ngFor="let item of story" [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'"></div>
     </div>
-    <span [routerLink]="''">X</span>
+    <i class="icon ion-md-close" [routerLink]="''"></i>
 </div>
