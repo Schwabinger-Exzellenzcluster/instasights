@@ -8,6 +8,14 @@
         width: calc(100% - 20px);
         background-color: red;
         margin: 0px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .timeline-item {
+            height: 100%;
+            width: 50px;
+            background-color: blue;
+        }
     }
 }
 
