@@ -9,3 +9,14 @@
     aspect-ratio: 9/16;
     background-color: #fff;
 }
+
+.chron-feed {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
