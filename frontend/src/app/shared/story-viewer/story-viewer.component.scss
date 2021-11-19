@@ -2,4 +2,13 @@
     height: 100vh;
     aspect-ratio: 9/16;
     background-color: #000;
+    animation: grow .1s;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(.95);
+    } to {
+        transform: scale(1);
+    }
 }
