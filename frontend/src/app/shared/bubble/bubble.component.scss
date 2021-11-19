@@ -1,0 +1,11 @@
+.bubble {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 5px;
+    &.highlighted {
+        border: 5px solid red;
+        margin: 0px;
+    }
+}
