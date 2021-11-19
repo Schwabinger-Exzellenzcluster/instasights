@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StoryViewerComponent } from './shared/story-viewer/story-viewer.component';
+import { BubbleComponent } from './shared/bubble/bubble.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StoryViewerComponent
+    StoryViewerComponent,
+    BubbleComponent
   ],
   imports: [
     BrowserModule,

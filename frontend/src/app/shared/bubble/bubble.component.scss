@@ -1,0 +1,16 @@
+.bubble {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .1s;
+    &:active {
+        transform: scale(0.95);
+    }
+    &.highlighted {
+        border: 5px solid var(--accent-color);
+        margin: 0px;
+    }
+}
