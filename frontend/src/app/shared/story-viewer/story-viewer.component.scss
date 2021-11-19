@@ -8,6 +8,25 @@
         width: calc(100% - 20px);
         background-color: red;
         margin: 0px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .timeline-item {
+            height: 100%;
+            width: 50px;
+            background-color: blue;
+            &.active {
+                background-color: yellow;
+                width: 100%;
+            }
+        }
+    }
+    i {
+        color: #fff;
+        font-size: 42px;
+        cursor: pointer;
+        float: right;
+        margin: 25px;
     }
 }
 
