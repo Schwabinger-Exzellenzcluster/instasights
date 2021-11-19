@@ -12,7 +12,7 @@ export class StoryViewerComponent implements OnInit {
 
   public story: StoryItem[] = [{
     id: "dgh",
-    duration: 1
+    duration: 2
   }, {
     id: "xc-lknv",
     duration: 1
@@ -21,7 +21,7 @@ export class StoryViewerComponent implements OnInit {
     duration: 1
   }];
 
-  public activeStoryItem: number = 1;
+  public activeStoryItem: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -29,6 +29,16 @@ export class StoryViewerComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(params => {
       console.log(params.get("userId") +" " + params.get("storyItemId"));
     });
+    this.nextStoryItem(this.story[0].duration);
+  }
+
+  private nextStoryItem(time: number) {
+    setTimeout(() => {
+      if (this.activeStoryItem < this.story.length - 1) {
+        this.activeStoryItem++;
+        this.nextStoryItem(this.story[this.activeStoryItem].duration);
+      }
+    }, time * 1000);
   }
 
 }
