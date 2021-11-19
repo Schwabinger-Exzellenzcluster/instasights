@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StoryViewerComponent } from './shared/story-viewer/story-viewer.component';
 import { BubbleComponent } from './shared/bubble/bubble.component';
+import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StoryViewerComponent,
-    BubbleComponent
+    BubbleComponent,
+    StoryItemComponent
   ],
   imports: [
     BrowserModule,
