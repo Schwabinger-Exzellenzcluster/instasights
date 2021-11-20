@@ -1,6 +1,7 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
     background-color: var(--bg-color);
+    background-color: red;
+    margin: 0px auto;
+    width: 100%;
+    left: 50%;
 }
