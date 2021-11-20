@@ -16,6 +16,6 @@ body {
     display: none;
 }
 
-* {
-  scrollbar-width: none;
+.paused {
+    animation-play-state: paused;
 }

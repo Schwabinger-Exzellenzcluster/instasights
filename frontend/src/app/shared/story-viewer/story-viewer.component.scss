@@ -7,6 +7,37 @@
   }
 }
 
+.overoverlay {
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.summary {
+  background-color: #fff;
+  font-size: 16pt;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  animation: swipeUp 0.5s;
+  ion-icon {
+    color: #333 !important;
+    float: right;
+  }
+}
+
+@keyframes swipeUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
 .story-viewer {
   height: 100vh;
   aspect-ratio: 9/16;
@@ -41,14 +72,23 @@
     font-size: 42px;
     cursor: pointer;
     float: right;
-    margin-right: 10px;
+    margin: 10px;
+  }
+
+  ion-icon[name="share"] {
+    float: left;
+  }
+
+  ion-icon[name="arrow-up"] {
+    position: absolute;
+    bottom: 10px;
   }
   .content,
   .background,
   .foreground,
   .overlay {
     height: 100%;
-    width: calc(100vh * 9/16);
+    width: calc(100vh * 9 / 16);
     max-width: 100%;
     position: absolute;
     top: 0px;
@@ -89,55 +129,69 @@
     background-color: #fff;
     z-index: 0;
     text-align: center;
-    h1 {
-        font-size: 56pt;
+    .text {
+      width: calc(100% - 40px);
+      margin: 20px;
+      h1 {
+        font-size: 68pt;
         color: #fff;
         /*text-shadow: #000 0px 0px 10px;*/
-        animation-name: popText;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-in-out;
         margin: 0px;
-    }
-    p {
+        opacity: 0;
+        &.appeared {
+          opacity: 1;
+          animation-name: popText;
+          animation-duration: 0.5s;
+          animation-timing-function: ease-in-out;
+        }
+      }
+      p {
         font-size: 36pt;
         color: #fff;
-        text-shadow: #000 0px 0px 10px;
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-        animation-timing-function: ease-in-out;
+        // text-shadow: #000 0px 0px 10px;
         margin: 0px;
+        opacity: 0;
+        &.appeared {
+          opacity: 1;
+          animation-name: fadeIn;
+          animation-duration: 0.5s;
+          animation-timing-function: ease-in-out;
+        }
+      }
     }
     img {
-        width: calc(100% - 20px);
-        border-radius: 10px;
+      width: calc(100% - 20px);
+      border-radius: 10px;
     }
     ion-spinner {
-        color: #fff;
-        width: 80px;
-        height: 80px;
+      color: #fff;
+      width: 80px;
+      height: 80px;
     }
   }
 }
 
 @keyframes popText {
-    0% {
-        transform: scale(.5);
-        opacity: 0;
-    } 80% {
-        transform: scale(1.5);
-    } 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes grow {

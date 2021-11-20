@@ -1,31 +1,44 @@
 <div class="story-viewer">
-    <div class="overlay">
+    <div class="overlay" (click)="continue()">
         <div class="header">
-          <div class="timeline">
-            <div class="timeline-item" *ngFor="let item of story; let i = index"
-                [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
-                <div class="timeline-item active" *ngIf="i < activeStoryItem"></div>
-                <div class="timeline-item active growing" *ngIf="!isLoading && i === activeStoryItem"
-                    [style.animation-duration]="item.duration.toString() + 's'"></div>
+            <div class="timeline">
+                <div class="timeline-item" *ngFor="let item of story; let i = index"
+                    [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
+                    <div class="timeline-item active" *ngIf="i < activeStoryItem"></div>
+                    <div class="timeline-item active growing" *ngIf="!isLoading && i === activeStoryItem"
+                        [style.animation-duration]="item.duration.toString() + 's'" [class.paused]="isPaused"></div>
+                </div>
             </div>
-          </div>
-          <ion-icon name="close" [routerLink]="''"></ion-icon>
+            <ion-icon name="share" (click)="share()"></ion-icon>
+            <ion-icon name="close" [routerLink]="''"></ion-icon>
         </div>
-        <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid"></app-story-poll>
+        <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid">
+        </app-story-poll>
+        <ion-icon name="arrow-up" (click)="togglePause(); showSummary = true" [hidden]="showSummary || !story[activeStoryItem].summary"></ion-icon>
+        <div class="summary" *ngIf="story[activeStoryItem].summary" [hidden]="!showSummary">
+            <ion-icon name="close" (click)="togglePause(); showSummary = false"></ion-icon>
+            {{ story[activeStoryItem].summary }}
+        </div>
     </div>
     <div class="content" [style.background]="getIndicatorColor(story[activeStoryItem].impact)">
-        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl([story[activeStoryItem].topic]) + ')'"></div>
+        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem]) + ')'">
+        </div>
         <div class="foreground">
             <div *ngIf="isLoading">
                 <ion-spinner name="crescent"></ion-spinner>
             </div>
-            <div [hidden]="isLoading">
+            <div class="text" [hidden]="isLoading">
                 <img [hidden]="true" #image alt="loading">
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
-                    <div [hidden]="i > activeText">
-                        <h1 *ngIf="textEle.relevance > 0"
-                            [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
-                        <p *ngIf="textEle.relevance === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                    <div>
+                        <h1 [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && isNumber(textEle.text)"
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused"
+                            [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
+                        <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && !isNumber(textEle.text)"
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused"
+                            [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                        <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance === 0" [class.paused]="isPaused"
+                            [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                     </div>
                 </span>
             </div>

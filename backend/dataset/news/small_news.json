@@ -1,17 +1,36 @@
-{
-  "art1": {
-    "date": "2019/06/27",
-    "title": "Confidence climbs in Turkey's economy",
-    "summary": "The rise stemmed from improvements in the consumer, services, retail trade, construction, real sector and real sector manufacturing industry confidence indexes.\n\n'Consumer, real sector, services, retail trade and construction confidence indices increased to 57.6, 99.6, 85.4, 93.2 and 50.4 respectively in June,'' TÜİK said.\n\nDuring the same period, the retail trade confidence index increased 3.7% and the construction confidence went up 1.3%. 'The economic confidence index is a composite index that encapsulates consumers' and producers' evaluations, expectations, and tendencies about the general economic situation,' said the TÜİK statement.\n"
+
+  [
+  {
+    "uuid": "829131d1-cfe2-4cb9-9ff3-3c81c4b558ce",
+    "topic": "news",
+    "impact": 0,
+    "date" : "2019-06-27",
+    "ui_text": [{"text":"Confidence","relevance":1 }, {"text":"climbs in", "relevance":0}, {"text":"Turkey's economy", "relevance": 1}],
+    "summary":"The rise stemmed from improvements in the consumer, services, retail trade, construction, real sector and real sector manufacturing industry confidence indexes.\n\n'Consumer, real sector, services, retail trade and construction confidence indices increased to 57.6, 99.6, 85.4, 93.2 and 50.4 respectively in June,'' TÜİK said.\n\nDuring the same period, the retail trade confidence index increased 3.7% and the construction confidence went up 1.3%. 'The economic confidence index is a composite index that encapsulates consumers' and producers' evaluations, expectations, and tendencies about the general economic situation,' said the TÜİK statement.\n",
+    "hyperlink": "https://www.hurriyetdailynews.com/confidence-climbs-in-turkeys-economy-144516",
+     "voice_text": "Confidence climbs in Turkey's economy"
+
   },
-  "art2": {
-    "date": "2019/06/20",
-    "title": "E-commerce grows 38 pct last year",
-    "article": "Some 68 percent of those surveyed said they purchase shoes/clothes online while 58 percent said they use the internet to buy electronic goods.\n\nAbout 49 percent of online shoppers order personal care/cosmetics products and 47 percent order food online from restaurants.\n\nFour percent said they do online shopping every day while 46 percent of respondents suggested they go online for shopping 'a few times' a month."
+   {
+    "uuid": "3fc52d30-d23e-4e6f-a49c-201c80502195",
+    "topic": "news",
+    "impact": 0,
+    "date": "2019-06-20",
+    "ui_text":[{"text": "E-commerce", "relevance": 0.5}, {"text": "grows", "relevance": 0}, {"text": "38%", "relevance": 1}, {"text": "last year", "relevance":0}],
+    "summary": "Some 68 percent of those surveyed said they purchase shoes/clothes online while 58 percent said they use the internet to buy electronic goods.\n\nAbout 49 percent of online shoppers order personal care/cosmetics products and 47 percent order food online from restaurants.\n\nFour percent said they do online shopping every day while 46 percent of respondents suggested they go online for shopping 'a few times' a month.",
+    "hyperlink": "https://www.hurriyetdailynews.com/e-commerce-grows-38-pct-last-year-144351",
+    "voice_text": "E-commerce grows 38 pct last year"
+
   },
-  "art3": {
-    "date": "2019/06/15",
-    "title": "German Amazon workers striking over better pay",
-    "article": "More than 2,000 workers at seven Amazon sites across Germany have gone on strike over pay for at least two days, labour union Verdi said on July 15. The walkouts, under the motto 'No more discount on our incomes', started overnight and coincide with Amazon’s Prime Day when the U.S. online retail giant offers its ‘Prime’ customers discount deals.Germany is its second-biggest market after the United States.Amazon has faced a long-running battle with unions in Germany over better pay and conditions for logistics workers, who have staged frequent strikes since 2013.Verdi said the strikes had hit Amazon’s sites in Werne, Rheinberg, Leipzig, Graben, Koblenz, as well as at Amazon’s two sites in Bad Hersfeld.Amazon runs 12 warehouses - which it calls fulfilment centres - in Germany. On July 14, Amazon said it plans to open a new warehouse in Germany this year and create more than 2,800 jobs with permanent contracts."
-  }
-}
+    {
+    "uuid": "6fcc5c28-4af9-45eb-a25c-7f8e316623a3",
+    "topic": "news",
+    "impact": 0,
+    "date": "2019-06-15",
+    "ui_text": [{"text": "German Amazonworkers", "relevance": 0}, {"text": "striking" , "relevance": 0.5}, {"text": "over", "relevance": 0}, {"text":"better pay" , "relevance": 1}],
+    "summary": "More than 2,000 workers at seven Amazon sites across Germany have gone on strike over pay for at least two days, labour union Verdi said on July 15. The walkouts, under the motto 'No more discount on our incomes', started overnight and coincide with Amazon’s Prime Day when the U.S. online retail giant offers its ‘Prime’ customers discount deals.Germany is its second-biggest market after the United States.Amazon has faced a long-running battle with unions in Germany over better pay and conditions for logistics workers, who have staged frequent strikes since 2013.Verdi said the strikes had hit Amazon’s sites in Werne, Rheinberg, Leipzig, Graben, Koblenz, as well as at Amazon’s two sites in Bad Hersfeld.Amazon runs 12 warehouses - which it calls fulfilment centres - in Germany. On July 14, Amazon said it plans to open a new warehouse in Germany this year and create more than 2,800 jobs with permanent contracts.",
+    "hyperlink": "https://www.hurriyetdailynews.com/german-amazon-workers-striking-over-better-pay-144979",
+    "voice_text": "German Amazon workers striking over better pay"
+    }
+    ]
+  

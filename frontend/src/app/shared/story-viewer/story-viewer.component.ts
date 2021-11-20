@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
-import { StoryItem } from 'src/app/services/story/story.model';
+import { StoryItem, UiText } from 'src/app/services/story/story.model';
 import { StoryService } from 'src/app/services/story/story.service';
 import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 
@@ -13,6 +13,10 @@ import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 })
 export class StoryViewerComponent implements OnInit, OnDestroy {
   public synth = window.speechSynthesis;
+
+  public isPaused: boolean = false;
+
+  public hasShared: boolean = false;
 
   public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
 
@@ -28,6 +32,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   private textTimeout: any;
   private storyTimeout: any;
+
+  public showSummary: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService, private storyService: StoryService) { }
 
@@ -61,7 +67,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
-    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
+    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
+    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * 1;
 
     this.isLoading = true
     this.activeText = 0;
@@ -69,7 +76,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     this.image.nativeElement.src = ""
     let img = new Image()
     await new Promise((resolve, reject) => {
-      img.src = this.unsplash.getImageUrl([this.story[this.activeStoryItem].topic])
+      img.src = this.unsplash.getImageUrl(this.story[this.activeStoryItem])
       img.onload = () => resolve(img)
       img.onerror = reject
     })
@@ -82,7 +89,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     }
     this.nextText();
     this.storyTimeout = setTimeout(() => {
-      if (this.activeStoryItem < this.story.length - 1) {
+      if (this.activeStoryItem < this.story.length - 1 && !this.isPaused) {
         this.activeStoryItem++;
         this.nextStoryItem();
       }
@@ -97,19 +104,65 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
     }
   }
+
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
     return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
   }
 
-  getIndicatorColor(impact: number) {
+  public isNumber(_thing): boolean {
+    let thing = _thing.replace("%", "")
+    return !isNaN(thing) && !isNaN(parseFloat(thing))
+  }
+
+  public getIndicatorColor(impact: number) {
     const opacity = Math.abs(impact);
     if (impact < 0) {
       return `rgba(255, 102, 102, ${opacity})`
     } else if (impact > 0) {
       return `rgba(102, 255, 204, ${opacity})`
     } else {
-      return "rgb(153, 204, 255)"
+      return "rgb(90, 142, 194)"
+    }
+  }
+
+  public getTextColor(impact: number) {
+    if (impact > 0) {
+      return `rgb(255, 102, 102)`
+    } else if (impact <= 0) {
+      return `rgb(102, 255, 204)`
+    } else {
+      return "rgba(255, 102, 102"
+    }
+  }
+
+  public togglePause() {
+    if (this.isPaused) {
+      this.nextStoryItem();
+    } else {
+      clearTimeout(this.textTimeout);
+      clearTimeout(this.storyTimeout);
+    }
+    this.isPaused = !this.isPaused;
+  }
+
+  public async share() {
+    this.togglePause();
+    await navigator.share({
+      title: 'Instasights',
+      text: this.toOneString(this.story[this.activeStoryItem].ui_text),
+      url: window.location.href
+    })
+    this.hasShared = true;
+  }
+
+  public toOneString(ui_texts: UiText[]): string {
+    return ui_texts.flatMap(e => e.text).join(' ')
+  }
+
+  public continue() {
+    if (this.hasShared) {
+      this.togglePause();
     }
   }
 }
