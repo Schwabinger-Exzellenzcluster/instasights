@@ -4,4 +4,5 @@ export interface StoryItem {
     ui_text: string;
     tts_text?: string;
     keywords: string[];
+    date: Date;
 }
