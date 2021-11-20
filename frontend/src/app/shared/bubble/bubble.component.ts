@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bubble',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bubble.component.scss']
 })
 export class BubbleComponent implements OnInit {
+  @Input() userId: string;
 
   constructor() { }
 
