@@ -9,22 +9,16 @@ import { StoryItem, Topic } from './story.model';
 export class StoryService {
   public apiUrl = 'http://192.168.2.129:5000/insights';
 
-  private _storiesSubject: BehaviorSubject<
-    StoryItem[]
-  > = new BehaviorSubject(STORY_ITEMS);
-
   constructor(public http: HttpClient) {
-    this.apiUrl = "http://localhost:5000/";
   }
 
   getStoryItems() {
-    // return this._storiesSubject.asObservable();
     return this.http.get<StoryItem[]>(this.apiUrl);
   }
 }
 
 
-const STORY_ITEMS: StoryItem[] = [{
+/*const STORY_ITEMS: StoryItem[] = [{
   id: "001",
   topic: Topic.Sales,
   ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
@@ -88,5 +82,5 @@ const STORY_ITEMS: StoryItem[] = [{
       votes: 5,
     }
   }
-}];
+}];*/
 

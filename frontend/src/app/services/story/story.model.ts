@@ -1,10 +1,9 @@
 export interface StoryItem {
-    id: string;
+    uuid: string;
     topic: Topic;
     duration: number;
     ui_text: UiText[];
-    tts_text?: string;
-    keywords: string[];
+    voice_text?: string;
     date: Date;
     isNew?: boolean;
     poll?: Poll;
@@ -12,7 +11,7 @@ export interface StoryItem {
 
 export interface UiText {
     text: string;
-    impact: number;
+    relevance: number;
 }
 
 export interface Poll {

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     return Math.floor(Math.random() * max);
   }
 
-  public storyItems: StoryItem[];
+  public storyItems: StoryItem[] = [];
   private storySub: Subscription
 
   constructor(public unsplash: UnsplashService, private storyService: StoryService) {
@@ -45,9 +45,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getTopicStory(topic: Topic) {
-    if (!this.storyItems) {
-      return null;
-    }
     return this.storyItems.filter((storyItem) => {
       return storyItem.topic == topic;
     }).sort((a: StoryItem, b: StoryItem) => {

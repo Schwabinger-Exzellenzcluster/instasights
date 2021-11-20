@@ -11,10 +11,10 @@
           </div>
           <ion-icon name="close" [routerLink]="''"></ion-icon>
         </div>
-        <app-story-poll *ngIf="story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].id"></app-story-poll>
+        <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid"></app-story-poll>
     </div>
     <div class="content" [style.background]="funkyColors[activeStoryItem % funkyColors.length]">
-        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem].keywords) + ')'"></div>
+        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl([story[activeStoryItem].topic]) + ')'"></div>
         <div class="foreground">
             <div *ngIf="isLoading">
                 <ion-spinner name="crescent"></ion-spinner>
@@ -23,9 +23,9 @@
                 <img [hidden]="true" #image alt="loading">
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
                     <div [hidden]="i > activeText">
-                        <h1 *ngIf="textEle.impact > 0"
+                        <h1 *ngIf="textEle.relevance > 0"
                             [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
-                        <p *ngIf="textEle.impact === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                        <p *ngIf="textEle.relevance === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                     </div>
                 </span>
             </div>

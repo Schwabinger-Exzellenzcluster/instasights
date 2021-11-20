@@ -38,7 +38,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
         });
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
-          return storyItem.id == params.get("storyItemId");
+          return storyItem.uuid == params.get("storyItemId");
         })
       });
     });
@@ -55,20 +55,22 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
+    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
+
     this.isLoading = true
     this.activeText = 0;
     this.synth.cancel();
     this.image.nativeElement.src = ""
     let img = new Image()
     await new Promise((resolve, reject) => {
-      img.src = this.unsplash.getImageUrl(this.story[this.activeStoryItem].keywords)
+      img.src = this.unsplash.getImageUrl([this.story[this.activeStoryItem].topic])
       img.onload = () => resolve(img)
       img.onerror = reject
     })
     this.image.nativeElement.src = img.src
     this.isLoading = false
-    if (this.story[this.activeStoryItem].tts_text) {
-      let utterance1 = new SpeechSynthesisUtterance(this.story[this.activeStoryItem].tts_text);
+    if (this.story[this.activeStoryItem].voice_text) {
+      let utterance1 = new SpeechSynthesisUtterance(this.story[this.activeStoryItem].voice_text);
       utterance1.lang = 'en-US';
       this.synth.speak(utterance1);
     }
@@ -79,10 +81,6 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
         this.nextStoryItem();
       }
     }, this.story[this.activeStoryItem].duration * 1000);
-  }
-
-  public doneLoading() {
-    console.log(new Date());
   }
 
   public nextText() {

@@ -13,6 +13,9 @@ export class UnsplashService {
    * Example Usage: <img [src]="unsplash.getImageUrl(['business'])">
    */
   public getImageUrl(keywords: string[]): string {
+    if (keywords.length === 0) {
+      return `https://source.unsplash.com/featured/?${keywords[0]}`;
+    }
     return `https://source.unsplash.com/featured/?${keywords.join(",")}`;
   }
 }

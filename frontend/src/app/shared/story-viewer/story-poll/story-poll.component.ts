@@ -21,7 +21,7 @@ export class StoryPollComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.storyItemSub = this.storyService.getStoryItems().subscribe((storyItems) => {
-      this.poll = storyItems.find(item => item.id === this.storyItemId)?.poll;
+      this.poll = storyItems.find(item => item.uuid === this.storyItemId)?.poll;
     });
   }
 
@@ -44,7 +44,6 @@ export class StoryPollComponent implements OnInit, OnDestroy {
       return "100%";
     } else {
       const diffFromFifty = this.getAnswerPercent(answer.votes) - 50;
-      console.log(diffFromFifty);
       return `${100 + diffFromFifty}%`;
     }
   }
