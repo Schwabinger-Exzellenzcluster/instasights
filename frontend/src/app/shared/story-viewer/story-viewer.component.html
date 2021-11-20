@@ -9,7 +9,7 @@
     </div>
     <div class="content" [style.background]="funkyColors[activeStoryItem % funkyColors.length]">
         <div *ngIf="isLoading">
-            <h2>Loading...</h2>
+            <ion-spinner name="crescent"></ion-spinner>
         </div>
         <div [hidden]="isLoading">
             <img #image alt="loading">
