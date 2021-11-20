@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { StoryViewerComponent } from './shared/story-viewer/story-viewer.component';
 import { BubbleComponent } from './shared/bubble/bubble.component';
 import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
