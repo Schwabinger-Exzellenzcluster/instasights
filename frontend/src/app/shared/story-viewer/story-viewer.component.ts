@@ -61,7 +61,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
-    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
+    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
+    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * 1;
 
     this.isLoading = true
     this.activeText = 0;
@@ -115,7 +116,17 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     } else if (impact > 0) {
       return `rgba(102, 255, 204, ${opacity})`
     } else {
-      return "rgb(153, 204, 255)"
+      return "rgb(90, 142, 194)"
+    }
+  }
+
+  public getTextColor(impact: number) {
+    if (impact > 0) {
+      return `rgb(255, 102, 102)`
+    } else if (impact <= 0) {
+      return `rgb(102, 255, 204)`
+    } else {
+      return "rgba(255, 102, 102"
     }
   }
 }
