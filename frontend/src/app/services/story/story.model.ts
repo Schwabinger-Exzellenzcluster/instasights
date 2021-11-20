@@ -1,4 +1,12 @@
-import { NumberSymbol } from "@angular/common";
+export interface Profile {
+    name: string;
+    imageUrl: string;
+}
+
+export interface Story {
+    profile: Profile;
+    items: StoryItem[];
+}
 
 export interface StoryItem {
     id: string;
@@ -20,7 +28,7 @@ export interface Poll {
   question: string;
   answerA: {
     text: string;
-    votes: NumberSymbol;
+    votes: number;
   },
   answerB: {
     text: string;

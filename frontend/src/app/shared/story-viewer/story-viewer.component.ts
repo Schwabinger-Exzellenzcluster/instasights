@@ -64,10 +64,6 @@ export class StoryViewerComponent implements OnInit {
     this.nextStoryItem(this.story[0].duration);
   }
 
-  public getRandomInt(max: number) {
-    return Math.floor(Math.random() * max);
-  }
-
   private async nextStoryItem(time: number) {
     this.isLoading = true
     this.synth.cancel();
