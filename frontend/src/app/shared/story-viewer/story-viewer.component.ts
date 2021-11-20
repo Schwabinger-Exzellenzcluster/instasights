@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
-import { StoryItem } from 'src/app/services/story/story.model';
+import { StoryItem, UiText } from 'src/app/services/story/story.model';
 import { StoryService } from 'src/app/services/story/story.service';
 import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 
@@ -15,6 +15,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   public synth = window.speechSynthesis;
 
   public isPaused: boolean = false;
+
+  public hasShared: boolean = false;
 
   public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
 
@@ -142,5 +144,25 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       clearTimeout(this.storyTimeout);
     }
     this.isPaused = !this.isPaused;
+  }
+
+  public async share() {
+    this.togglePause();
+    await navigator.share({
+      title: 'Instasights',
+      text: this.toOneString(this.story[this.activeStoryItem].ui_text),
+      url: window.location.href
+    })
+    this.hasShared = true;
+  }
+
+  public toOneString(ui_texts: UiText[]): string {
+    return ui_texts.flatMap(e => e.text).join(' ')
+  }
+
+  public continue() {
+    if (this.hasShared) {
+      this.togglePause();
+    }
   }
 }
