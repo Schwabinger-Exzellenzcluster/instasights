@@ -1,3 +1,13 @@
+export interface Profile {
+    name: string;
+    imageUrl: string;
+}
+
+export interface Story {
+    profile: Profile;
+    items: StoryItem[];
+}
+
 export interface StoryItem {
     id: string;
     duration: number;
