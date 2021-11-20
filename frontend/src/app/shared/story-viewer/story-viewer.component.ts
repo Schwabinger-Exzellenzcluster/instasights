@@ -61,6 +61,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
+    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
     this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
 
     this.isLoading = true
@@ -97,12 +98,18 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
     }
   }
+
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
     return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
   }
 
-  getIndicatorColor(impact: number) {
+  public isNumber(_thing): boolean {
+    let thing = _thing.replace("%", "")
+    return !isNaN(thing) && !isNaN(parseFloat(thing))
+  }
+
+  public getIndicatorColor(impact: number) {
     const opacity = Math.abs(impact);
     if (impact < 0) {
       return `rgba(255, 102, 102, ${opacity})`
@@ -110,6 +117,16 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       return `rgba(102, 255, 204, ${opacity})`
     } else {
       return "rgb(153, 204, 255)"
+    }
+  }
+
+  public getTextColor(impact: number) {
+    if (impact > 0) {
+      return `rgb(255, 102, 102)`
+    } else if (impact <= 0) {
+      return `rgb(102, 255, 204)`
+    } else {
+      return "rgba(255, 102, 102"
     }
   }
 }
