@@ -5,6 +5,7 @@ export interface StoryItem {
     tts_text?: string;
     keywords: string[];
     date: Date;
+    isNew?: boolean;
 }
 
 export interface UiText {

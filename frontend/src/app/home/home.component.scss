@@ -25,6 +25,15 @@ hr.solid {
   justify-content: space-evenly;
   align-items: center;
   height: calc(100% - 125px - 1px);
+  .tile {
+      height: 180px;
+      width: 140px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.5);
+  }
 }
 
 .department-row {
