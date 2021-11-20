@@ -1,4 +1,4 @@
-@keyframes growVertically {
+@keyframes growHorizontally {
     from {
         width: 0%;
     }
@@ -29,7 +29,7 @@
                 background-color: #fff;
                 width: 100%;
                 &.growing {
-                    animation-name: growVertically;
+                    animation-name: growHorizontally;
                     animation-duration: 0.5s;
                     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
                 }
