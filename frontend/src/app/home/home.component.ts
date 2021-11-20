@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
 import { StoryItem, Topic, UiText } from '../services/story/story.model';
@@ -10,7 +10,7 @@ import { UnsplashService } from '../services/unsplash/unsplash.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
 
   public getRandomInt(max: number) {
@@ -26,6 +26,12 @@ export class HomeComponent implements OnInit {
     this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
       this.storyItems = storyItems;
     });
+  }
+
+  ngOnDestroy(): void {
+    if (this.storySub) {
+      this.storySub.unsubscribe();
+    }
   }
 
   get topics() {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
@@ -11,7 +11,7 @@ import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
   templateUrl: './story-viewer.component.html',
   styleUrls: ['./story-viewer.component.scss']
 })
-export class StoryViewerComponent implements OnInit {
+export class StoryViewerComponent implements OnInit, OnDestroy {
   public synth = window.speechSynthesis;
 
   public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
@@ -46,6 +46,12 @@ export class StoryViewerComponent implements OnInit {
 
   ngAfterViewInit() {
     this.nextStoryItem();
+  }
+
+  ngOnDestroy(): void {
+    if (this.storySub) {
+      this.storySub.unsubscribe();
+    }
   }
 
   private async nextStoryItem() {

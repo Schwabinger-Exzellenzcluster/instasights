@@ -1,5 +1,5 @@
 import { formatNumber } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Answer, Poll } from 'src/app/services/story/story.model';
 import { StoryService } from 'src/app/services/story/story.service';
@@ -9,7 +9,7 @@ import { StoryService } from 'src/app/services/story/story.service';
   templateUrl: './story-poll.component.html',
   styleUrls: ['./story-poll.component.scss']
 })
-export class StoryPollComponent implements OnInit {
+export class StoryPollComponent implements OnInit, OnDestroy {
   @Input() storyItemId: string;
 
   poll: Poll;
@@ -23,6 +23,12 @@ export class StoryPollComponent implements OnInit {
     this.storyItemSub = this.storyService.observeStoryItem(this.storyItemId).subscribe((storyItem) => {
       this.poll = storyItem?.poll;
     })
+  }
+
+  ngOnDestroy(): void {
+    if (this.storyItemSub) {
+      this.storyItemSub.unsubscribe();
+    }
   }
 
   getAnswerText(answer: Answer) {
