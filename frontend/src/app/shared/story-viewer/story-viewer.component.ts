@@ -13,8 +13,7 @@ export class StoryViewerComponent implements OnInit {
 
   public story: StoryItem[] = [{
     id: "dgh",
-    duration: 2,
-    tts_text: "Hallo Welt!"
+    duration: 2
   }, {
     id: "xc-lknv",
     duration: 1,
