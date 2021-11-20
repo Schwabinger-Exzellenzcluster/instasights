@@ -7,7 +7,7 @@ const routes: Routes = [{
   path: '',
   component: HomeComponent
 }, {
-  path: 'stories/:userId/:storyItemId',
+  path: 'stories/:topic/:storyItemId',
   component: StoryViewerComponent
 }];
 

@@ -1,6 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { compareAsc } from 'date-fns';
+import { Subscription } from 'rxjs';
 import { StoryItem } from 'src/app/services/story/story.model';
+import { StoryService } from 'src/app/services/story/story.service';
 import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 
 @Component({
@@ -17,66 +20,35 @@ export class StoryViewerComponent implements OnInit {
 
   @ViewChild('image') image: ElementRef;
 
-  public story: StoryItem[] = [{
-    id: "001",
-    ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
-    duration: 3,
-    keywords: ["tree"],
-    date: new Date(),
-    tts_text: "hello world!",
-    poll: {
-      question: "Does this require instant action?",
-      answerA: {
-        text: "Yes",
-        votes: 2,
-      },
-      answerB: {
-        text: "No",
-        votes: 5,
-      }
-    }
-  }, {
-    id: "002",
-    ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
-    duration: 2,
-    keywords: ["mountain"],
-    date: new Date()
-  }, {
-    id: "003",
-    ui_text: [{text: "hello", impact: 1}],
-    duration: 1,
-    keywords: ["baguette"],
-    date: new Date(),
-    tts_text: "end",
-    poll: {
-      question: "Does this require instant action?",
-      answerA: {
-        text: "Yes",
-        votes: 2,
-      },
-      answerB: {
-        text: "No",
-        votes: 5,
-      }
-    }
-  }];
+  public story: StoryItem[];
+  private storySub: Subscription;
 
   public activeStoryItem: number = 0;
   public activeText: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService) { }
+  constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService, private storyService: StoryService) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
-      console.log(params.get("userId") + " " + params.get("storyItemId"));
+      this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
+        this.story = storyItems.filter((storyItem) => {
+          return storyItem.topic == params.get("topic");
+        }).sort((a: StoryItem, b: StoryItem) => {
+          return compareAsc(a.date, b.date)
+        });
+
+        this.activeStoryItem = this.story.findIndex((storyItem) => {
+          return storyItem.id == params.get("storyItemId");
+        })
+      });
     });
   }
 
   ngAfterViewInit() {
-    this.nextStoryItem(this.story[0].duration);
+    this.nextStoryItem();
   }
 
-  private async nextStoryItem(time: number) {
+  private async nextStoryItem() {
     this.isLoading = true
     this.activeText = 0;
     this.synth.cancel();
@@ -98,9 +70,9 @@ export class StoryViewerComponent implements OnInit {
     setTimeout(() => {
       if (this.activeStoryItem < this.story.length - 1) {
         this.activeStoryItem++;
-        this.nextStoryItem(this.story[this.activeStoryItem].duration);
+        this.nextStoryItem();
       }
-    }, time * 1000);
+    }, this.story[this.activeStoryItem].duration * 1000);
   }
 
   public doneLoading() {

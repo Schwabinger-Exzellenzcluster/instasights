@@ -11,7 +11,7 @@
           </div>
           <ion-icon name="close" [routerLink]="''"></ion-icon>
         </div>
-        <app-story-poll *ngIf="story[activeStoryItem].poll"></app-story-poll>
+        <app-story-poll *ngIf="story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].id"></app-story-poll>
     </div>
     <div class="content" [style.background]="funkyColors[activeStoryItem % funkyColors.length]">
         <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem].keywords) + ')'"></div>

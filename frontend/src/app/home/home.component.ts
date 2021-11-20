@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Story, StoryItem, UiText } from '../services/story/story.model';
+import { compareAsc } from 'date-fns';
+import { Subscription } from 'rxjs';
+import { StoryItem, Topic, UiText } from '../services/story/story.model';
+import { StoryService } from '../services/story/story.service';
 import { UnsplashService } from '../services/unsplash/unsplash.service';
 
 @Component({
@@ -14,95 +17,35 @@ export class HomeComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
-  public profile1 = {
-    name: "HR",
-    imageUrl: ""
-  }
+  public storyItems: StoryItem[];
+  private storySub: Subscription
 
-  public profile2 = {
-    name: "Sales",
-    imageUrl: ""
-  }
-
-  public profile3 = {
-    name: "Accounting",
-    imageUrl: ""
-  }
-
-  public story1: Story = {
-    profile: this.profile1,
-    items: [{
-      id: "001",
-      ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
-      duration: 3,
-      keywords: ["tree"],
-      date: new Date(),
-      tts_text: "hello world!"
-    }, {
-      id: "002",
-      ui_text: [{text: "hi", impact: 1}],
-      duration: 1,
-      keywords: ["mountain"],
-      date: new Date()
-    }, {
-      id: "003",
-      ui_text: [{text: "hello", impact: 1}],
-      duration: 1,
-      keywords: ["baguette"],
-      date: new Date(),
-      tts_text: "end"
-    }]
-  }
-
-  public story2: Story = {
-    profile: this.profile2,
-    items: [{
-      id: "004",
-      ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
-      duration: 3,
-      keywords: ["tree"],
-      date: new Date(),
-      tts_text: "hello world!"
-    }, {
-      id: "005",
-      ui_text: [{text: "hi", impact: 1}],
-      duration: 1,
-      keywords: ["mountain"],
-      date: new Date()
-    }]
-  }
-
-  public story3: Story = {
-    profile: this.profile3,
-    items: [{
-      id: "004",
-      ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
-      duration: 3,
-      keywords: ["tree"],
-      date: new Date(),
-      tts_text: "hello world!"
-    }, {
-      id: "005",
-      ui_text: [{text: "hi", impact: 1}],
-      duration: 1,
-      keywords: ["mountain"],
-      date: new Date()
-    }]
-  }
-
-  public stories: Story[] = [
-    this.story1,
-    this.story2,
-    this.story3
-  ];
-
-  constructor(public unsplash: UnsplashService) { }
+  constructor(public unsplash: UnsplashService, private storyService: StoryService) { }
 
   ngOnInit(): void {
+    this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
+      this.storyItems = storyItems;
+    });
+  }
+
+  get topics() {
+    return [
+      Topic.Sales,
+      Topic.Stock,
+      Topic.Finance,
+      Topic.News
+    ];
+  }
+
+  getTopicStory(topic: Topic) {
+    return this.storyItems.filter((storyItem) => {
+      return storyItem.topic == topic;
+    }).sort((a: StoryItem, b: StoryItem) => {
+      return compareAsc(a.date, b.date);
+    });
   }
 
   public toOneString(ui_texts: UiText[]): string {
     return ui_texts.flatMap(e => e.text).join(' ')
   }
-
 }

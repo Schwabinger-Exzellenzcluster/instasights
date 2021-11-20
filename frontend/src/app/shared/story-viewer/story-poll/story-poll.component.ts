@@ -1,6 +1,8 @@
 import { formatNumber } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Answer, Poll } from 'src/app/services/story/story.model';
+import { StoryService } from 'src/app/services/story/story.service';
 
 @Component({
   selector: 'app-story-poll',
@@ -8,24 +10,19 @@ import { Answer, Poll } from 'src/app/services/story/story.model';
   styleUrls: ['./story-poll.component.scss']
 })
 export class StoryPollComponent implements OnInit {
+  @Input() storyItemId: string;
 
-  poll: Poll = {
-    question: "Does this require instant action?",
-      answerA: {
-        text: "Yes",
-        votes: 2,
-      },
-      answerB: {
-        text: "No",
-        votes: 5,
-      }
-  }
+  poll: Poll;
+  storyItemSub: Subscription;
 
   answered = false;
 
-  constructor() { }
+  constructor(private storyService: StoryService) { }
 
   ngOnInit(): void {
+    this.storyItemSub = this.storyService.observeStoryItem(this.storyItemId).subscribe((storyItem) => {
+      this.poll = storyItem?.poll;
+    })
   }
 
   getAnswerText(answer: Answer) {

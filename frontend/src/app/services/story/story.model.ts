@@ -1,15 +1,6 @@
-export interface Profile {
-    name: string;
-    imageUrl: string;
-}
-
-export interface Story {
-    profile: Profile;
-    items: StoryItem[];
-}
-
 export interface StoryItem {
     id: string;
+    topic: Topic;
     duration: number;
     ui_text: UiText[];
     tts_text?: string;
@@ -33,4 +24,11 @@ export interface Poll {
 export interface Answer {
   text: string,
   votes: number
+}
+
+export enum Topic {
+  Sales = "sales",
+  Stock = "stock",
+  Finance = "finance",
+  News = "news"
 }
