@@ -26,6 +26,9 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   public activeStoryItem: number = 0;
   public activeText: number = 0;
 
+  private textTimeout: any;
+  private storyTimeout: any;
+
   constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService, private storyService: StoryService) { }
 
   ngOnInit(): void {
@@ -49,6 +52,9 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.synth.cancel();
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
     if (this.storySub) {
       this.storySub.unsubscribe();
     }
@@ -75,7 +81,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       this.synth.speak(utterance1);
     }
     this.nextText();
-    setTimeout(() => {
+    this.storyTimeout = setTimeout(() => {
       if (this.activeStoryItem < this.story.length - 1) {
         this.activeStoryItem++;
         this.nextStoryItem();
@@ -85,7 +91,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   public nextText() {
     if (this.activeText < this.story[this.activeStoryItem].ui_text.length - 1) {
-      setTimeout(() => {
+      this.textTimeout = setTimeout(() => {
         this.activeText++;
         this.nextText();
       }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
