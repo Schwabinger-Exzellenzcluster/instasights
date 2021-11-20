@@ -17,17 +17,20 @@ export class StoryViewerComponent implements OnInit {
     id: "001",
     ui_text: "hey",
     duration: 2,
-    keywords: ["tree"]
+    keywords: ["tree"],
+    date: new Date()
   }, {
     id: "002",
     ui_text: "hi",
     duration: 1,
-    keywords: ["mountain"]
+    keywords: ["mountain"],
+    date: new Date()
   }, {
     id: "003",
     ui_text: "hello",
     duration: 1,
-    keywords: ["baguette"]
+    keywords: ["baguette"],
+    date: new Date()
   }];
 
   public activeStoryItem: number = 0;
