@@ -43,10 +43,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         h1 {
             font-size: 42pt;
             color: #fff;
             text-shadow: #000 0px 0px 10px;
+        }
+        img {
+            width: calc(100% - 20px);
+            border-radius: 10px;
         }
     }
 
