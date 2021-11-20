@@ -44,6 +44,8 @@
         margin-right: 10px;
     }
     .content,
+    .background,
+    .foreground,
     .overlay {
         height: 100vh;
         aspect-ratio: 9/16;
@@ -52,17 +54,27 @@
         overflow: hidden;
     }
 
-    .content {
-        background-color: #fff;
-        z-index: 0;
+    .foreground {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .background {
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.25;
+    }
+
+    .content {
+        background-color: #fff;
+        z-index: 0;
         h1 {
             font-size: 56pt;
             color: #fff;
             /*text-shadow: #000 0px 0px 10px;*/
+            text-shadow: #000 0px 0px 10px;
         }
         h2 {
             font-size: 36pt;
