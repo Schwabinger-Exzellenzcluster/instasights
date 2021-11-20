@@ -14,7 +14,7 @@
         </div>
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid">
         </app-story-poll>
-        <ion-icon name="arrow-up" (click)="togglePause(); showSummary = true" [hidden]="showSummary"></ion-icon>
+        <ion-icon name="arrow-up" (click)="togglePause(); showSummary = true" [hidden]="showSummary || !story[activeStoryItem].summary"></ion-icon>
         <div class="summary" *ngIf="story[activeStoryItem].summary" [hidden]="!showSummary">
             <ion-icon name="close" (click)="togglePause(); showSummary = false"></ion-icon>
             {{ story[activeStoryItem].summary }}
