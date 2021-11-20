@@ -16,12 +16,10 @@ export class StoryViewerComponent implements OnInit {
     duration: 2
   }, {
     id: "xc-lknv",
-    duration: 1,
-    tts_text: "Story text"
+    duration: 1
   }, {
     id: "cmh",
-    duration: 1,
-    tts_text: "Ende"
+    duration: 1
   }];
 
   public activeStoryItem: number = 0;
