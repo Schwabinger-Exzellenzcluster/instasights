@@ -24,9 +24,9 @@
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
                     <div>
                         <h1 [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && isNumber(textEle.text)"
-                            [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
                         <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && !isNumber(textEle.text)"
-                            [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                         <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                     </div>
                 </span>

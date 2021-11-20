@@ -119,4 +119,14 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       return "rgb(153, 204, 255)"
     }
   }
+
+  public getTextColor(impact: number) {
+    if (impact > 0) {
+      return `rgb(255, 102, 102)`
+    } else if (impact <= 0) {
+      return `rgb(102, 255, 204)`
+    } else {
+      return "rgba(255, 102, 102"
+    }
+  }
 }
