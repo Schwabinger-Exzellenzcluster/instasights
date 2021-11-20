@@ -1,6 +1,7 @@
 export interface StoryItem {
     uuid: string;
     topic: Topic;
+    impact: number;
     duration: number;
     ui_text: UiText[];
     voice_text?: string;

@@ -20,6 +20,7 @@ export class StoryService {
 
 /*const STORY_ITEMS: StoryItem[] = [{
   id: "001",
+  impact: 1,
   topic: Topic.Sales,
   ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
   duration: 3,
@@ -39,6 +40,7 @@ export class StoryService {
   }
 }, {
   id: "002",
+  impact: 0,
   topic: Topic.Sales,
   ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
   duration: 2,
@@ -46,6 +48,7 @@ export class StoryService {
   date: new Date()
 }, {
   id: "003",
+  impact: -1,
   topic: Topic.Sales,
   ui_text: [{text: "hello", impact: 1}],
   duration: 1,
@@ -66,6 +69,7 @@ export class StoryService {
 }, {
   id: "004",
   topic: Topic.Sales,
+  impact: -0.5,
   ui_text: [{text: "hello", impact: 1}],
   duration: 1,
   keywords: ["french"],

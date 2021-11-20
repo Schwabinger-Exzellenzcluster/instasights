@@ -13,7 +13,7 @@
         </div>
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid"></app-story-poll>
     </div>
-    <div class="content" [style.background]="funkyColors[activeStoryItem % funkyColors.length]">
+    <div class="content" [style.background]="getIndicatorColor(story[activeStoryItem].impact)">
         <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl([story[activeStoryItem].topic]) + ')'"></div>
         <div class="foreground">
             <div *ngIf="isLoading">
