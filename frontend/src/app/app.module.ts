@@ -10,6 +10,7 @@ import { BubbleComponent } from './shared/bubble/bubble.component';
 import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.component';
 import { IonicModule } from '@ionic/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoryPollComponent } from './shared/story-viewer/story-poll/story-poll.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     StoryViewerComponent,
     BubbleComponent,
-    StoryItemComponent
+    StoryItemComponent,
+    StoryPollComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+.poll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  p {
+    color: white;
+  }
+}
+
+.answers {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.answer {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.a {
+  background-color: black;
+}
+.b {
+  background-color: red;
+}
+

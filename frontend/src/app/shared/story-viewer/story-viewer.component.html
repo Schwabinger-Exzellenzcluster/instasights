@@ -4,7 +4,7 @@
             <div class="timeline-item" *ngFor="let item of story; let i = index"
                 [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
                 <div class="timeline-item active" *ngIf="i < activeStoryItem"></div>
-                <div class="timeline-item active growing" *ngIf="!isLoading && i == activeStoryItem"
+                <div class="timeline-item active growing" *ngIf="!isLoading && i === activeStoryItem"
                     [style.animation-duration]="item.duration.toString() + 's'"></div>
             </div>
         </div>
@@ -25,6 +25,7 @@
                         <h2 *ngIf="textEle.impact === 0">{{ textEle.text }}</h2>
                     </div>
                 </span>
+                <app-story-poll *ngIf="story[activeStoryItem].poll"></app-story-poll>
             </div>
         </div>
     </div>

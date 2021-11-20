@@ -16,9 +16,22 @@ export interface StoryItem {
     keywords: string[];
     date: Date;
     isNew?: boolean;
+    poll?: Poll;
 }
 
 export interface UiText {
     text: string;
     impact: number;
+}
+
+export interface Poll {
+  question: string;
+  answerA: {
+    text: string;
+    votes: number;
+  },
+  answerB: {
+    text: string;
+    votes: number;
+  }
 }
