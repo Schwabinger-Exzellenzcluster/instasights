@@ -47,8 +47,9 @@
   .background,
   .foreground,
   .overlay {
-    height: 100vh;
-    aspect-ratio: 9/16;
+    height: 100%;
+    width: calc(100vh * 9/16);
+    max-width: 100%;
     position: absolute;
     top: 0px;
     overflow: hidden;
