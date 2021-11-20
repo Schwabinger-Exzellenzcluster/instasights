@@ -11,6 +11,7 @@ import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.
 import { IonicModule } from '@ionic/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoryPollComponent } from './shared/story-viewer/story-poll/story-poll.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { StoryPollComponent } from './shared/story-viewer/story-poll/story-poll.
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ChartsModule,
     IonicModule.forRoot()
   ],
   providers: [],
