@@ -13,7 +13,9 @@
         </div>
         <div [hidden]="isLoading">
             <img #image alt="loading">
-            <h1>{{ story[activeStoryItem].ui_text }}</h1>
+            <span *ngFor="let textEle of story[activeStoryItem].ui_text">
+                <h1 [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]">{{ textEle.text }}</h1>
+            </span>
         </div>
     </div>
 </div>
