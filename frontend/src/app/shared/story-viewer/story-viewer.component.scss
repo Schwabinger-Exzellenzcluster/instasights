@@ -133,12 +133,14 @@
       width: calc(100% - 40px);
       margin: 20px;
       h1 {
-        font-size: 68pt;
         color: #fff;
         /*text-shadow: #000 0px 0px 10px;*/
         margin: 0px;
         opacity: 0;
+        font-size: 0;
+        transition: all .5s;
         &.appeared {
+          font-size: 68pt;
           opacity: 1;
           animation-name: popText;
           animation-duration: 0.5s;
@@ -146,12 +148,14 @@
         }
       }
       p {
-        font-size: 36pt;
         color: #fff;
         // text-shadow: #000 0px 0px 10px;
         margin: 0px;
         opacity: 0;
+        font-size: 0;
+        transition: all .5s;
         &.appeared {
+          font-size: 36pt;
           opacity: 1;
           animation-name: fadeIn;
           animation-duration: 0.5s;

@@ -101,7 +101,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       this.textTimeout = setTimeout(() => {
         this.activeText++;
         this.nextText();
-      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
+      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + .75)) * 1000);
     }
   }
 
