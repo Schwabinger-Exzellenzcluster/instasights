@@ -6,12 +6,17 @@
                 [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
                 <div class="timeline-item active" *ngIf="i < activeStoryItem"></div>
                 <div class="timeline-item active growing" *ngIf="!isLoading && i === activeStoryItem"
-                    [style.animation-duration]="item.duration.toString() + 's'"></div>
+                    [style.animation-duration]="item.duration.toString() + 's'" [class.paused]="isPaused"></div>
             </div>
           </div>
           <ion-icon name="close" [routerLink]="''"></ion-icon>
         </div>
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid"></app-story-poll>
+        <ion-icon name="arrow-up" (click)="togglePause(); showSummary = true" [hidden]="showSummary"></ion-icon>
+        <div class="summary" *ngIf="story[activeStoryItem].summary" [hidden]="!showSummary">
+            <ion-icon name="close" (click)="togglePause(); showSummary = false"></ion-icon>
+            {{ story[activeStoryItem].summary }}
+        </div>
     </div>
     <div class="content" [style.background]="getIndicatorColor(story[activeStoryItem].impact)">
         <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem]) + ')'"></div>
@@ -24,10 +29,10 @@
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
                     <div>
                         <h1 [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && isNumber(textEle.text)"
-                            [style.color]="getTextColor(story[activeStoryItem].impact)" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
                         <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && !isNumber(textEle.text)"
-                            [style.color]="getTextColor(story[activeStoryItem].impact)" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
-                        <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                            [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
+                        <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance === 0" [class.paused]="isPaused" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                     </div>
                 </span>
             </div>

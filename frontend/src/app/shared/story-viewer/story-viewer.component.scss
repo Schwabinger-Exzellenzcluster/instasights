@@ -7,6 +7,29 @@
   }
 }
 
+.summary {
+  background-color: #fff;
+  font-size: 16pt;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  animation: swipeUp .5s;
+  ion-icon {
+    color: #333 !important;
+    float: right;
+  }
+}
+
+@keyframes swipeUp {
+  from {
+    bottom: -100%;
+  } to {
+    bottom: 0;
+  }
+}
+
 .story-viewer {
   height: 100vh;
   aspect-ratio: 9/16;
@@ -41,7 +64,12 @@
     font-size: 42px;
     cursor: pointer;
     float: right;
-    margin-right: 10px;
+    margin: 10px;
+  }
+
+  ion-icon[name=arrow-up] {
+    position: absolute;
+    bottom: 10px;
   }
   .content,
   .background,

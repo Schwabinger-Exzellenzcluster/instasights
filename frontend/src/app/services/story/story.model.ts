@@ -8,6 +8,7 @@ export interface StoryItem {
     date?: Date;
     isNew?: boolean;
     poll?: Poll;
+    summary?: string;
 }
 
 export interface UiText {

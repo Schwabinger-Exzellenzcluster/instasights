@@ -14,6 +14,8 @@ import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 export class StoryViewerComponent implements OnInit, OnDestroy {
   public synth = window.speechSynthesis;
 
+  public isPaused: boolean = false;
+
   public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
 
   public isLoading: boolean = true;
@@ -28,6 +30,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   private textTimeout: any;
   private storyTimeout: any;
+
+  public showSummary: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService, private storyService: StoryService) { }
 
@@ -83,7 +87,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     }
     this.nextText();
     this.storyTimeout = setTimeout(() => {
-      if (this.activeStoryItem < this.story.length - 1) {
+      if (this.activeStoryItem < this.story.length - 1 && !this.isPaused) {
         this.activeStoryItem++;
         this.nextStoryItem();
       }
@@ -128,5 +132,15 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     } else {
       return "rgba(255, 102, 102"
     }
+  }
+
+  public togglePause() {
+    if (this.isPaused) {
+      this.nextStoryItem();
+    } else {
+      clearTimeout(this.textTimeout);
+      clearTimeout(this.storyTimeout);
+    }
+    this.isPaused = !this.isPaused;
   }
 }
