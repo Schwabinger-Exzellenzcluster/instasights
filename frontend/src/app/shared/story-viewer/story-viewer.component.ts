@@ -61,6 +61,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
+    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
     this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
 
     this.isLoading = true
