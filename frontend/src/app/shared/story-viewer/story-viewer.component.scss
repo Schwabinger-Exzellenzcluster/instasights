@@ -15,9 +15,9 @@
             border-radius: 5px;
             height: 100%;
             width: 50px;
-            background-color: blue;
+            background-color: rgba(255, 255, 255, 0.25);
             &.active {
-                background-color: yellow;
+                background-color: #fff;
                 width: 100%;
             }
         }
@@ -34,11 +34,19 @@
         aspect-ratio: 9/16;
         position: absolute;
         top: 0px;
+        overflow: hidden;
     }
 
     .content {
-        background-color: green;
-        z-index: 0;;
+        background-color: #fff;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 42pt;
+            color: #fff;
+        }
     }
 
     .overlay {

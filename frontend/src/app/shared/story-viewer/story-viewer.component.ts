@@ -11,14 +11,19 @@ import { StoryItemComponent } from './story-item/story-item.component';
 export class StoryViewerComponent implements OnInit {
   public synth = window.speechSynthesis;
 
+  public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
+
   public story: StoryItem[] = [{
-    id: "dgh",
+    id: "001",
+    ui_text: "hey",
     duration: 2
   }, {
-    id: "xc-lknv",
+    id: "002",
+    ui_text: "hi",
     duration: 1
   }, {
-    id: "cmh",
+    id: "003",
+    ui_text: "hello",
     duration: 1
   }];
 
@@ -31,6 +36,10 @@ export class StoryViewerComponent implements OnInit {
       console.log(params.get("userId") +" " + params.get("storyItemId"));
     });
     this.nextStoryItem(this.story[0].duration);
+  }
+
+  public getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
   }
 
   private nextStoryItem(time: number) {
