@@ -1,6 +1,20 @@
 <div class="main-content">
     <div class="chron-feed">
-        <app-bubble [routerLink]="'stories/zucc/153564156'"></app-bubble>
-        <app-bubble [routerLink]="'stories/zucc/151654684'"></app-bubble>
+        <app-bubble [routerLink]="'stories/zucc/153564156'" userId="Karl"></app-bubble>
+        <app-bubble [routerLink]="'stories/zucc/151654684'" userId="Heinz"></app-bubble>
+    </div>
+    <div class="departments">
+      <div class="department-row">
+        <app-bubble [routerLink]="'stories'" userId="Sales"></app-bubble>
+        <app-bubble [routerLink]="'stories'" userId="Marketing"></app-bubble>
+      </div>
+      <div class="department-row">
+        <app-bubble [routerLink]="'stories'" userId="Production"></app-bubble>
+        <app-bubble [routerLink]="'stories'" userId="R&D"></app-bubble>
+      </div>
+      <div class="department-row">
+        <app-bubble [routerLink]="'stories'" userId="Finance"></app-bubble>
+        <app-bubble [routerLink]="'stories'" userId="HR"></app-bubble>
+      </div>
     </div>
 </div>

@@ -13,3 +13,17 @@
     padding: 10px;
     max-width: 100%;
 }
+
+.departments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.department-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 95%;
+}
