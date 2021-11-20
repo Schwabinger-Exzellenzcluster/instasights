@@ -6,6 +6,22 @@
     scroll-behavior: smooth;
     overflow-y: auto;
     overflow-x: hidden;
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        img {
+            height: 46px;
+        }
+        p {
+            font-size: 32px;
+            font-weight: bolder;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
 }
 
 .title {
