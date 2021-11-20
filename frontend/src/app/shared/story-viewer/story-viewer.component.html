@@ -27,7 +27,7 @@
             <div *ngIf="isLoading">
                 <ion-spinner name="crescent"></ion-spinner>
             </div>
-            <div [hidden]="isLoading">
+            <div class="text" [hidden]="isLoading">
                 <img [hidden]="true" #image alt="loading">
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
                     <div>
