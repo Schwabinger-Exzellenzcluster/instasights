@@ -87,26 +87,54 @@
   .content {
     background-color: #fff;
     z-index: 0;
+    text-align: center;
     h1 {
-      font-size: 56pt;
-      color: #fff;
-      /*text-shadow: #000 0px 0px 10px;*/
+        font-size: 56pt;
+        color: #fff;
+        /*text-shadow: #000 0px 0px 10px;*/
+        animation-name: popText;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
     }
-    h2 {
-      font-size: 36pt;
-      color: #fff;
-      text-shadow: #000 0px 0px 10px;
+    p {
+        font-size: 36pt;
+        color: #fff;
+        text-shadow: #000 0px 0px 10px;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
     }
     img {
-      width: calc(100% - 20px);
-      border-radius: 10px;
+        width: calc(100% - 20px);
+        border-radius: 10px;
     }
     ion-spinner {
-      color: #fff;
-      width: 80px;
-      height: 80px;
+        color: #fff;
+        width: 80px;
+        height: 80px;
     }
   }
+}
+
+@keyframes popText {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    } 80% {
+        transform: scale(1.5);
+    } 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes grow {
