@@ -12,7 +12,7 @@ export class StoryService {
   public apiUrl = 'http://192.168.2.129:5000/insights';
 
   constructor(public http: HttpClient) {
-    this.apiUrl = 'http://192.168.2.126:5000'
+    // this.apiUrl = 'http://192.168.2.126:5000'
   }
 
   getStoryItems() {
