@@ -19,7 +19,7 @@ export class StoryViewerComponent implements OnInit {
 
   public story: StoryItem[] = [{
     id: "001",
-    ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
+    ui_text: [{ text: "Sales are up", impact: 0 }, { text: "20%", impact: 1 }, { text: "this week", impact: 0 }],
     duration: 3,
     keywords: ["tree"],
     date: new Date(),
@@ -37,13 +37,13 @@ export class StoryViewerComponent implements OnInit {
     }
   }, {
     id: "002",
-    ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
+    ui_text: [{ text: "hi", impact: 1 }, { text: "was geht?", impact: 0 }],
     duration: 2,
     keywords: ["mountain"],
     date: new Date()
   }, {
     id: "003",
-    ui_text: [{text: "hello", impact: 1}],
+    ui_text: [{ text: "hello", impact: 1 }],
     duration: 1,
     keywords: ["baguette"],
     date: new Date(),
@@ -70,10 +70,6 @@ export class StoryViewerComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(params => {
       console.log(params.get("userId") + " " + params.get("storyItemId"));
     });
-  }
-
-  ngAfterViewInit() {
-    this.nextStoryItem(this.story[0].duration);
   }
 
   private async nextStoryItem(time: number) {
@@ -117,6 +113,6 @@ export class StoryViewerComponent implements OnInit {
   }
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
-    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
+    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1) / 2) + "s"
   }
 }
