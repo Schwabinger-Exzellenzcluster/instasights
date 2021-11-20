@@ -1,8 +1,14 @@
 <div class="story-viewer">
-    <div class="timeline">
-        <div class="timeline-item" *ngFor="let item of story; let i = index" [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
-            <div class="timeline-item active" *ngIf="i <= activeStoryItem"></div>
+    <div class="overlay">
+        <div class="timeline">
+            <div class="timeline-item" *ngFor="let item of story; let i = index" [style.width]="'calc(' + (100/story.length).toString() + '% - 5px)'">
+                <div class="timeline-item active" *ngIf="i <= activeStoryItem"></div>
+            </div>
         </div>
+        <i class="icon ion-md-close" [routerLink]="''"></i>
     </div>
-    <i class="icon ion-md-close" [routerLink]="''"></i>
+    <div class="content" [style.background]="funkyColors[getRandomInt(story.length - 1)]">
+        <img [src]="unsplash.getImageUrl(story[activeStoryItem].keywords)" alt="loading">
+        <h1>{{ story[activeStoryItem].ui_text }}</h1>
+    </div>
 </div>
