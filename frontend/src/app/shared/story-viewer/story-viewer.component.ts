@@ -23,7 +23,18 @@ export class StoryViewerComponent implements OnInit {
     duration: 3,
     keywords: ["tree"],
     date: new Date(),
-    tts_text: "hello world!"
+    tts_text: "hello world!",
+    poll: {
+      question: "Does this require instant action?",
+      answerA: {
+        text: "Yes",
+        votes: 2,
+      },
+      answerB: {
+        text: "No",
+        votes: 5,
+      }
+    }
   }, {
     id: "002",
     ui_text: [{text: "hi", impact: 1}],
