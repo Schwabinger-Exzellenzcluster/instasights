@@ -2,6 +2,7 @@ from flask import Flask, request, send_from_directory
 from trends import get_trends
 from predictions import get_predictions
 from comparisons import get_comparisons
+from tsfeatures import get_features
 import json
 import pandas as pd
 import logging
@@ -17,7 +18,7 @@ df_stores = pd.read_csv(
         'storetype_id': 'category',
         'city_id': 'category'
     }
-    )
+)
 df_sales = pd.read_csv(
     'dataset/turkish_retail_data/sales.csv',
     delimiter=',',
@@ -32,7 +33,13 @@ df_sales = pd.read_csv(
         "promo_discount_type_2": "category"
     },
     parse_dates=["date"]
-    )
+)
+# Drop unused columns
+df_sales.drop(
+    columns=['promo_type_1', 'promo_type_2', 'promo_bin_2', 'promo_discount_2', 'promo_discount_type_2'],
+    inplace=True
+)
+
 df_product_hierachy = pd.read_csv(
     'dataset/turkish_retail_data/product_hierarchy.csv',
     delimiter=',',
@@ -45,10 +52,21 @@ df_product_hierachy = pd.read_csv(
         'hierarchy4_id': 'category',
         'hierarchy5_id': 'category'
     }
-    )
+)
+
+df_product_hierachy.drop(
+    columns=['hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
+    inplace=True
+)
 
 df = df_sales.join(df_stores.set_index('store_id'), on='store_id')
 df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
+
+end_date = '2019-10-01'
+before_end_date = df['date'] <= end_date
+
+df_cut = df.loc[before_end_date]
+del df
 
 logging.basicConfig()
 logging.root.setLevel('NOTSET')
@@ -59,37 +77,37 @@ logger.debug('Parsing finished')
 @app.route('/insights/market')
 def get_market_insights():
     return send_from_directory('dataset/turkish_market_insights', 'market_insights.json')
+insights = []
+# add different insights
+insights += get_comparisons(df_cut)
+insights += get_predictions(df_cut)
+insights += get_trends(df_cut)
+# Broken due to some reason
+# insights += get_features(df_cut)
+
+
+# convert to dict
+insights = list(
+    map(
+        lambda insight: insight.to_dict(),
+        insights
+    )
+)
+
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
 
 
-# @app.route('/insights')
+@app.route('/insights')
 def get_insights():
-    end_date = ''  # request.args.get('date')
-    if not end_date:
-        end_date = '2019-10-01'
-    before_end_date = df['date'] <= end_date
-    df_cut = df.loc[before_end_date]
-
-    insights = []
-    insights += get_comparisons(df_cut)
-    insights += get_predictions(df_cut)
-    insights += get_trends(df_cut)
-
-    insights = list(
-        map(
-            lambda insight: insight.to_dict(),
-            insights
-        )
-    )
-
     print(insights)
     with open('insights.json', 'w') as f:
         f.write(json.dumps(insights))
     return json.dumps(insights)
 
-print(get_insights())
+
+# print(get_insights())
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

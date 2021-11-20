@@ -1,3 +1,6 @@
+import uuid
+
+
 class UiTextItem:
     text: str
     relevance: float
@@ -8,12 +11,14 @@ class UiTextItem:
 
 
 class Insight:
+    uuid
     topic: str
     impact: int
     ui_text: list[UiTextItem]
     voice_text: str
 
     def __init__(self, topic, impact, ui_text, voice_text):
+        self.uuid = str(uuid.uuid4())
         self.topic = topic
         self.impact = impact
         self.ui_text = ui_text

@@ -5,6 +5,7 @@ backcall==0.2.0
 bleach==4.1.0
 botorch==0.5.1
 cffi==1.15.0
+click==8.0.3
 cmdstanpy==0.9.5
 convertdate==2.3.2
 cycler==0.11.0
@@ -15,6 +16,7 @@ defusedxml==0.7.1
 entrypoints==0.3
 ephem==4.1
 fbprophet==0.7
+Flask==2.0.2
 fonttools==4.28.1
 gpytorch==1.5.1
 hijri-converter==2.2.2
@@ -23,6 +25,7 @@ ipykernel==6.5.1
 ipython==7.29.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
+itsdangerous==2.0.1
 jedi==0.18.1
 Jinja2==3.0.3
 joblib==1.1.0
@@ -97,4 +100,5 @@ typeguard==2.13.0
 typing_extensions==4.0.0
 wcwidth==0.2.5
 webencodings==0.5.1
+Werkzeug==2.0.2
 widgetsnbextension==3.5.2
