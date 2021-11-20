@@ -22,7 +22,8 @@ export class StoryViewerComponent implements OnInit {
     ui_text: "hey",
     duration: 2,
     keywords: ["tree"],
-    date: new Date()
+    date: new Date(),
+    tts_text: "hello world!"
   }, {
     id: "002",
     ui_text: "hi",
@@ -34,7 +35,8 @@ export class StoryViewerComponent implements OnInit {
     ui_text: "hello",
     duration: 1,
     keywords: ["baguette"],
-    date: new Date()
+    date: new Date(),
+    tts_text: "end"
   }];
 
   public activeStoryItem: number = 0;
@@ -58,11 +60,6 @@ export class StoryViewerComponent implements OnInit {
   private async nextStoryItem(time: number) {
     this.isLoading = true
     this.synth.cancel();
-    if (this.story[this.activeStoryItem].tts_text) {
-      let utterance1 = new SpeechSynthesisUtterance(this.story[this.activeStoryItem].tts_text);
-      utterance1.lang = 'en-US';
-      this.synth.speak(utterance1);
-    }
     this.image.nativeElement.src = ""
     let img = new Image()
     await new Promise((resolve, reject) => {
@@ -72,6 +69,11 @@ export class StoryViewerComponent implements OnInit {
     })
     this.image.nativeElement.src = img.src
     this.isLoading = false
+    if (this.story[this.activeStoryItem].tts_text) {
+      let utterance1 = new SpeechSynthesisUtterance(this.story[this.activeStoryItem].tts_text);
+      utterance1.lang = 'en-US';
+      this.synth.speak(utterance1);
+    }
     setTimeout(() => {
       if (this.activeStoryItem < this.story.length - 1) {
         this.activeStoryItem++;
