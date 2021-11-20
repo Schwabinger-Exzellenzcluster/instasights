@@ -70,6 +70,7 @@
     .content {
         background-color: #fff;
         z-index: 0;
+        text-align: center;
         h1 {
             font-size: 56pt;
             color: #fff;
@@ -82,6 +83,9 @@
             font-size: 36pt;
             color: #fff;
             text-shadow: #000 0px 0px 10px;
+            animation-name: fadeIn;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
         }
         img {
             width: calc(100% - 20px);
@@ -111,6 +115,15 @@
         transform: scale(1.5);
     } 100% {
         transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }

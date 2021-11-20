@@ -22,7 +22,7 @@
                     <div [hidden]="i > activeText">
                         <h1 *ngIf="textEle.impact > 0"
                             [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
-                        <p *ngIf="textEle.impact === 0">{{ textEle.text }}</p>
+                        <p *ngIf="textEle.impact === 0" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>
                     </div>
                 </span>
                 <app-story-poll *ngIf="story[activeStoryItem].poll"></app-story-poll>
