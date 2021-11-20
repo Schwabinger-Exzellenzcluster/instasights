@@ -1,0 +1,56 @@
+{
+  "09/2019": {
+    "volume_yoy": {
+      "title": "Retail sales volume increased by 2.7% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail sales volume with constant prices increased by 2.7% in September 2019 compared with the same month of previous year. In the same month non-food (except automotive fuel) sales increased by 4.7%, automotive fuel sales increased by 4.4%, food, drinks and tobacco sales decreased by 2%."
+    },
+    "volume_monthly": {
+      "title": "Retail sales volume increased by 0.6% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail sales volume with constant prices increased by 0.6% in September 2019 compared with the previous month. In the same month food, drinks and tobacco sales increased by 0.7%, non-food (except automotive fuel) sales increased by 0.6%, automotive fuel sales increased by 0.7%."
+    },
+    "turnover_yoy": {
+      "title": "Retail turnover increased by 11.2% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail turnover with current prices increased by 11.2% in September 2019 compared with the same month of previous year. In the same month food, drinks and tobacco sales increased by 16.1%, non-food (except automotive fuel) sales increased by 12.3%, automotive fuel sales increased by 1.8%."
+    },
+    "turnover_monthly": {
+      "title": "Retail turnover increased by 1.2% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail turnover with current prices increased by 1.2% in September 2019 compared with the previous month. In the same month food, drinks and tobacco sales increased by 1.2%, non-food (except automotive fuel) sales increased by 2.1%, automotive fuel sales decreased by 1%."
+    }
+  },
+  "08/2019": {
+    "volume_yoy": {
+      "title": "Retail sales volume decreased by 4.3% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail sales volume with constant prices decreased by 4.3% in August 2019 compared with the same month of previous year. In the same month food, drinks and tobacco sales decreased by 5%, non-food (except automotive fuel) sales decreased by 5.8%, automotive fuel sales increased by 0.4%."
+    },
+    "volume_monthly": {
+      "title": "Retail sales volume increased by 0.3% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail sales volume with constant prices increased by 0.3% in August 2019 compared with the previous month. In the same month non-food (except automotive fuel) sales increased by 0.4%, automotive fuel sales increased by 2.4%, food, drinks and tobacco sales decreased by 1.5%."
+    },
+    "turnover_yoy": {
+      "title": "Retail turnover increased by 9.2% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail turnover with current prices increased by 9.2% in August 2019 compared with the same month of previous year. In the same month food, drinks and tobacco sales increased by 17.4%, non-food (except automotive fuel) sales increased by 8%, automotive fuel sales increased by 1.7%."
+    },
+    "turnover_monthly": {
+      "title": "Retail turnover decreased by 0.1% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail turnover with current prices decreased by 0.1% in August 2019 compared with the previous month. In the same month non-food (except automotive fuel) sales decreased by 0.2%, automotive fuel sales decreased by 1.1%, food, drinks and tobacco sales increased by 0.7%."
+    }
+  },
+  "07/2019": {
+    "volume_yoy": {
+      "title": "Retail sales volume decreased by 3.7% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail sales volume with constant prices decreased by 3.7% in July 2019 compared with the same month of previous year. In the same month food, drinks and tobacco sales decreased by 1%, non-food (except automotive fuel) sales decreased by 4.5%, automotive fuel sales decreased by 5%."
+    },
+    "volume_monthly": {
+      "title": "Retail sales volume decreased by 1.5% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail sales volume with constant prices decreased by 1.5% in July 2019 compared with the previous month. In the same month non-food (except automotive fuel) sales decreased by 2.8%, automotive fuel sales decreased by 0.3%, food, drinks and tobacco sales remained stable."
+    },
+    "turnover_yoy": {
+      "title": "Retail turnover increased by 13.2% compared with the same month of previous year",
+      "paragraph": "Calendar adjusted retail turnover with current prices increased by 13.2% in July 2019 compared with the same month of previous year. In the same month food, drinks and tobacco sales increased by 18%, non-food (except automotive fuel) sales increased by 13.7%, automotive fuel sales increased by 5.8%."
+    },
+    "turnover_monthly": {
+      "title": "Retail turnover increased by 0.8% compared with the previous month",
+      "paragraph": "Seasonal and calendar adjusted retail turnover with current prices increased by 0.8% in July 2019 compared with the previous month. In the same month food, drinks and tobacco sales increased by 1.8%, automotive fuel sales increased by 2.8%, non-food (except automotive fuel) sales decreased by 0.5%."
+    }
+  }
+}
