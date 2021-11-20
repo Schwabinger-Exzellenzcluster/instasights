@@ -97,4 +97,15 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
     return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
   }
+
+  getIndicatorColor(impact: number) {
+    const opacity = Math.abs(impact);
+    if (impact < 0) {
+      return `rgba(255, 102, 102, ${opacity})`
+    } else if (impact > 0) {
+      return `rgba(102, 255, 204, ${opacity})`
+    } else {
+      return "rgb(153, 204, 255)"
+    }
+  }
 }

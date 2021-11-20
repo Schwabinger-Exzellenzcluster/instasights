@@ -11,8 +11,6 @@ import { UnsplashService } from '../services/unsplash/unsplash.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public funkyColors = ["#1770ff", "#17ff9e", "#ff2e17", "#6817ff"];
-
   public getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
@@ -49,6 +47,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     }).sort((a: StoryItem, b: StoryItem) => {
       return compareAsc(a.date, b.date);
     });
+  }
+
+  getIndicatorColor(impact: number) {
+    const opacity = Math.abs(impact);
+    if (impact < 0) {
+      return `rgba(255, 102, 102, ${opacity})`
+    } else if (impact > 0) {
+      return `rgba(102, 255, 204, ${opacity})`
+    } else {
+      return "rgb(153, 204, 255)"
+    }
   }
 
   public toOneString(ui_texts: UiText[]): string {

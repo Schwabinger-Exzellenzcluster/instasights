@@ -1,6 +1,7 @@
 export interface StoryItem {
     id: string;
     topic: Topic;
+    impact: number;
     duration: number;
     ui_text: UiText[];
     tts_text?: string;
