@@ -19,8 +19,8 @@ export class StoryViewerComponent implements OnInit {
 
   public story: StoryItem[] = [{
     id: "001",
-    ui_text: [{text: "hey", impact: 1}],
-    duration: 2,
+    ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
+    duration: 3,
     keywords: ["tree"],
     date: new Date(),
     tts_text: "hello world!"
