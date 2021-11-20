@@ -7,7 +7,7 @@
         </div>
         <i class="icon ion-md-close" [routerLink]="''"></i>
     </div>
-    <div class="content" [style.background]="funkyColors[getRandomInt(funkyColors.length - 1)]">
+    <div class="content" [style.background]="'url(' + unsplash.getImageUrl(story[activeStoryItem].keywords) + ')'">
         <h1>{{ story[activeStoryItem].ui_text }}</h1>
     </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoryItem } from 'src/app/services/story/story.model';
-import { StoryItemComponent } from './story-item/story-item.component';
+import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 
 @Component({
   selector: 'app-story-viewer',
@@ -16,20 +16,23 @@ export class StoryViewerComponent implements OnInit {
   public story: StoryItem[] = [{
     id: "001",
     ui_text: "hey",
-    duration: 2
+    duration: 2,
+    keywords: ["tree"]
   }, {
     id: "002",
     ui_text: "hi",
-    duration: 1
+    duration: 1,
+    keywords: ["mountain"]
   }, {
     id: "003",
     ui_text: "hello",
-    duration: 1
+    duration: 1,
+    keywords: ["baguette"]
   }];
 
   public activeStoryItem: number = 0;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {

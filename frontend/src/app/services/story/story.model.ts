@@ -3,4 +3,5 @@ export interface StoryItem {
     duration: number;
     ui_text: string;
     tts_text?: string;
+    keywords: string[];
 }
