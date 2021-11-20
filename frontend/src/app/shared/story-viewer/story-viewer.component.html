@@ -8,7 +8,7 @@
                     [style.animation-duration]="item.duration.toString() + 's'"></div>
             </div>
         </div>
-        <i class="icon ion-md-close" [routerLink]="''"></i>
+        <ion-icon name="close" [routerLink]="''"></ion-icon>
     </div>
     <div class="content" [style.background]="funkyColors[activeStoryItem % funkyColors.length]">
         <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem].keywords) + ')'"></div>
