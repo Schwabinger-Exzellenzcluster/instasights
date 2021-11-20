@@ -58,6 +58,11 @@
             width: calc(100% - 20px);
             border-radius: 10px;
         }
+        ion-spinner {
+            color: #fff;
+            width: 80px;
+            height: 80px;
+        }
     }
 
     .overlay {

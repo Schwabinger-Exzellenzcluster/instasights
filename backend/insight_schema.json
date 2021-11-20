@@ -1,0 +1,11 @@
+{
+  "topic": "xaz",
+  "ui_text": [
+    {
+      "text": "word",
+      "relevance": 0.7
+    }
+  ],
+  "voice_text": "Hello World!",
+  "impact": -2
+}
