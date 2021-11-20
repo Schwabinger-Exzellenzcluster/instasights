@@ -21,8 +21,8 @@
                 <span *ngFor="let textEle of story[activeStoryItem].ui_text; let i = index">
                     <div [hidden]="i > activeText">
                         <h1 *ngIf="textEle.impact > 0"
-                            [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]">{{ textEle.text }}</h1>
-                        <h2 *ngIf="textEle.impact === 0">{{ textEle.text }}</h2>
+                            [style.color]="funkyColors[(activeStoryItem + 1) % funkyColors.length]" [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
+                        <p *ngIf="textEle.impact === 0">{{ textEle.text }}</p>
                     </div>
                 </span>
                 <app-story-poll *ngIf="story[activeStoryItem].poll"></app-story-poll>

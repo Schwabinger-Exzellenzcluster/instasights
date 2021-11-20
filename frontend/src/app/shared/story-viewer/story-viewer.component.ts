@@ -38,7 +38,7 @@ export class StoryViewerComponent implements OnInit {
   }, {
     id: "002",
     ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
-    duration: 1,
+    duration: 2,
     keywords: ["mountain"],
     date: new Date()
   }, {
@@ -103,5 +103,9 @@ export class StoryViewerComponent implements OnInit {
         this.nextText();
       }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
     }
+  }
+  public getTimeInterval() {
+    let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
+    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
   }
 }
