@@ -18,12 +18,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   public storyItems: StoryItem[];
   private storySub: Subscription
 
-  constructor(public unsplash: UnsplashService, private storyService: StoryService) { }
-
-  ngOnInit(): void {
+  constructor(public unsplash: UnsplashService, private storyService: StoryService) {
     this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
       this.storyItems = storyItems;
     });
+  }
+
+  ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
@@ -42,6 +43,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getTopicStory(topic: Topic) {
+    if (!this.storyItems) {
+      return null;
+    }
     return this.storyItems.filter((storyItem) => {
       return storyItem.topic == topic;
     }).sort((a: StoryItem, b: StoryItem) => {
