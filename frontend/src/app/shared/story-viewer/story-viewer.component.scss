@@ -96,6 +96,7 @@
         animation-name: popText;
         animation-duration: 0.5s;
         animation-timing-function: ease-in-out;
+        margin: 0px;
     }
     p {
         font-size: 36pt;
@@ -104,6 +105,7 @@
         animation-name: fadeIn;
         animation-duration: 0.5s;
         animation-timing-function: ease-in-out;
+        margin: 0px;
     }
     img {
         width: calc(100% - 20px);
