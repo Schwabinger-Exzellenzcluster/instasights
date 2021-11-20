@@ -3,7 +3,7 @@ from trends import get_trends
 from predictions import get_predictions
 from comparisons import get_comparisons
 from tsfeatures import get_features
-import json
+import json1
 import pandas as pd
 import logging
 
