@@ -62,7 +62,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   private async nextStoryItem() {
     window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
-    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * .75;
+    this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * 1;
 
     this.isLoading = true
     this.activeText = 0;
@@ -116,7 +116,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     } else if (impact > 0) {
       return `rgba(102, 255, 204, ${opacity})`
     } else {
-      return "rgb(153, 204, 255)"
+      return "rgb(90, 142, 194)"
     }
   }
 
