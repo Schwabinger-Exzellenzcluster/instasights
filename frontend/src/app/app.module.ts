@@ -9,6 +9,7 @@ import { StoryViewerComponent } from './shared/story-viewer/story-viewer.compone
 import { BubbleComponent } from './shared/bubble/bubble.component';
 import { StoryItemComponent } from './shared/story-viewer/story-item/story-item.component';
 import { IonicModule } from '@ionic/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { IonicModule } from '@ionic/angular';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot()
   ],
   providers: [],
