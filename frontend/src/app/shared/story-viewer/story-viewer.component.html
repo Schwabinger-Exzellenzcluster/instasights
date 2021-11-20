@@ -14,7 +14,7 @@
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid"></app-story-poll>
     </div>
     <div class="content" [style.background]="getIndicatorColor(story[activeStoryItem].impact)">
-        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl([story[activeStoryItem].topic]) + ')'"></div>
+        <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem]) + ')'"></div>
         <div class="foreground">
             <div *ngIf="isLoading">
                 <ion-spinner name="crescent"></ion-spinner>

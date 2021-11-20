@@ -9,24 +9,26 @@ import { StoryItem, Topic } from './story.model';
 export class StoryService {
   public apiUrl = 'http://192.168.2.129:5000/insights';
 
+  private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
+
   constructor(public http: HttpClient) {
   }
 
   getStoryItems() {
+    // return this._storySubject.asObservable();
     return this.http.get<StoryItem[]>(this.apiUrl);
   }
 }
 
 
-/*const STORY_ITEMS: StoryItem[] = [{
-  id: "001",
+const STORY_ITEMS: StoryItem[] = [{
+  uuid: "001",
   impact: 1,
   topic: Topic.Sales,
-  ui_text: [{text: "Sales are up", impact: 0}, {text: "20%", impact: 1}, {text: "this week", impact: 0}],
+  ui_text: [{text: "Sales are up", relevance: 0}, {text: "20%", relevance: 1}, {text: "this week", relevance: 0}],
   duration: 3,
-  keywords: ["tree"],
   date: new Date(),
-  tts_text: "hello world!",
+  voice_text: "hello world!",
   poll: {
     question: "Does this require instant action?",
     answerA: {
@@ -39,22 +41,20 @@ export class StoryService {
     }
   }
 }, {
-  id: "002",
+  uuid: "002",
   impact: 0,
   topic: Topic.Sales,
-  ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
+  ui_text: [{text: "hi", relevance: 1}, {text: "was geht?", relevance: 0}],
   duration: 2,
-  keywords: ["mountain"],
   date: new Date()
 }, {
-  id: "003",
+  uuid: "003",
   impact: -1,
   topic: Topic.Sales,
-  ui_text: [{text: "hello", impact: 1}],
+  ui_text: [{text: "hello", relevance: 1}],
   duration: 1,
-  keywords: ["baguette"],
   date: new Date(),
-  tts_text: "end",
+  voice_text: "end",
   poll: {
     question: "Does this require instant action?",
     answerA: {
@@ -67,14 +67,13 @@ export class StoryService {
     }
   }
 }, {
-  id: "004",
+  uuid: "004",
   topic: Topic.Sales,
   impact: -0.5,
-  ui_text: [{text: "hello", impact: 1}],
+  ui_text: [{text: "hello", relevance: 1}],
   duration: 1,
-  keywords: ["french"],
   date: new Date(),
-  tts_text: "end",
+  voice_text: "end",
   poll: {
     question: "Does this require instant action?",
     answerA: {
@@ -86,5 +85,5 @@ export class StoryService {
       votes: 5,
     }
   }
-}];*/
+}];
 
