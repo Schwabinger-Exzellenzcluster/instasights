@@ -9,6 +9,7 @@ export interface StoryItem {
     isNew?: boolean;
     poll?: Poll;
     data?: InsightData;
+    summary?: string;
 }
 
 export interface UiText {
