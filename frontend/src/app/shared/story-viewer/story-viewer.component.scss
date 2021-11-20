@@ -15,6 +15,10 @@
             height: 100%;
             width: 50px;
             background-color: blue;
+            &.active {
+                background-color: yellow;
+                width: 100%;
+            }
         }
     }
     i {
