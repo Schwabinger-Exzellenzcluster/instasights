@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { StoryItem, Topic } from './story.model';
@@ -6,25 +7,19 @@ import { StoryItem, Topic } from './story.model';
   providedIn: 'root'
 })
 export class StoryService {
+  public apiUrl = 'http://192.168.2.129:5000/insights';
+
   private _storiesSubject: BehaviorSubject<
     StoryItem[]
   > = new BehaviorSubject(STORY_ITEMS);
 
-  constructor() { }
-
-  getStoryItems() {
-    return this._storiesSubject.asObservable();
+  constructor(public http: HttpClient) {
+    this.apiUrl = "http://localhost:5000/";
   }
 
-  observeStoryItem(itemId: string) {
-    return this.getStoryItems().pipe(
-      map((storyItems) => {
-        const story = storyItems.find((storyItem) => {
-          return storyItem.id === itemId;
-        })
-        return story ? story : null;
-      })
-    )
+  getStoryItems() {
+    // return this._storiesSubject.asObservable();
+    return this.http.get<StoryItem[]>(this.apiUrl);
   }
 }
 

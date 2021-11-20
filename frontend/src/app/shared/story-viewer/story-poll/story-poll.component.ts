@@ -20,9 +20,9 @@ export class StoryPollComponent implements OnInit, OnDestroy {
   constructor(private storyService: StoryService) { }
 
   ngOnInit(): void {
-    this.storyItemSub = this.storyService.observeStoryItem(this.storyItemId).subscribe((storyItem) => {
-      this.poll = storyItem?.poll;
-    })
+    this.storyItemSub = this.storyService.getStoryItems().subscribe((storyItems) => {
+      this.poll = storyItems.find(item => item.id === this.storyItemId)?.poll;
+    });
   }
 
   ngOnDestroy(): void {
