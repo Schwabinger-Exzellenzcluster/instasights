@@ -9,9 +9,8 @@ import { StoryItem, Topic } from './story.model';
 export class StoryService {
   public apiUrl = 'http://192.168.2.129:5000/insights';
 
-  private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
-
   constructor(public http: HttpClient) {
+    // this.apiUrl = 'http://192.168.2.126:5000'
   }
 
   getStoryItems() {

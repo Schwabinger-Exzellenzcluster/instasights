@@ -97,12 +97,18 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
     }
   }
+
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
     return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
   }
 
-  getIndicatorColor(impact: number) {
+  public isNumber(_thing): boolean {
+    let thing = _thing.replace("%", "")
+    return !isNaN(thing) && !isNaN(parseFloat(thing))
+  }
+
+  public getIndicatorColor(impact: number) {
     const opacity = Math.abs(impact);
     if (impact < 0) {
       return `rgba(255, 102, 102, ${opacity})`

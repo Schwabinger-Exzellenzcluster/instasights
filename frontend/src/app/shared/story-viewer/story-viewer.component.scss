@@ -90,7 +90,7 @@
     z-index: 0;
     text-align: center;
     h1 {
-        font-size: 56pt;
+        font-size: 68pt;
         color: #fff;
         /*text-shadow: #000 0px 0px 10px;*/
         animation-name: popText;
@@ -101,7 +101,7 @@
     p {
         font-size: 36pt;
         color: #fff;
-        text-shadow: #000 0px 0px 10px;
+        // text-shadow: #000 0px 0px 10px;
         animation-name: fadeIn;
         animation-duration: 0.5s;
         animation-timing-function: ease-in-out;
