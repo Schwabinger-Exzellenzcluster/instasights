@@ -74,5 +74,24 @@ const STORY_ITEMS: StoryItem[] = [{
       votes: 5,
     }
   }
+}, {
+  id: "004",
+  topic: Topic.Sales,
+  ui_text: [{text: "hello", impact: 1}],
+  duration: 1,
+  keywords: ["french"],
+  date: new Date(),
+  tts_text: "end",
+  poll: {
+    question: "Does this require instant action?",
+    answerA: {
+      text: "Yes",
+      votes: 2,
+    },
+    answerB: {
+      text: "No",
+      votes: 5,
+    }
+  }
 }];
 
