@@ -69,7 +69,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     this.image.nativeElement.src = ""
     let img = new Image()
     await new Promise((resolve, reject) => {
-      img.src = this.unsplash.getImageUrl([this.story[this.activeStoryItem].topic])
+      img.src = this.unsplash.getImageUrl(this.story[this.activeStoryItem])
       img.onload = () => resolve(img)
       img.onerror = reject
     })
