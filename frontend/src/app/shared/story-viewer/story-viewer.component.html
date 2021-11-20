@@ -7,5 +7,7 @@
         </div>
         <i class="icon ion-md-close" [routerLink]="''"></i>
     </div>
-    <div class="content"></div>
+    <div class="content" [style.background]="funkyColors[getRandomInt(funkyColors.length - 1)]">
+        <h1>{{ story[activeStoryItem].ui_text }}</h1>
+    </div>
 </div>
