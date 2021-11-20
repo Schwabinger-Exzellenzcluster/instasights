@@ -2,12 +2,11 @@ import logging
 
 import kats.consts
 import pandas as pd
-from insight import Insight
-from kats.detectors.trend_mk import MKDetector
 from kats.consts import TimeSeriesData
-from kats.models.prophet import ProphetModel, ProphetParams
-from insight import UiTextItem
 from kats.tsfeatures.tsfeatures import TsFeatures
+
+from insight import Insight
+from insight import UiTextItem
 
 logger = logging.getLogger('FEAT')
 logging.getLogger('numba').setLevel(logging.WARNING)
