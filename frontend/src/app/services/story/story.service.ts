@@ -14,8 +14,8 @@ export class StoryService {
   }
 
   getStoryItems() {
-    // return this._storySubject.asObservable();
-    return this.http.get<StoryItem[]>(this.apiUrl);
+    return this._storySubject.asObservable();
+    // return this.http.get<StoryItem[]>(this.apiUrl);
   }
 }
 
@@ -27,7 +27,7 @@ const STORY_ITEMS: StoryItem[] = [{
   ui_text: [{text: "Sales are up", relevance: 0}, {text: "20%", relevance: 1}, {text: "this week", relevance: 0}],
   duration: 3,
   date: new Date(),
-  voice_text: "hello world!",
+  voice_text: "hello Joe!",
   poll: {
     question: "Does this require instant action?",
     answerA: {
