@@ -26,7 +26,7 @@ export class StoryViewerComponent implements OnInit {
     tts_text: "hello world!"
   }, {
     id: "002",
-    ui_text: [{text: "hi", impact: 1}],
+    ui_text: [{text: "hi", impact: 1}, {text: "was geht?", impact: 0}],
     duration: 1,
     keywords: ["mountain"],
     date: new Date()
@@ -40,6 +40,7 @@ export class StoryViewerComponent implements OnInit {
   }];
 
   public activeStoryItem: number = 0;
+  public activeText: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService) { }
 
@@ -55,6 +56,7 @@ export class StoryViewerComponent implements OnInit {
 
   private async nextStoryItem(time: number) {
     this.isLoading = true
+    this.activeText = 0;
     this.synth.cancel();
     this.image.nativeElement.src = ""
     let img = new Image()
@@ -70,6 +72,7 @@ export class StoryViewerComponent implements OnInit {
       utterance1.lang = 'en-US';
       this.synth.speak(utterance1);
     }
+    this.nextText();
     setTimeout(() => {
       if (this.activeStoryItem < this.story.length - 1) {
         this.activeStoryItem++;
@@ -82,4 +85,12 @@ export class StoryViewerComponent implements OnInit {
     console.log(new Date());
   }
 
+  public nextText() {
+    if (this.activeText < this.story[this.activeStoryItem].ui_text.length - 1) {
+      setTimeout(() => {
+        this.activeText++;
+        this.nextText();
+      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)) * 1000);
+    }
+  }
 }
