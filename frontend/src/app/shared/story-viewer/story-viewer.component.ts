@@ -9,16 +9,20 @@ import { StoryItemComponent } from './story-item/story-item.component';
   styleUrls: ['./story-viewer.component.scss']
 })
 export class StoryViewerComponent implements OnInit {
+  public synth = window.speechSynthesis;
 
   public story: StoryItem[] = [{
     id: "dgh",
-    duration: 2
+    duration: 2,
+    tts_text: "Hallo Welt!"
   }, {
     id: "xc-lknv",
-    duration: 1
+    duration: 1,
+    tts_text: "Story text"
   }, {
     id: "cmh",
-    duration: 1
+    duration: 1,
+    tts_text: "Ende"
   }];
 
   public activeStoryItem: number = 0;
@@ -33,6 +37,12 @@ export class StoryViewerComponent implements OnInit {
   }
 
   private nextStoryItem(time: number) {
+    this.synth.cancel();
+    if (this.story[this.activeStoryItem].tts_text) {
+      let utterance1 = new SpeechSynthesisUtterance(this.story[this.activeStoryItem].tts_text);
+      utterance1.lang = 'en-US';
+      this.synth.speak(utterance1);
+    }
     setTimeout(() => {
       if (this.activeStoryItem < this.story.length - 1) {
         this.activeStoryItem++;
