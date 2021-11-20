@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, send_from_directory
 from trends import get_trends
 from predictions import get_predictions
 from comparisons import get_comparisons
@@ -56,6 +56,9 @@ logger = logging.getLogger('MAIN')
 
 logger.debug('Parsing finished')
 
+@app.route('/insights/market')
+def get_market_insights():
+    return send_from_directory('dataset/turkish_market_insights', 'market_insights.json')
 
 @app.route('/')
 def hello_world():
