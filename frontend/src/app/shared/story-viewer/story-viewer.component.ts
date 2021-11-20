@@ -47,7 +47,18 @@ export class StoryViewerComponent implements OnInit {
     duration: 1,
     keywords: ["baguette"],
     date: new Date(),
-    tts_text: "end"
+    tts_text: "end",
+    poll: {
+      question: "Does this require instant action?",
+      answerA: {
+        text: "Yes",
+        votes: 2,
+      },
+      answerB: {
+        text: "No",
+        votes: 5,
+      }
+    }
   }];
 
   public activeStoryItem: number = 0;

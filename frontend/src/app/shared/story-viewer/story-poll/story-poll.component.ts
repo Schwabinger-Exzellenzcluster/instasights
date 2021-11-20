@@ -1,5 +1,6 @@
+import { formatNumber } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Poll } from 'src/app/services/story/story.model';
+import { Answer, Poll } from 'src/app/services/story/story.model';
 
 @Component({
   selector: 'app-story-poll',
@@ -27,15 +28,33 @@ export class StoryPollComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  answerA(): void {
-    console.log("Answered a");
+  getAnswerText(answer: Answer) {
+    if (this.answered) {
+      return `${formatNumber(this.getAnswerPercent(answer.votes), "en", "1.0-0")}%`;
+    } else {
+      return answer.text;
+    }
+  }
+
+  getAnswerWidth(answer: Answer) {
+    if (!this.answered) {
+      return "100%";
+    } else {
+      const diffFromFifty = this.getAnswerPercent(answer.votes) - 50;
+      console.log(diffFromFifty);
+      return `${100 + diffFromFifty}%`;
+    }
+  }
+
+  private getAnswerPercent(votes: number) {
+    return (votes / (this.poll.answerA.votes + this.poll.answerB.votes)) * 100;
+  }
+
+  answer(answer: Answer): void {
+    if (this.answered) {
+      return;
+    }
     this.answered = true;
-    this.poll.answerA.votes += 1;
+    answer.votes += 1;
   }
-
-  answerB(): void {
-    this.answered = false;
-    this.poll.answerB.votes += 1;
-  }
-
 }

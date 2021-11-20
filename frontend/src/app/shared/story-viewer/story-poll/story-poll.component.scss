@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  p {
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  .question {
+    text-align: center;
     color: white;
+    font-size: large;
+    margin-bottom: 5px;
   }
 }
 
@@ -12,19 +18,27 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .answer {
   width: 100%;
   height: 100%;
-  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  transition: width 0.5s;
 }
 
 .a {
-  background-color: black;
+  color: green;
+  border-right: 1px solid grey;
 }
 .b {
-  background-color: red;
+  color: red;
+  border-left: 1px solid grey;
 }
 

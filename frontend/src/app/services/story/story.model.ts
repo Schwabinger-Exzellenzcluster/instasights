@@ -26,12 +26,11 @@ export interface UiText {
 
 export interface Poll {
   question: string;
-  answerA: {
-    text: string;
-    votes: number;
-  },
-  answerB: {
-    text: string;
-    votes: number;
-  }
+  answerA: Answer
+  answerB: Answer
+}
+
+export interface Answer {
+  text: string,
+  votes: number
 }

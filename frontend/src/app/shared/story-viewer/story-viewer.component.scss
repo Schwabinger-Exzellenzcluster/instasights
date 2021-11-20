@@ -1,110 +1,119 @@
 @keyframes growHorizontally {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .story-viewer {
+  height: 100vh;
+  aspect-ratio: 9/16;
+  background-color: #000;
+  animation: grow 0.1s;
+  .timeline {
+    height: 5px;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .timeline-item {
+      border-radius: 5px;
+      height: 100%;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.25);
+      &.active {
+        background-color: #fff;
+        width: 100%;
+        &.growing {
+          animation-name: growHorizontally;
+          animation-duration: 0.5s;
+          animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
+      }
+    }
+  }
+  ion-icon {
+    color: #fff;
+    font-size: 42px;
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+  }
+  .content,
+  .background,
+  .foreground,
+  .overlay {
     height: 100vh;
     aspect-ratio: 9/16;
-    background-color: #000;
-    animation: grow 0.1s;
-    .timeline {
-        height: 5px;
-        width: calc(100% - 20px);
-        margin: 0px 10px;
-        margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .timeline-item {
-            border-radius: 5px;
-            height: 100%;
-            width: 50px;
-            background-color: rgba(255, 255, 255, 0.25);
-            &.active {
-                background-color: #fff;
-                width: 100%;
-                &.growing {
-                    animation-name: growHorizontally;
-                    animation-duration: 0.5s;
-                    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-                }
-            }
-        }
-    }
-    ion-icon {
-        color: #fff;
-        font-size: 42px;
-        cursor: pointer;
-        float: right;
-        margin-right: 10px;
-    }
-    .content,
-    .background,
-    .foreground,
-    .overlay {
-        height: 100vh;
-        aspect-ratio: 9/16;
-        position: absolute;
-        top: 0px;
-        overflow: hidden;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+  }
+
+  .overlay {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      width: 100%;
     }
 
-    .foreground {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    app-story-poll {
+      position: absolute;
+      bottom: 10px;
+      z-index: 100;
     }
+  }
 
-    .background {
-        background-size: cover;
-        background-position: center center;
-        opacity: 0.25;
-    }
+  .foreground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .content {
-        background-color: #fff;
-        z-index: 0;
-        h1 {
-            font-size: 56pt;
-            color: #fff;
-            /*text-shadow: #000 0px 0px 10px;*/
-        }
-        h2 {
-            font-size: 36pt;
-            color: #fff;
-            text-shadow: #000 0px 0px 10px;
-        }
-        img {
-            width: calc(100% - 20px);
-            border-radius: 10px;
-        }
-        ion-spinner {
-            color: #fff;
-            width: 80px;
-            height: 80px;
-        }
-        app-story-poll {
-          position: absolute;
-          bottom: 10px;
-        }
-    }
+  .background {
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.25;
+  }
 
-    .overlay {
-        z-index: 1;
+  .content {
+    background-color: #fff;
+    z-index: 0;
+    h1 {
+      font-size: 56pt;
+      color: #fff;
+      /*text-shadow: #000 0px 0px 10px;*/
     }
+    h2 {
+      font-size: 36pt;
+      color: #fff;
+      text-shadow: #000 0px 0px 10px;
+    }
+    img {
+      width: calc(100% - 20px);
+      border-radius: 10px;
+    }
+    ion-spinner {
+      color: #fff;
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
 @keyframes grow {
-    from {
-        transform: scale(0.95);
-    }
-    to {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
 }
