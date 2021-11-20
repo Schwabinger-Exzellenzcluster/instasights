@@ -6,6 +6,7 @@ class UiTextItem:
         self.text = text
         self.relevance = relevance
 
+
 class Insight:
     topic: str
     impact: int
@@ -18,3 +19,12 @@ class Insight:
         self.ui_text = ui_text
         self.voice_text = voice_text
 
+    def to_dict(self):
+        d = self.__dict__
+        d['ui_text'] = list(
+            map(
+                lambda item: item.__dict__,
+                d['ui_text']
+            )
+        )
+        return d

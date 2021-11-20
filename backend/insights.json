@@ -1,0 +1,577 @@
+[
+  {
+    "topic": "sales",
+    "impact": 0.7275537084623562,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "global",
+        "relevance": 0
+      },
+      {
+        "text": "global",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "-7.275537084623562%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "year",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of global global are down -7.275537084623562% this year"
+  },
+  {
+    "topic": "sales",
+    "impact": 2.0418269341547446,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST04",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-20.418269341547447%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "sales of store type ST04 are predicted to fall -20.418269341547447% within 30 days"
+  },
+  {
+    "topic": "revenue",
+    "impact": 1.1809751378919597,
+    "ui_text": [
+      {
+        "text": "revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST04",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "rise",
+        "relevance": 1
+      },
+      {
+        "text": "11.809751378919596%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "revenue of store type ST04 are predicted to rise 11.809751378919596% within 30 days"
+  },
+  {
+    "topic": "sales",
+    "impact": 1.4322388425519172,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST03",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-14.322388425519172%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "sales of store type ST03 are predicted to fall -14.322388425519172% within 30 days"
+  },
+  {
+    "topic": "revenue",
+    "impact": 1.1968800743967056,
+    "ui_text": [
+      {
+        "text": "revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST03",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-11.968800743967057%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "revenue of store type ST03 are predicted to fall -11.968800743967057% within 30 days"
+  },
+  {
+    "topic": "sales",
+    "impact": 2.124192383028576,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST01",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-21.241923830285756%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "sales of store type ST01 are predicted to fall -21.241923830285756% within 30 days"
+  },
+  {
+    "topic": "revenue",
+    "impact": 2.5570514197347927,
+    "ui_text": [
+      {
+        "text": "revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST01",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-25.570514197347926%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "revenue of store type ST01 are predicted to fall -25.570514197347926% within 30 days"
+  },
+  {
+    "topic": "sales",
+    "impact": 0.5417101399146185,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST02",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "-5.417101399146185%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "sales of store type ST02 are predicted to fall -5.417101399146185% within 30 days"
+  },
+  {
+    "topic": "revenue",
+    "impact": 2.3940430104159893,
+    "ui_text": [
+      {
+        "text": "revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "store type",
+        "relevance": 0
+      },
+      {
+        "text": "ST02",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "rise",
+        "relevance": 1
+      },
+      {
+        "text": "23.940430104159894%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30",
+        "relevance": 0.5
+      },
+      {
+        "text": "days",
+        "relevance": 0
+      }
+    ],
+    "voice_text": "revenue of store type ST02 are predicted to rise 23.940430104159894% within 30 days"
+  },
+  {
+    "topic": "sales",
+    "impact": 1.311154598825832,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "product group",
+        "relevance": 0
+      },
+      {
+        "text": "H01",
+        "relevance": 1
+      },
+      {
+        "text": "fell",
+        "relevance": 1
+      },
+      {
+        "text": "-39.334637964774956%",
+        "relevance": 1
+      },
+      {
+        "text": "from",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-26 00:00:00",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of product group H01 fell -39.334637964774956% from 2019-08-26 00:00:00"
+  },
+  {
+    "topic": "sales",
+    "impact": 0.8951235804943222,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "product group",
+        "relevance": 0
+      },
+      {
+        "text": "H03",
+        "relevance": 1
+      },
+      {
+        "text": "fell",
+        "relevance": 1
+      },
+      {
+        "text": "26.853707414829664%",
+        "relevance": 1
+      },
+      {
+        "text": "from",
+        "relevance": 0
+      },
+      {
+        "text": "2017-11-02 00:00:00",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of product group H03 fell 26.853707414829664% from 2017-11-02 00:00:00"
+  },
+  {
+    "topic": "sales",
+    "impact": 0.6741484261370778,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "product group",
+        "relevance": 0
+      },
+      {
+        "text": "H00",
+        "relevance": 1
+      },
+      {
+        "text": "fell",
+        "relevance": 1
+      },
+      {
+        "text": "20.224452784112334%",
+        "relevance": 1
+      },
+      {
+        "text": "from",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-29 00:00:00",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of product group H00 fell 20.224452784112334% from 2019-08-29 00:00:00"
+  },
+  {
+    "topic": "sales",
+    "impact": 0.7302464869845656,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "product group",
+        "relevance": 0
+      },
+      {
+        "text": "H02",
+        "relevance": 1
+      },
+      {
+        "text": "fell",
+        "relevance": 1
+      },
+      {
+        "text": "-21.90739460953697%",
+        "relevance": 1
+      },
+      {
+        "text": "from",
+        "relevance": 0
+      },
+      {
+        "text": "2019-05-28 00:00:00",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of product group H02 fell -21.90739460953697% from 2019-05-28 00:00:00"
+  }
+]
