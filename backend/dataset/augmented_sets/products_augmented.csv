@@ -1,0 +1,700 @@
+﻿id;word;category
+P0001;Magazines;drugstore_goods
+P0002;Laundry detergent;drugstore_goods
+P0003;Energy drinks;food_beverages
+P0004;Candy;food_beverages
+P0005;Toothpaste;drugstore_goods
+P0006;Sunblock;drugstore_goods
+P0007;Vitamins;drugstore_goods
+P0008;Cleaning supplies;drugstore_goods
+P0009;Soda;food_beverages
+P0010;DVDs and movies;electronics
+P0011;TV;electronics
+P0012;Phones;electronics
+P0013;Handbags;luxury
+P0014;Furniture;luxury
+P0015;suits;luxury
+P0016;Electronic devices;electronics
+P0017;Personal hygiene products;drugstore_goods
+P0018;Vacuum cleaners;drugstore_goods
+P0019;Watches;luxury
+P0020;Designer clothing;luxury
+P0021;shoes;luxury
+P0022;Jewelry;luxury
+P0023;Perfumes;drugstore_goods
+P0024;Magazines;drugstore_goods
+P0025;Laundry detergent;drugstore_goods
+P0026;Energy drinks;food_beverages
+P0027;Candy;food_beverages
+P0028;Toothpaste;drugstore_goods
+P0029;Sunblock;drugstore_goods
+P0030;Vitamins;drugstore_goods
+P0031;Cleaning supplies;drugstore_goods
+P0032;Soda;food_beverages
+P0033;DVDs and movies;electronics
+P0034;TV;electronics
+P0035;Phones;electronics
+P0036;Handbags;luxury
+P0037;Furniture;luxury
+P0038;suits;luxury
+P0039;Electronic devices;electronics
+P0040;Personal hygiene products;drugstore_goods
+P0041;Vacuum cleaners;drugstore_goods
+P0042;Watches;luxury
+P0043;Designer clothing;luxury
+P0044;shoes;luxury
+P0045;Jewelry;luxury
+P0046;Perfumes;drugstore_goods
+P0047;Magazines;drugstore_goods
+P0048;Laundry detergent;drugstore_goods
+P0049;Energy drinks;food_beverages
+P0050;Candy;food_beverages
+P0051;Toothpaste;drugstore_goods
+P0052;Sunblock;drugstore_goods
+P0053;Vitamins;drugstore_goods
+P0054;Cleaning supplies;drugstore_goods
+P0055;Soda;food_beverages
+P0056;DVDs and movies;electronics
+P0057;TV;electronics
+P0058;Phones;electronics
+P0059;Handbags;luxury
+P0060;Furniture;luxury
+P0061;suits;luxury
+P0062;Electronic devices;electronics
+P0063;Personal hygiene products;drugstore_goods
+P0064;Vacuum cleaners;drugstore_goods
+P0065;Watches;luxury
+P0066;Designer clothing;luxury
+P0067;shoes;luxury
+P0068;Jewelry;luxury
+P0069;Perfumes;drugstore_goods
+P0070;Magazines;drugstore_goods
+P0071;Laundry detergent;drugstore_goods
+P0072;Energy drinks;food_beverages
+P0073;Candy;food_beverages
+P0074;Toothpaste;drugstore_goods
+P0075;Sunblock;drugstore_goods
+P0076;Vitamins;drugstore_goods
+P0077;Cleaning supplies;drugstore_goods
+P0078;Soda;food_beverages
+P0079;DVDs and movies;electronics
+P0080;TV;electronics
+P0081;Phones;electronics
+P0082;Handbags;luxury
+P0083;Furniture;luxury
+P0084;suits;luxury
+P0085;Electronic devices;electronics
+P0086;Personal hygiene products;drugstore_goods
+P0087;Vacuum cleaners;drugstore_goods
+P0088;Watches;luxury
+P0089;Designer clothing;luxury
+P0090;shoes;luxury
+P0091;Jewelry;luxury
+P0092;Perfumes;drugstore_goods
+P0093;Magazines;drugstore_goods
+P0094;Laundry detergent;drugstore_goods
+P0095;Energy drinks;food_beverages
+P0096;Candy;food_beverages
+P0097;Toothpaste;drugstore_goods
+P0098;Sunblock;drugstore_goods
+P0099;Vitamins;drugstore_goods
+P0100;Cleaning supplies;drugstore_goods
+P0101;Soda;food_beverages
+P0102;DVDs and movies;electronics
+P0103;TV;electronics
+P0104;Phones;electronics
+P0105;Handbags;luxury
+P0106;Furniture;luxury
+P0107;suits;luxury
+P0108;Electronic devices;electronics
+P0109;Personal hygiene products;drugstore_goods
+P0110;Vacuum cleaners;drugstore_goods
+P0111;Watches;luxury
+P0112;Designer clothing;luxury
+P0113;shoes;luxury
+P0114;Jewelry;luxury
+P0115;Perfumes;drugstore_goods
+P0116;Magazines;drugstore_goods
+P0117;Laundry detergent;drugstore_goods
+P0118;Energy drinks;food_beverages
+P0119;Candy;food_beverages
+P0120;Toothpaste;drugstore_goods
+P0121;Sunblock;drugstore_goods
+P0122;Vitamins;drugstore_goods
+P0123;Cleaning supplies;drugstore_goods
+P0124;Soda;food_beverages
+P0125;DVDs and movies;electronics
+P0126;TV;electronics
+P0127;Phones;electronics
+P0128;Handbags;luxury
+P0129;Furniture;luxury
+P0130;suits;luxury
+P0131;Electronic devices;electronics
+P0132;Personal hygiene products;drugstore_goods
+P0133;Vacuum cleaners;drugstore_goods
+P0134;Watches;luxury
+P0135;Designer clothing;luxury
+P0136;shoes;luxury
+P0137;Jewelry;luxury
+P0138;Perfumes;drugstore_goods
+P0139;Magazines;drugstore_goods
+P0140;Laundry detergent;drugstore_goods
+P0141;Energy drinks;food_beverages
+P0142;Candy;food_beverages
+P0143;Toothpaste;drugstore_goods
+P0144;Sunblock;drugstore_goods
+P0145;Vitamins;drugstore_goods
+P0146;Cleaning supplies;drugstore_goods
+P0147;Soda;food_beverages
+P0148;DVDs and movies;electronics
+P0149;TV;electronics
+P0150;Phones;electronics
+P0151;Handbags;luxury
+P0152;Furniture;luxury
+P0153;suits;luxury
+P0154;Electronic devices;electronics
+P0155;Personal hygiene products;drugstore_goods
+P0156;Vacuum cleaners;drugstore_goods
+P0157;Watches;luxury
+P0158;Designer clothing;luxury
+P0159;shoes;luxury
+P0160;Jewelry;luxury
+P0161;Perfumes;drugstore_goods
+P0162;Magazines;drugstore_goods
+P0163;Laundry detergent;drugstore_goods
+P0164;Energy drinks;food_beverages
+P0165;Candy;food_beverages
+P0166;Toothpaste;drugstore_goods
+P0167;Sunblock;drugstore_goods
+P0168;Vitamins;drugstore_goods
+P0169;Cleaning supplies;drugstore_goods
+P0170;Soda;food_beverages
+P0171;DVDs and movies;electronics
+P0172;TV;electronics
+P0173;Phones;electronics
+P0174;Handbags;luxury
+P0175;Furniture;luxury
+P0176;suits;luxury
+P0177;Electronic devices;electronics
+P0178;Personal hygiene products;drugstore_goods
+P0179;Vacuum cleaners;drugstore_goods
+P0180;Watches;luxury
+P0181;Designer clothing;luxury
+P0182;shoes;luxury
+P0183;Jewelry;luxury
+P0184;Perfumes;drugstore_goods
+P0185;Magazines;drugstore_goods
+P0186;Laundry detergent;drugstore_goods
+P0187;Energy drinks;food_beverages
+P0188;Candy;food_beverages
+P0189;Toothpaste;drugstore_goods
+P0190;Sunblock;drugstore_goods
+P0191;Vitamins;drugstore_goods
+P0192;Cleaning supplies;drugstore_goods
+P0193;Soda;food_beverages
+P0194;DVDs and movies;electronics
+P0195;TV;electronics
+P0196;Phones;electronics
+P0197;Handbags;luxury
+P0198;Furniture;luxury
+P0199;suits;luxury
+P0200;Electronic devices;electronics
+P0201;Personal hygiene products;drugstore_goods
+P0202;Vacuum cleaners;drugstore_goods
+P0203;Watches;luxury
+P0204;Designer clothing;luxury
+P0205;shoes;luxury
+P0206;Jewelry;luxury
+P0207;Perfumes;drugstore_goods
+P0208;Magazines;drugstore_goods
+P0209;Laundry detergent;drugstore_goods
+P0210;Energy drinks;food_beverages
+P0211;Candy;food_beverages
+P0212;Toothpaste;drugstore_goods
+P0213;Sunblock;drugstore_goods
+P0214;Vitamins;drugstore_goods
+P0215;Cleaning supplies;drugstore_goods
+P0216;Soda;food_beverages
+P0217;DVDs and movies;electronics
+P0218;TV;electronics
+P0219;Phones;electronics
+P0220;Handbags;luxury
+P0221;Furniture;luxury
+P0222;suits;luxury
+P0223;Electronic devices;electronics
+P0224;Personal hygiene products;drugstore_goods
+P0225;Vacuum cleaners;drugstore_goods
+P0226;Watches;luxury
+P0227;Designer clothing;luxury
+P0228;shoes;luxury
+P0229;Jewelry;luxury
+P0230;Perfumes;drugstore_goods
+P0231;Magazines;drugstore_goods
+P0232;Laundry detergent;drugstore_goods
+P0233;Energy drinks;food_beverages
+P0234;Candy;food_beverages
+P0235;Toothpaste;drugstore_goods
+P0236;Sunblock;drugstore_goods
+P0237;Vitamins;drugstore_goods
+P0238;Cleaning supplies;drugstore_goods
+P0239;Soda;food_beverages
+P0240;DVDs and movies;electronics
+P0241;TV;electronics
+P0242;Phones;electronics
+P0243;Handbags;luxury
+P0244;Furniture;luxury
+P0245;suits;luxury
+P0246;Electronic devices;electronics
+P0247;Personal hygiene products;drugstore_goods
+P0248;Vacuum cleaners;drugstore_goods
+P0249;Watches;luxury
+P0250;Designer clothing;luxury
+P0251;shoes;luxury
+P0252;Jewelry;luxury
+P0253;Perfumes;drugstore_goods
+P0254;Magazines;drugstore_goods
+P0255;Laundry detergent;drugstore_goods
+P0256;Energy drinks;food_beverages
+P0257;Candy;food_beverages
+P0258;Toothpaste;drugstore_goods
+P0259;Sunblock;drugstore_goods
+P0260;Vitamins;drugstore_goods
+P0261;Cleaning supplies;drugstore_goods
+P0262;Soda;food_beverages
+P0263;DVDs and movies;electronics
+P0264;TV;electronics
+P0265;Phones;electronics
+P0266;Handbags;luxury
+P0267;Furniture;luxury
+P0268;suits;luxury
+P0269;Electronic devices;electronics
+P0270;Personal hygiene products;drugstore_goods
+P0271;Vacuum cleaners;drugstore_goods
+P0272;Watches;luxury
+P0273;Designer clothing;luxury
+P0274;shoes;luxury
+P0275;Jewelry;luxury
+P0276;Perfumes;drugstore_goods
+P0277;Magazines;drugstore_goods
+P0278;Laundry detergent;drugstore_goods
+P0279;Energy drinks;food_beverages
+P0280;Candy;food_beverages
+P0281;Toothpaste;drugstore_goods
+P0282;Sunblock;drugstore_goods
+P0283;Vitamins;drugstore_goods
+P0284;Cleaning supplies;drugstore_goods
+P0285;Soda;food_beverages
+P0286;DVDs and movies;electronics
+P0287;TV;electronics
+P0288;Phones;electronics
+P0289;Handbags;luxury
+P0290;Furniture;luxury
+P0291;suits;luxury
+P0292;Electronic devices;electronics
+P0293;Personal hygiene products;drugstore_goods
+P0294;Vacuum cleaners;drugstore_goods
+P0295;Watches;luxury
+P0296;Designer clothing;luxury
+P0297;shoes;luxury
+P0298;Jewelry;luxury
+P0299;Perfumes;drugstore_goods
+P0300;Magazines;drugstore_goods
+P0301;Laundry detergent;drugstore_goods
+P0302;Energy drinks;food_beverages
+P0303;Candy;food_beverages
+P0304;Toothpaste;drugstore_goods
+P0305;Sunblock;drugstore_goods
+P0306;Vitamins;drugstore_goods
+P0307;Cleaning supplies;drugstore_goods
+P0308;Soda;food_beverages
+P0309;DVDs and movies;electronics
+P0310;TV;electronics
+P0311;Phones;electronics
+P0312;Handbags;luxury
+P0313;Furniture;luxury
+P0314;suits;luxury
+P0315;Electronic devices;electronics
+P0316;Personal hygiene products;drugstore_goods
+P0317;Vacuum cleaners;drugstore_goods
+P0318;Watches;luxury
+P0319;Designer clothing;luxury
+P0320;shoes;luxury
+P0321;Jewelry;luxury
+P0322;Perfumes;drugstore_goods
+P0323;Magazines;drugstore_goods
+P0324;Laundry detergent;drugstore_goods
+P0325;Energy drinks;food_beverages
+P0326;Candy;food_beverages
+P0327;Toothpaste;drugstore_goods
+P0328;Sunblock;drugstore_goods
+P0329;Vitamins;drugstore_goods
+P0330;Cleaning supplies;drugstore_goods
+P0331;Soda;food_beverages
+P0332;DVDs and movies;electronics
+P0333;TV;electronics
+P0334;Phones;electronics
+P0335;Handbags;luxury
+P0336;Furniture;luxury
+P0337;suits;luxury
+P0338;Electronic devices;electronics
+P0339;Personal hygiene products;drugstore_goods
+P0340;Vacuum cleaners;drugstore_goods
+P0341;Watches;luxury
+P0342;Designer clothing;luxury
+P0343;shoes;luxury
+P0344;Jewelry;luxury
+P0345;Perfumes;drugstore_goods
+P0346;Magazines;drugstore_goods
+P0347;Laundry detergent;drugstore_goods
+P0348;Energy drinks;food_beverages
+P0349;Candy;food_beverages
+P0350;Toothpaste;drugstore_goods
+P0351;Sunblock;drugstore_goods
+P0352;Vitamins;drugstore_goods
+P0353;Cleaning supplies;drugstore_goods
+P0354;Soda;food_beverages
+P0355;DVDs and movies;electronics
+P0356;TV;electronics
+P0357;Phones;electronics
+P0358;Handbags;luxury
+P0359;Furniture;luxury
+P0360;suits;luxury
+P0361;Electronic devices;electronics
+P0362;Personal hygiene products;drugstore_goods
+P0363;Vacuum cleaners;drugstore_goods
+P0364;Watches;luxury
+P0365;Designer clothing;luxury
+P0366;shoes;luxury
+P0367;Jewelry;luxury
+P0368;Perfumes;drugstore_goods
+P0369;Magazines;drugstore_goods
+P0370;Laundry detergent;drugstore_goods
+P0371;Energy drinks;food_beverages
+P0372;Candy;food_beverages
+P0373;Toothpaste;drugstore_goods
+P0374;Sunblock;drugstore_goods
+P0375;Vitamins;drugstore_goods
+P0376;Cleaning supplies;drugstore_goods
+P0377;Soda;food_beverages
+P0378;DVDs and movies;electronics
+P0379;TV;electronics
+P0380;Phones;electronics
+P0381;Handbags;luxury
+P0382;Furniture;luxury
+P0383;suits;luxury
+P0384;Electronic devices;electronics
+P0385;Personal hygiene products;drugstore_goods
+P0386;Vacuum cleaners;drugstore_goods
+P0387;Watches;luxury
+P0388;Designer clothing;luxury
+P0389;shoes;luxury
+P0390;Jewelry;luxury
+P0391;Perfumes;drugstore_goods
+P0392;Magazines;drugstore_goods
+P0393;Laundry detergent;drugstore_goods
+P0394;Energy drinks;food_beverages
+P0395;Candy;food_beverages
+P0396;Toothpaste;drugstore_goods
+P0397;Sunblock;drugstore_goods
+P0398;Vitamins;drugstore_goods
+P0399;Cleaning supplies;drugstore_goods
+P0400;Soda;food_beverages
+P0401;DVDs and movies;electronics
+P0402;TV;electronics
+P0403;Phones;electronics
+P0404;Handbags;luxury
+P0405;Furniture;luxury
+P0406;suits;luxury
+P0407;Electronic devices;electronics
+P0408;Personal hygiene products;drugstore_goods
+P0409;Vacuum cleaners;drugstore_goods
+P0410;Watches;luxury
+P0411;Designer clothing;luxury
+P0412;shoes;luxury
+P0413;Jewelry;luxury
+P0414;Perfumes;drugstore_goods
+P0415;Magazines;drugstore_goods
+P0416;Laundry detergent;drugstore_goods
+P0417;Energy drinks;food_beverages
+P0418;Candy;food_beverages
+P0419;Toothpaste;drugstore_goods
+P0420;Sunblock;drugstore_goods
+P0421;Vitamins;drugstore_goods
+P0422;Cleaning supplies;drugstore_goods
+P0423;Soda;food_beverages
+P0424;DVDs and movies;electronics
+P0425;TV;electronics
+P0426;Phones;electronics
+P0427;Handbags;luxury
+P0428;Furniture;luxury
+P0429;suits;luxury
+P0430;Electronic devices;electronics
+P0431;Personal hygiene products;drugstore_goods
+P0432;Vacuum cleaners;drugstore_goods
+P0433;Watches;luxury
+P0434;Designer clothing;luxury
+P0435;shoes;luxury
+P0436;Jewelry;luxury
+P0437;Perfumes;drugstore_goods
+P0438;Magazines;drugstore_goods
+P0439;Laundry detergent;drugstore_goods
+P0440;Energy drinks;food_beverages
+P0441;Candy;food_beverages
+P0442;Toothpaste;drugstore_goods
+P0443;Sunblock;drugstore_goods
+P0444;Vitamins;drugstore_goods
+P0445;Cleaning supplies;drugstore_goods
+P0446;Soda;food_beverages
+P0447;DVDs and movies;electronics
+P0448;TV;electronics
+P0449;Phones;electronics
+P0450;Handbags;luxury
+P0451;Furniture;luxury
+P0452;suits;luxury
+P0453;Electronic devices;electronics
+P0454;Personal hygiene products;drugstore_goods
+P0455;Vacuum cleaners;drugstore_goods
+P0456;Watches;luxury
+P0457;Designer clothing;luxury
+P0458;shoes;luxury
+P0459;Jewelry;luxury
+P0460;Perfumes;drugstore_goods
+P0461;Magazines;drugstore_goods
+P0462;Laundry detergent;drugstore_goods
+P0463;Energy drinks;food_beverages
+P0464;Candy;food_beverages
+P0465;Toothpaste;drugstore_goods
+P0466;Sunblock;drugstore_goods
+P0467;Vitamins;drugstore_goods
+P0468;Cleaning supplies;drugstore_goods
+P0469;Soda;food_beverages
+P0470;DVDs and movies;electronics
+P0471;TV;electronics
+P0472;Phones;electronics
+P0473;Handbags;luxury
+P0474;Furniture;luxury
+P0475;suits;luxury
+P0476;Electronic devices;electronics
+P0477;Personal hygiene products;drugstore_goods
+P0478;Vacuum cleaners;drugstore_goods
+P0479;Watches;luxury
+P0480;Designer clothing;luxury
+P0481;shoes;luxury
+P0482;Jewelry;luxury
+P0483;Perfumes;drugstore_goods
+P0484;Magazines;drugstore_goods
+P0485;Laundry detergent;drugstore_goods
+P0486;Energy drinks;food_beverages
+P0487;Candy;food_beverages
+P0488;Toothpaste;drugstore_goods
+P0489;Sunblock;drugstore_goods
+P0490;Vitamins;drugstore_goods
+P0491;Cleaning supplies;drugstore_goods
+P0492;Soda;food_beverages
+P0493;DVDs and movies;electronics
+P0494;TV;electronics
+P0495;Phones;electronics
+P0496;Handbags;luxury
+P0497;Furniture;luxury
+P0498;suits;luxury
+P0499;Electronic devices;electronics
+P0500;Personal hygiene products;drugstore_goods
+P0501;Vacuum cleaners;drugstore_goods
+P0502;Watches;luxury
+P0503;Designer clothing;luxury
+P0504;shoes;luxury
+P0505;Jewelry;luxury
+P0506;Perfumes;drugstore_goods
+P0507;Magazines;drugstore_goods
+P0508;Laundry detergent;drugstore_goods
+P0509;Energy drinks;food_beverages
+P0510;Candy;food_beverages
+P0511;Toothpaste;drugstore_goods
+P0512;Sunblock;drugstore_goods
+P0513;Vitamins;drugstore_goods
+P0514;Cleaning supplies;drugstore_goods
+P0515;Soda;food_beverages
+P0516;DVDs and movies;electronics
+P0517;TV;electronics
+P0518;Phones;electronics
+P0519;Handbags;luxury
+P0520;Furniture;luxury
+P0521;suits;luxury
+P0522;Electronic devices;electronics
+P0523;Personal hygiene products;drugstore_goods
+P0524;Vacuum cleaners;drugstore_goods
+P0525;Watches;luxury
+P0526;Designer clothing;luxury
+P0527;shoes;luxury
+P0528;Jewelry;luxury
+P0529;Perfumes;drugstore_goods
+P0530;Magazines;drugstore_goods
+P0531;Laundry detergent;drugstore_goods
+P0532;Energy drinks;food_beverages
+P0533;Candy;food_beverages
+P0534;Toothpaste;drugstore_goods
+P0535;Sunblock;drugstore_goods
+P0536;Vitamins;drugstore_goods
+P0537;Cleaning supplies;drugstore_goods
+P0538;Soda;food_beverages
+P0539;DVDs and movies;electronics
+P0540;TV;electronics
+P0541;Phones;electronics
+P0542;Handbags;luxury
+P0543;Furniture;luxury
+P0544;suits;luxury
+P0545;Electronic devices;electronics
+P0546;Personal hygiene products;drugstore_goods
+P0547;Vacuum cleaners;drugstore_goods
+P0548;Watches;luxury
+P0549;Designer clothing;luxury
+P0550;shoes;luxury
+P0551;Jewelry;luxury
+P0552;Perfumes;drugstore_goods
+P0553;Magazines;drugstore_goods
+P0554;Laundry detergent;drugstore_goods
+P0555;Energy drinks;food_beverages
+P0556;Candy;food_beverages
+P0557;Toothpaste;drugstore_goods
+P0558;Sunblock;drugstore_goods
+P0559;Vitamins;drugstore_goods
+P0560;Cleaning supplies;drugstore_goods
+P0561;Soda;food_beverages
+P0562;DVDs and movies;electronics
+P0563;TV;electronics
+P0564;Phones;electronics
+P0565;Handbags;luxury
+P0566;Furniture;luxury
+P0567;suits;luxury
+P0568;Electronic devices;electronics
+P0569;Personal hygiene products;drugstore_goods
+P0570;Vacuum cleaners;drugstore_goods
+P0571;Watches;luxury
+P0572;Designer clothing;luxury
+P0573;shoes;luxury
+P0574;Jewelry;luxury
+P0575;Perfumes;drugstore_goods
+P0576;Magazines;drugstore_goods
+P0577;Laundry detergent;drugstore_goods
+P0578;Energy drinks;food_beverages
+P0579;Candy;food_beverages
+P0580;Toothpaste;drugstore_goods
+P0581;Sunblock;drugstore_goods
+P0582;Vitamins;drugstore_goods
+P0583;Cleaning supplies;drugstore_goods
+P0584;Soda;food_beverages
+P0585;DVDs and movies;electronics
+P0586;TV;electronics
+P0587;Phones;electronics
+P0588;Handbags;luxury
+P0589;Furniture;luxury
+P0590;suits;luxury
+P0591;Electronic devices;electronics
+P0592;Personal hygiene products;drugstore_goods
+P0593;Vacuum cleaners;drugstore_goods
+P0594;Watches;luxury
+P0595;Designer clothing;luxury
+P0596;shoes;luxury
+P0597;Jewelry;luxury
+P0598;Perfumes;drugstore_goods
+P0599;Magazines;drugstore_goods
+P0600;Laundry detergent;drugstore_goods
+P0601;Energy drinks;food_beverages
+P0602;Candy;food_beverages
+P0603;Toothpaste;drugstore_goods
+P0604;Sunblock;drugstore_goods
+P0605;Vitamins;drugstore_goods
+P0606;Cleaning supplies;drugstore_goods
+P0607;Soda;food_beverages
+P0608;DVDs and movies;electronics
+P0609;TV;electronics
+P0610;Phones;electronics
+P0611;Handbags;luxury
+P0612;Furniture;luxury
+P0613;suits;luxury
+P0614;Electronic devices;electronics
+P0615;Personal hygiene products;drugstore_goods
+P0616;Vacuum cleaners;drugstore_goods
+P0617;Watches;luxury
+P0618;Designer clothing;luxury
+P0619;shoes;luxury
+P0620;Jewelry;luxury
+P0621;Perfumes;drugstore_goods
+P0622;Magazines;drugstore_goods
+P0623;Laundry detergent;drugstore_goods
+P0624;Energy drinks;food_beverages
+P0625;Candy;food_beverages
+P0626;Toothpaste;drugstore_goods
+P0627;Sunblock;drugstore_goods
+P0628;Vitamins;drugstore_goods
+P0629;Cleaning supplies;drugstore_goods
+P0630;Soda;food_beverages
+P0631;DVDs and movies;electronics
+P0632;TV;electronics
+P0633;Phones;electronics
+P0634;Handbags;luxury
+P0635;Furniture;luxury
+P0636;suits;luxury
+P0637;Electronic devices;electronics
+P0638;Personal hygiene products;drugstore_goods
+P0639;Vacuum cleaners;drugstore_goods
+P0640;Watches;luxury
+P0641;Designer clothing;luxury
+P0642;shoes;luxury
+P0643;Jewelry;luxury
+P0644;Perfumes;drugstore_goods
+P0645;Magazines;drugstore_goods
+P0646;Laundry detergent;drugstore_goods
+P0647;Energy drinks;food_beverages
+P0648;Candy;food_beverages
+P0649;Toothpaste;drugstore_goods
+P0650;Sunblock;drugstore_goods
+P0651;Vitamins;drugstore_goods
+P0652;Cleaning supplies;drugstore_goods
+P0653;Soda;food_beverages
+P0654;DVDs and movies;electronics
+P0655;TV;electronics
+P0656;Phones;electronics
+P0657;Handbags;luxury
+P0658;Furniture;luxury
+P0659;suits;luxury
+P0660;Electronic devices;electronics
+P0661;Personal hygiene products;drugstore_goods
+P0662;Vacuum cleaners;drugstore_goods
+P0663;Watches;luxury
+P0664;Designer clothing;luxury
+P0665;shoes;luxury
+P0666;Jewelry;luxury
+P0667;Perfumes;drugstore_goods
+P0668;Magazines;drugstore_goods
+P0669;Laundry detergent;drugstore_goods
+P0670;Energy drinks;food_beverages
+P0671;Candy;food_beverages
+P0672;Toothpaste;drugstore_goods
+P0673;Sunblock;drugstore_goods
+P0674;Vitamins;drugstore_goods
+P0675;Cleaning supplies;drugstore_goods
+P0676;Soda;food_beverages
+P0677;DVDs and movies;electronics
+P0678;TV;electronics
+P0679;Phones;electronics
+P0680;Handbags;luxury
+P0681;Furniture;luxury
+P0682;suits;luxury
+P0683;Electronic devices;electronics
+P0684;Personal hygiene products;drugstore_goods
+P0685;Vacuum cleaners;drugstore_goods
+P0686;Watches;luxury
+P0687;Designer clothing;luxury
+P0688;shoes;luxury
+P0689;Jewelry;luxury
+P0690;Perfumes;drugstore_goods
+P0691;Magazines;drugstore_goods
+P0692;Laundry detergent;drugstore_goods
+P0693;Energy drinks;food_beverages
+P0694;Candy;food_beverages
+P0695;Toothpaste;drugstore_goods
+P0696;Sunblock;drugstore_goods
+P0697;Vitamins;drugstore_goods
+P0698;Cleaning supplies;drugstore_goods
+P0699;Knobi-Vital;drugstore_goods
