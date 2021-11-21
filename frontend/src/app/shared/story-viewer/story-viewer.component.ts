@@ -170,23 +170,42 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     return ui_texts.flatMap(e => e.text).join(' ')
   }
 
-  public continue() {
+  public continue(event: any) {
+    let middle = window.innerWidth / 2;
+    // console.log((event.x < middle) ? "left" : "right");
     if (this.hasShared) {
       this.hasShared = false;
-      this.togglePause();
+      // this.togglePause();
     } else {
-      this.skip();
+      if (event.y > 75) {
+        if (event.x > middle) {
+          this.skip();
+        } else {
+          this.back();
+        }
+      }
+    }
+  }
+
+  public back() {
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
+    if (this.activeStoryItem > 0) {
+      this.activeStoryItem--;
+      this.nextStoryItem();
+    } else {
+      this.activeText = 0;
     }
   }
 
   public skip() {
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
     if (this.activeStoryItem < this.story.length - 1) {
       this.activeStoryItem++;
       this.nextStoryItem();
     } else {
       this.activeText = this.story[this.activeStoryItem].ui_text.length - 1;
     }
-    clearTimeout(this.textTimeout);
-    clearTimeout(this.storyTimeout);
   }
 }
