@@ -1,5 +1,5 @@
-﻿Column1;Column2;Column3
-id;word;category
+﻿id;word;category
+P0000; Knobi-Vital;drugstore_goods
 P0001;Magazines;drugstore_goods
 P0002;Laundry detergent;drugstore_goods
 P0003;Energy drinks;food_beverages
