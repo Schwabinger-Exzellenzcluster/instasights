@@ -133,7 +133,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     for (var i = 0; i < str.length; i++) {
       hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
-    return hash;
+    return hash + 40000;
   }
 
   public getTextColor(impact: number) {
@@ -177,12 +177,10 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       this.hasShared = false;
       // this.togglePause();
     } else {
-      if (event.y > 75) {
-        if (event.x > middle) {
-          this.skip();
-        } else {
-          this.back();
-        }
+      if (event.x > middle) {
+        this.skip();
+      } else {
+        this.back();
       }
     }
   }
