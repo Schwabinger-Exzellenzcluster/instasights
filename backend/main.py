@@ -160,6 +160,7 @@ insights = list(
     )
 )
 
+# dump to json
 print(insights)
 with open('insights.json', 'w') as f:
     f.write(json.dumps(insights))
@@ -167,8 +168,7 @@ with open('insights.json', 'w') as f:
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
-
+    return 'Hello from Instasights!'
 
 @app.route('/insights')
 def get_insights():
