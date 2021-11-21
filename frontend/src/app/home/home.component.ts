@@ -10,27 +10,15 @@ import { UnsplashService } from '../services/unsplash/unsplash.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
   public getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
 
-  public storyItems: StoryItem[] = [];
-  private storySub: Subscription
-
   constructor(public unsplash: UnsplashService, private storyService: StoryService) {
-    this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
-      this.storyItems = storyItems;
-    });
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-    if (this.storySub) {
-      this.storySub.unsubscribe();
-    }
   }
 
   get topics() {
@@ -42,8 +30,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     ];
   }
 
-  getTopicStory(topic: Topic) {
-    return this.storyItems.filter((storyItem) => {
+  public getTopicStory(topic: Topic) {
+    return this.storyService.storyItems.filter((storyItem) => {
       return storyItem.topic == topic;
     }).sort((a: StoryItem, b: StoryItem) => {
       return compareAsc(a.date, b.date);
