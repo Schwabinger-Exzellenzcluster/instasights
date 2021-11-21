@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { StoryItem, Topic } from './story.model';
+import storyItems from "../../../data/insights.json"
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,19 @@ import { StoryItem, Topic } from './story.model';
 export class StoryService {
   private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
 
-  public apiUrl = 'http://192.168.2.122:5000/insights';
+  private apiUrl = 'http://192.168.2.122:5000/insights';
+  private demoHosting = false;
 
   constructor(public http: HttpClient) {
     // this.apiUrl = 'http://192.168.2.126:5000'
   }
 
   getStoryItems() {
-    return this.http.get<StoryItem[]>(this.apiUrl);
+    if (this.demoHosting) {
+      return this._storySubject.asObservable();
+    } else {
+      return this.http.get<StoryItem[]>(this.apiUrl);
+    }
   }
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ChartDataSets } from "chart.js";
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
 import { StoryItem, Topic, UiText } from '../services/story/story.model';
@@ -12,27 +11,6 @@ import { UnsplashService } from '../services/unsplash/unsplash.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public chartOptions = {
-    maintainAspectRatio: false,
-    responsive: true,
-    zoom: {
-      enabled: true,
-      mode: "xy",
-    },
-    title: {
-      display: false,
-      text: "",
-    },
-    defaultFontFamily: "Roboto",
-  }
-
-  chartData: ChartDataSets[] = [{
-    data: [{
-      x: new Date(),
-      y: 3
-    }]
-  }];
-
   public getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }

@@ -1,13 +1,16 @@
-from flask import Flask, request, send_from_directory
-from trends import get_trends
-from predictions import get_predictions
-from comparisons import get_comparisons
-from tsfeatures import get_features
 import json
-import pandas as pd
 import logging
 
+import pandas as pd
+from flask import Flask, send_from_directory
+from flask_cors import CORS
+
+from predictions import get_predictions
+from comparisons import get_comparisons
+from trends import get_trends
+
 app = Flask(__name__)
+CORS(app)
 
 # Read in CSV dataset
 df_stores = pd.read_csv(
@@ -69,18 +72,15 @@ df_cut = df.loc[before_end_date]
 del df
 
 logging.basicConfig()
-logging.root.setLevel('NOTSET')
+logging.root.setLevel('INFO')
 logger = logging.getLogger('MAIN')
 
-logger.debug('Parsing finished')
+logger.info('Parsing finished')
 
-@app.route('/insights/market')
-def get_market_insights():
-    return send_from_directory('dataset/turkish_market_insights', 'market_insights.json')
 insights = []
 # add different insights
-insights += get_comparisons(df_cut)
-insights += get_predictions(df_cut)
+# insights += get_comparisons(df_cut)
+# insights += get_predictions(df_cut)
 insights += get_trends(df_cut)
 # Broken due to some reason
 # insights += get_features(df_cut)
@@ -94,7 +94,6 @@ insights = list(
     )
 )
 
-
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
@@ -106,6 +105,16 @@ def get_insights():
     with open('insights.json', 'w') as f:
         f.write(json.dumps(insights))
     return json.dumps(insights)
+
+
+@app.route('/insights/market')
+def get_market_insights():
+    return send_from_directory('dataset/turkish_market_insights', 'market_insights.json')
+
+
+@app.route('/insights/news')
+def get_news():
+    return send_from_directory('dataset/news', 'small_news.json')
 
 
 # print(get_insights())

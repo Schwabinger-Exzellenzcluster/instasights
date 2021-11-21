@@ -8,6 +8,7 @@ export interface StoryItem {
     date?: Date;
     isNew?: boolean;
     poll?: Poll;
+    data?: InsightData;
     summary?: string;
 }
 
@@ -32,4 +33,13 @@ export interface Poll {
 export interface Answer {
   text: string,
   votes: number
+}
+
+export interface InsightData {
+  xLabel: string;
+  yLabel: string;
+  chartData: {
+    x: Date,
+    y: number
+  }[];
 }

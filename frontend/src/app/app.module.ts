@@ -12,6 +12,7 @@ import { IonicModule } from '@ionic/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoryPollComponent } from './shared/story-viewer/story-poll/story-poll.component';
 import { ChartsModule } from 'ng2-charts';
+import { ChartComponent } from './shared/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChartsModule } from 'ng2-charts';
     StoryViewerComponent,
     BubbleComponent,
     StoryItemComponent,
-    StoryPollComponent
+    StoryPollComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
