@@ -33,7 +33,7 @@
                     <div>
                         <h1 [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && isNumber(textEle.text)"
                             [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused"
-                            [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</h1>
+                            [style.animation-duration]="getTimeInterval()" [class.badNews]="story[activeStoryItem].impact < 0">{{ textEle.text }}</h1>
                         <p [class.appeared]="i <= activeText" *ngIf="textEle.relevance > 0 && !isNumber(textEle.text)"
                             [style.color]="getTextColor(story[activeStoryItem].impact)" [class.paused]="isPaused"
                             [style.animation-duration]="getTimeInterval()">{{ textEle.text }}</p>

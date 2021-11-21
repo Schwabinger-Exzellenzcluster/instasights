@@ -138,13 +138,16 @@
         margin: 0px;
         opacity: 0;
         font-size: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         &.appeared {
           font-size: 68pt;
           opacity: 1;
           animation-name: popText;
           animation-duration: 0.5s;
           animation-timing-function: ease-in-out;
+          &.badNews {
+            animation-name: shakeText;
+          }
         }
       }
       p {
@@ -153,7 +156,7 @@
         margin: 0px;
         opacity: 0;
         font-size: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         &.appeared {
           font-size: 36pt;
           opacity: 1;
@@ -186,6 +189,29 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes shakeText {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 
