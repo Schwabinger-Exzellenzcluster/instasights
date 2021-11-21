@@ -11,7 +11,7 @@ export class StoryService implements OnDestroy {
   private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
 
   private apiUrl = 'http://192.168.2.122:5000/insights';
-  private demoHosting = false;
+  private demoHosting = true;
 
   public storyItems: StoryItem[] = [];
   private storySub: Subscription;
@@ -56,7 +56,7 @@ export class StoryService implements OnDestroy {
 
   public getStoryItems() {
     if (this.demoHosting) {
-      return this._storySubject.asObservable();
+      return this.http.get<StoryItem[]>("./assets/insights.json");
     } else {
       return this.http.get<StoryItem[]>(this.apiUrl);
     }

@@ -50,3 +50,5 @@ def df_to_dict(df: pd.DataFrame) -> dict:
     ))
     d.update({'data': data})
     return d
+
+VALUE_LIMIT = 10

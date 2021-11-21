@@ -5,8 +5,8 @@ import pandas as pd
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
-from predictions import get_predictions
 from comparisons import get_comparisons
+from predictions import get_predictions
 from trends import get_trends
 
 app = Flask(__name__)
@@ -22,6 +22,7 @@ df_stores = pd.read_csv(
         'city_id': 'category'
     }
 )
+
 df_sales = pd.read_csv(
     'dataset/turkish_retail_data/sales.csv',
     delimiter=',',
@@ -58,18 +59,59 @@ df_product_hierachy = pd.read_csv(
 )
 
 df_product_hierachy.drop(
-    columns=['hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
+    columns=['hierarchy1_id', 'hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
     inplace=True
 )
 
 df = df_sales.join(df_stores.set_index('store_id'), on='store_id')
-df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
+# df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
 
 end_date = '2019-10-01'
 before_end_date = df['date'] <= end_date
 
 df_cut = df.loc[before_end_date]
 del df
+# Adjust city names
+df_cities_mapping = pd.read_csv(
+    'dataset/augmented_sets/cities_augmented.csv',
+    delimiter=';',
+    dtype={
+        'city_id': 'category',
+        'name': 'category'
+    }
+)
+cities_dict = { row[0] : row[1] for row in df_cities_mapping.values.tolist()}
+df_sales.replace({'city_id': cities_dict}, inplace=True)
+
+# Adjust store names
+df_stores_mapping = pd.read_csv(
+    'dataset/augmented_sets/cities_augmented.csv',
+    delimiter=';',
+    dtype={
+        'store_id': 'category',
+        'name': 'category'
+    }
+)
+stores_dict = { row[0] : row[1] for row in df_stores_mapping.values.tolist()}
+df_sales.replace({'store_id': cities_dict}, inplace=True)
+
+# Adjust product names and categories
+df_product_mapping =  pd.read_csv(
+    'dataset/augmented_sets/products_augmented.csv',
+    delimiter=';',
+    dtype={
+        'product_id': 'category',
+        'name': 'category',
+        'hierarchy1_id': 'category',
+    }
+)
+products_dict = {row[0] : row[1] for row in df_product_mapping.values.tolist()}
+df_sales.replace({'product_id': products_dict}, inplace=True)
+
+df_product_mapping.drop(columns=['name'])
+df_sales.join(df_product_mapping.set_index('product_id'), on='product_id')
+
+print(df_sales)
 
 logging.basicConfig()
 logging.root.setLevel('INFO')
@@ -79,8 +121,8 @@ logger.info('Parsing finished')
 
 insights = []
 # add different insights
-# insights += get_comparisons(df_cut)
-# insights += get_predictions(df_cut)
+insights += get_comparisons(df_cut)
+insights += get_predictions(df_cut)
 insights += get_trends(df_cut)
 # Broken due to some reason
 # insights += get_features(df_cut)
@@ -93,6 +135,10 @@ insights = list(
         insights
     )
 )
+print(insights)
+with open('insights.json', 'w') as f:
+    f.write(json.dumps(insights))
+
 
 @app.route('/')
 def hello_world():
@@ -101,10 +147,7 @@ def hello_world():
 
 @app.route('/insights')
 def get_insights():
-    print(insights)
-    with open('insights.json', 'w') as f:
-        f.write(json.dumps(insights))
-    return json.dumps(insights)
+    return json.dumps(insights + json.load(open('dataset/news/small_news.json')))
 
 
 @app.route('/insights/market')
@@ -112,11 +155,5 @@ def get_market_insights():
     return send_from_directory('dataset/turkish_market_insights', 'market_insights.json')
 
 
-@app.route('/insights/news')
-def get_news():
-    return send_from_directory('dataset/news', 'small_news.json')
-
-
-# print(get_insights())
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

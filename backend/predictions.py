@@ -8,7 +8,7 @@ from kats.models.prophet import ProphetModel, ProphetParams
 
 from insight import Insight
 from insight import UiTextItem
-from util import get_ui_and_voice_text, df_to_dict
+from util import get_ui_and_voice_text, df_to_dict, VALUE_LIMIT
 
 logger = logging.getLogger('PREDICT')
 
@@ -56,21 +56,19 @@ def make_stock_alert_insight(store: str, product: str, steps: int, forecast: pd.
 
 def get_predictions(df: pd.DataFrame) -> list[Insight]:
     insights = []
-    insights += get_typed_predictions(df, 'city', 'city_id')
+    insights += get_typed_predictions(df, 'revenue', 'city', 'city_id')
+    insights += get_stock_alert_predictions(df)
     return insights
 
 
-def get_typed_predictions(df: pd.DataFrame, type: str, type_id: str) -> list[Insight]:
+def get_typed_predictions(df: pd.DataFrame, metric: str,  type: str, type_id: str) -> list[Insight]:
     insights = []
     type_enum = df[type_id].drop_duplicates()
-    for type_value in type_enum:
+    for type_value in type_enum[:VALUE_LIMIT]:
         equals_type_value = df[type_id] == type_value
         df_tv = df.loc[equals_type_value]
 
         steps = 30  # TODO
-
-        # get revenue predictions
-        metric = 'revenue'  # TODO
 
         curr_value, frcst_val, forecast = get_prediction(df_tv, metric, steps)
         change_percent = ((frcst_val / curr_value) - 1) * 100
@@ -85,7 +83,7 @@ def get_typed_predictions(df: pd.DataFrame, type: str, type_id: str) -> list[Ins
             )
         )
 
-    logger.info(f'Added {type} predictions')
+    logger.info(f'Added {type} {metric} predictions')
 
     return insights
 
@@ -95,7 +93,7 @@ def get_stock_alert_predictions(df: pd.DataFrame) -> list[Insight]:
     stores = df['store_id'].drop_duplicates()
 
     # random selection of stores
-    for store in stores[10:16]:
+    for store in stores[:VALUE_LIMIT]:
         equals_store = df['store_id'] == store
         df_st = df.loc[equals_store]
         products = df_st['product_id'].drop_duplicates()
@@ -112,11 +110,11 @@ def get_stock_alert_predictions(df: pd.DataFrame) -> list[Insight]:
 
             steps = 30
             # get stock alerts
-            curr_value, frcst_val = get_prediction(df_p, 'stock', steps)
+            curr_value, frcst_val, forecast = get_prediction(df_p, 'stock', steps)
 
             # Are we running out of stock
             if (frcst_val <= 0):
-                insights.append(make_stock_alert_insight(store, product, steps))
+                insights.append(make_stock_alert_insight(store, product, steps, forecast))
                 # return for now
                 return insights  # TODO
 
