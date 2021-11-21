@@ -97,7 +97,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       this.textTimeout = setTimeout(() => {
         this.activeText++;
         this.nextText();
-      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + .75)) * 1000);
+      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 10)) * 1000);
     }
   }
 
@@ -111,21 +111,28 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     return !isNaN(thing) && !isNaN(parseFloat(thing))
   }
 
-  public getIndicatorColor(impact: number) {
-    const opacity = Math.abs(impact);
-    if (impact < 0) {
-      return `rgba(255, 102, 102, ${opacity})`
-    } else if (impact > 0) {
-      return `rgba(102, 255, 204, ${opacity})`
-    } else {
-      return "rgb(90, 142, 194)"
+  public getBackgroundColor(storyItem: StoryItem) {
+    const uuidHash = this.hash(storyItem.uuid)
+    var colour = '#';
+    for (var i = 0; i < 3; i++) {
+      var value = (uuidHash >> (i * 8)) & 0xFF;
+      colour += ('00' + value.toString(16)).substr(-2);
     }
+    return colour;
+  }
+
+  private hash(str: string) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return hash;
   }
 
   public getTextColor(impact: number) {
-    if (impact > 0) {
-      return `rgb(255, 102, 102)`
-    } else if (impact <= 0) {
+    if (impact < 0) {
+      return `rgba(255, 102, 102)`
+    } else if (impact > 0) {
       return `rgb(102, 255, 204)`
     } else {
       return "rgba(255, 102, 102"

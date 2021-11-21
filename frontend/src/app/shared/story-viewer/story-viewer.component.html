@@ -20,7 +20,7 @@
             {{ story[activeStoryItem].summary }}
         </div>
     </div>
-    <div class="content" [style.background]="getIndicatorColor(story[activeStoryItem].impact)">
+    <div class="content" [style.background]="getBackgroundColor(story[activeStoryItem])">
         <div class="background" [style.background-image]="'url(' + unsplash.getImageUrl(story[activeStoryItem]) + ')'">
         </div>
         <div class="foreground">
