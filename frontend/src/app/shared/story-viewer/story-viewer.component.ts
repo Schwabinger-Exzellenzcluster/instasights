@@ -45,7 +45,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
         if (this.topic == "briefing") {
           this.story = this.storyService.getBestStory(storyItems);
         } else {
-          this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+          this.story = this.storyService.getTopicStory(storyItems, <Topic>params.get("topic"))
         }
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
@@ -110,7 +110,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
-    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
+    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1) / 2) + "s"
   }
 
   public isNumber(_thing): boolean {
@@ -131,7 +131,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   private hash(str: string) {
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
-       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
     return hash;
   }
@@ -174,6 +174,19 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     if (this.hasShared) {
       this.hasShared = false;
       this.togglePause();
+    } else {
+      this.skip();
     }
+  }
+
+  public skip() {
+    if (this.activeStoryItem < this.story.length - 1) {
+      this.activeStoryItem++;
+      this.nextStoryItem();
+    } else {
+      this.activeText = this.story[this.activeStoryItem].ui_text.length - 1;
+    }
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
   }
 }
