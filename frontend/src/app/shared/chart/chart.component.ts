@@ -79,7 +79,7 @@ export class ChartComponent implements OnInit {
         }
       }
 
-    this.chartData.push({
+    this.chartData = [{
         data: chartData,
         yAxisID: "value",
         label: topic.toUpperCase(),
@@ -87,7 +87,7 @@ export class ChartComponent implements OnInit {
         spanGaps: true,
         cubicInterpolationMode: "monotone",
         fill: false,
-      });
+      }];
 
       this.dataLoaded = true;
     });
