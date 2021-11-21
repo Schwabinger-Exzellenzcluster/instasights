@@ -6,7 +6,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     .briefing {
-        background-color: red;
+        background: var(--accent-gradient);
         width: calc(100% - 20px);
         padding: 10px;
         margin: 0px 10px;
@@ -14,6 +14,14 @@
         text-align: center;
         cursor: pointer;
         transition: all 0.1s;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        ion-icon {
+            color: #fff;
+            font-size: 28px;
+        }
         &:active {
             transform: scale(0.95);
         }
@@ -21,7 +29,6 @@
             color: #fff;
             font-weight: bold;
             margin: 10px;
-            text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.86);
         }
     }
     .header {
