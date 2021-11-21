@@ -57,13 +57,13 @@ def get_comparisons(df: pd.DataFrame) -> list[Insight]:
     insights = []
     insights += get_typed_comparisons(df, 'sales', 'month', 'product group', 'hierarchy1_id')
     insights += get_typed_comparisons(df, 'sales', 'week', 'product', 'product_id')
-    insights += get_global_comparisons(df, 'sales', 'month')
-    insights += get_global_comparisons(df, 'revenue', 'year')
-    insights += get_global_comparisons(df, 'sales', 'week')
+    insights += get_national_comparisons(df, 'sales', 'month')
+    insights += get_national_comparisons(df, 'revenue', 'year')
+    insights += get_national_comparisons(df, 'sales', 'week')
     return insights
 
 
-def get_global_comparisons(df: pd.DataFrame, metric: str, t_delta: str) -> list[Insight]:
+def get_national_comparisons(df: pd.DataFrame, metric: str, t_delta: str) -> list[Insight]:
     insights = []
 
     comp_val, curr_val = get_comparison(df, metric, t_delta)
@@ -91,7 +91,7 @@ def get_typed_comparisons(df: pd.DataFrame, metric: str, t_delta: str, type: str
         comp_val, end_val = get_comparison(df_tv, metric, t_delta)
         change_percent = to_change_percent(comp_val, end_val)
         insights.append(
-            make_comparison_insight(metric, type, type_value, t_delta, change_percent)
+            make_national_comparison_insight(metric, t_delta, change_percent)
         )
 
     logger.info(f'Added {type} {metric} comparisons for {t_delta}')
