@@ -136,7 +136,6 @@ print(categories_dict)
 new_categories_dict = {old_categories_dict[key] : categories_dict[key] for key in old_categories_dict}
 print(new_categories_dict)
 
-df_cut[hierarchy]
 df_product_mapping.drop(columns=['name'], inplace=True)
 
 logger.info('Parsed augmented product data')
