@@ -1,5 +1,5 @@
-﻿id;word;category
-P0000; Knobi-Vital;drugstore goods
+﻿product_id;name;hierarchy1_id
+P0000;Knobi-Vital;drugstore goods
 P0001;Magazines;drugstore goods
 P0002;Laundry detergent;drugstore goods
 P0003;Energy drinks;food and beverage items
