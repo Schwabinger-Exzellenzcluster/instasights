@@ -9,14 +9,14 @@
                         [style.animation-duration]="item.duration.toString() + 's'" [class.paused]="isPaused"></div>
                 </div>
             </div>
-            <ion-icon name="share" (click)="share()"></ion-icon>
+            <ion-icon name="share" (click)="$event.stopPropagation(); share()"></ion-icon>
             <ion-icon name="close" [routerLink]="''"></ion-icon>
         </div>
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid">
         </app-story-poll>
-        <ion-icon name="arrow-up" (click)="togglePause(); showMore = true" [hidden]="showMore || story == null || !(story[activeStoryItem].summary || story[activeStoryItem].data)"></ion-icon>
+        <ion-icon name="arrow-up" (click)="$event.stopPropagation(); togglePause(); showMore = true" [hidden]="showMore || story == null || !(story[activeStoryItem].summary || story[activeStoryItem].data)"></ion-icon>
         <div class="details" *ngIf="story != null && (story[activeStoryItem].summary || story[activeStoryItem].data)" [hidden]="!showMore">
-            <ion-icon name="close" (click)="togglePause(); showMore = false"></ion-icon>
+            <ion-icon name="close" (click)="$event.stopPropagation(); togglePause(); showMore = false"></ion-icon>
             <div class="summary" *ngIf="story[activeStoryItem].summary">{{ story[activeStoryItem].summary }}</div>
             <app-chart *ngIf="story[activeStoryItem].data" [storyItemId]="story[activeStoryItem].uuid"></app-chart>
         </div>
