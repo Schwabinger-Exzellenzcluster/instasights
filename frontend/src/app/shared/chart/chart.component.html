@@ -1,5 +1,8 @@
-<canvas baseChart
-      [datasets]="chartData"
-      [options]="chartOptions"
-      [chartType]="'line'">
-</canvas>
+<div class="chart-card" *ngIf="dataLoaded">
+  <canvas baseChart
+    [datasets]="chartData"
+    [options]="chartOptions"
+    [chartType]="'line'">
+  </canvas>
+</div>
+

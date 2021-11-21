@@ -22,14 +22,12 @@ export class ChartComponent implements OnInit {
       enabled: true,
       mode: "xy",
     },
-    title: {
-      display: false,
-      text: "",
-    },
     defaultFontFamily: "Roboto",
   }
 
   chartData: ChartDataSets[] = [];
+
+  dataLoaded = false;
 
   constructor(private storyService: StoryService) { }
 
@@ -37,42 +35,61 @@ export class ChartComponent implements OnInit {
     this.storyItemsSub = this.storyService.getStoryItems().subscribe((storyItems) => {
       this.storyItem = storyItems.find(item => item.uuid === this.storyItemId);
       const data = this.storyItem.data
+      console.log(data);
+      console.log(data.data);
+      const chartData = data.data.map((value) => {
+        return {
+          x: new Date(value.x),
+          y: value.y
+        };
+      })
+
+      const topic = this.storyItem.topic == "finance" ? "revenue" : this.storyItem.topic.toString()
       this.chartOptions = {
         ...this.chartOptions,
-        yAxes: [
-          {
-            id: data.xLabel,
-            position: "left",
-            type: "linear",
-            scaleLabel: {
-              display: true,
-              labelString: data.yLabel
+        title: {
+          display: true,
+          text: this.storyItem.ui_text.map((el) => el.text).join(" "),
+        },
+        scales: {
+          yAxes: [
+            {
+              id: "value",
+              position: "left",
+              type: "linear",
+              scaleLabel: {
+                display: true,
+                labelString: topic
+              }
             }
-          }
-        ],
-        xAxes: [
-          {
-            type: "time",
-            distribution: "linear",
-            bounds: "ticks",
-            ticks: {
-              source: "auto",
-              minRotation: 25,
-              maxRotation: 25,
-              autoSkip: true
-            },
-          }
-        ]
-      };
-      this.chartData = [{
-        data: data.chartData,
-        yAxisID: data.yLabel,
-        label: this.storyItem.ui_text.map((el) => el.text).join(" "),
+          ],
+          xAxes: [
+            {
+              type: "time",
+              distribution: "linear",
+              bounds: "ticks",
+              ticks: {
+                source: "auto",
+                minRotation: 25,
+                maxRotation: 25,
+                autoSkip: true
+              },
+            }
+          ]
+        }
+      }
+
+    this.chartData = [{
+        data: chartData,
+        yAxisID: "value",
+        label: topic.toUpperCase(),
         pointHitRadius: 10,
         spanGaps: true,
         cubicInterpolationMode: "monotone",
         fill: false,
       }];
+
+      this.dataLoaded = true;
     });
   }
 

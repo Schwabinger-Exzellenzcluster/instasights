@@ -38,8 +38,8 @@ export interface Answer {
 export interface InsightData {
   xLabel: string;
   yLabel: string;
-  chartData: {
-    x: Date,
+  data: {
+    x: string,
     y: number
   }[];
 }

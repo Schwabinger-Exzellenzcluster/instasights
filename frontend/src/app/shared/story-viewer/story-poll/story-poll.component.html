@@ -1,7 +1,7 @@
 <div class="poll">
   <div class="question">{{ poll.question }}</div>
   <div class="answers">
-    <div class="answer a" (click)="answer(poll.answerA)" [style.width]="getAnswerWidth(poll.answerA)">{{ getAnswerText(poll.answerA) | uppercase }}</div>
-    <div class="answer b" (click)="answer(poll.answerB)" [style.width]="getAnswerWidth(poll.answerB)">{{ getAnswerText(poll.answerB) | uppercase }}</div>
+    <div class="answer a" (click)="$event.stopPropagation(); answer(poll.answerA)" [style.width]="getAnswerWidth(poll.answerA)">{{ getAnswerText(poll.answerA) | uppercase }}</div>
+    <div class="answer b" (click)="$event.stopPropagation(); answer(poll.answerB)" [style.width]="getAnswerWidth(poll.answerB)">{{ getAnswerText(poll.answerB) | uppercase }}</div>
   </div>
 </div>

@@ -11,7 +11,7 @@ export class StoryService implements OnDestroy {
   private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject([]);
 
   private apiUrl = 'http://192.168.2.122:5000/insights';
-  private demoHosting = false;
+  private demoHosting = true;
 
   public storyItems: StoryItem[] = [];
   private storySub: Subscription;
