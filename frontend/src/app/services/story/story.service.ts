@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
+import { compareAsc } from 'date-fns';
 import { BehaviorSubject, map, Subscription } from 'rxjs';
 import { StoryItem, Topic } from './story.model';
-import storyItems from "../../../data/insights.json"
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +14,37 @@ export class StoryService implements OnDestroy {
   private demoHosting = false;
 
   public storyItems: StoryItem[] = [];
-  private storySub: Subscription
+  private storySub: Subscription;
+
+  public dailyBriefing: StoryItem[] = [];
 
   constructor(public http: HttpClient) {
     this.apiUrl = 'http://192.168.2.126:5000'
     this.storySub = this.getStoryItems().subscribe((storyItems) => {
       this.storyItems = storyItems;
+      let bests: StoryItem[] = [];
+      for (let topic of Object.values(Topic)) {
+        let best = undefined;
+        for (let item of this.getTopicStory(topic)) {
+          if (!best) {
+            best = item;
+          } else {
+            if (Math.abs(item.impact) > Math.abs(best.impact)) {
+              best = item;
+              bests.push(best);
+            }
+          }
+        }
+      }
+      console.log("hi :" + bests);
+    });
+  }
+
+  public getTopicStory(topic: Topic) {
+    return this.storyItems.filter((storyItem) => {
+      return storyItem.topic == topic;
+    }).sort((a: StoryItem, b: StoryItem) => {
+      return compareAsc(a.date, b.date);
     });
   }
 
@@ -43,7 +68,7 @@ const STORY_ITEMS: StoryItem[] = [{
   uuid: "001",
   impact: 1,
   topic: Topic.Sales,
-  ui_text: [{text: "Sales are up", relevance: 0}, {text: "20%", relevance: 1}, {text: "this week", relevance: 0}],
+  ui_text: [{ text: "Sales are up", relevance: 0 }, { text: "20%", relevance: 1 }, { text: "this week", relevance: 0 }],
   duration: 3,
   date: new Date(),
   voice_text: "hello Joe!",
@@ -62,14 +87,14 @@ const STORY_ITEMS: StoryItem[] = [{
   uuid: "002",
   impact: 0,
   topic: Topic.Sales,
-  ui_text: [{text: "hi", relevance: 1}, {text: "was geht?", relevance: 0}],
+  ui_text: [{ text: "hi", relevance: 1 }, { text: "was geht?", relevance: 0 }],
   duration: 2,
   date: new Date()
 }, {
   uuid: "003",
   impact: -1,
   topic: Topic.Sales,
-  ui_text: [{text: "hello", relevance: 1}],
+  ui_text: [{ text: "hello", relevance: 1 }],
   duration: 1,
   date: new Date(),
   voice_text: "end",
@@ -88,7 +113,7 @@ const STORY_ITEMS: StoryItem[] = [{
   uuid: "004",
   topic: Topic.Sales,
   impact: -0.5,
-  ui_text: [{text: "hello", relevance: 1}],
+  ui_text: [{ text: "hello", relevance: 1 }],
   duration: 1,
   date: new Date(),
   voice_text: "end",
