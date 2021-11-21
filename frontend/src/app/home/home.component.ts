@@ -10,27 +10,20 @@ import { UnsplashService } from '../services/unsplash/unsplash.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
   public getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
 
-  public storyItems: StoryItem[] = [];
-  private storySub: Subscription
+  storyItems: StoryItem[];
 
-  constructor(public unsplash: UnsplashService, private storyService: StoryService) {
-    this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
-      this.storyItems = storyItems;
-    });
+  constructor(public unsplash: UnsplashService, public storyService: StoryService) {
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-    if (this.storySub) {
-      this.storySub.unsubscribe();
-    }
+    this.storyService.getStoryItems().subscribe((storyItems) => {
+      this.storyItems = storyItems;
+    })
   }
 
   get topics() {
@@ -40,14 +33,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       Topic.Finance,
       Topic.News
     ];
-  }
-
-  getTopicStory(topic: Topic) {
-    return this.storyItems.filter((storyItem) => {
-      return storyItem.topic == topic;
-    }).sort((a: StoryItem, b: StoryItem) => {
-      return compareAsc(a.date, b.date);
-    });
   }
 
   getIndicatorColor(impact: number) {

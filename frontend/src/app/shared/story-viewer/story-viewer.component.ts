@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 import { compareAsc } from 'date-fns';
 import { Subscription } from 'rxjs';
-import { StoryItem, UiText } from 'src/app/services/story/story.model';
+import { StoryItem, Topic, UiText } from 'src/app/services/story/story.model';
 import { StoryService } from 'src/app/services/story/story.service';
 import { UnsplashService } from 'src/app/services/unsplash/unsplash.service';
 
@@ -40,11 +40,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
       this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
-        this.story = storyItems.filter((storyItem) => {
-          return storyItem.topic == params.get("topic");
-        }).sort((a: StoryItem, b: StoryItem) => {
-          return compareAsc(a.date, b.date)
-        });
+        this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
           return storyItem.uuid == params.get("storyItemId");
