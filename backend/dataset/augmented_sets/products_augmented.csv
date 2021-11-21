@@ -1,4 +1,4 @@
-﻿id;word;category
+﻿product_id;name;hierarchy1_id
 P0000; Knobi-Vital;drugstore_goods
 P0001;Magazines;drugstore_goods
 P0002;Laundry detergent;drugstore_goods
