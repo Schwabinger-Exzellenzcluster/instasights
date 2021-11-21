@@ -51,6 +51,7 @@ def make_stock_alert_insight(store: str, product: str, steps: int, forecast: pd.
 
     ui_text, voice_text = get_ui_and_voice_text(ui_text)
     # impact depends on change severity
+    forecast.rename(columns={'fcst': 'value'}, inplace=True)
     return Insight('stock', -3, ui_text, voice_text, df_to_dict(forecast))
 
 
