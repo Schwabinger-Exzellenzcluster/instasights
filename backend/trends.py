@@ -8,7 +8,7 @@ from kats.detectors.trend_mk import MKDetector
 
 from insight import Insight
 from insight import UiTextItem
-from util import get_ui_and_voice_text, to_change_percent, df_to_dict
+from util import get_ui_and_voice_text, to_change_percent, df_to_dict, VALUE_LIMIT
 
 logger = logging.getLogger('TRENDS')
 
@@ -47,20 +47,20 @@ def make_trend_insight(
 
 def get_trends(df: pd.DataFrame) -> list[Insight]:
     insights = []
-    insights += get_typed_trends(df, 'product group', 'hierarchy1_id')
+    insights += get_typed_trends(df, 'sales', 'product group', 'hierarchy1_id')
+    insights += get_typed_trends(df, 'stock', 'product', 'product_id')
     return insights
 
 
-def get_typed_trends(df: pd.DataFrame, type: str, type_id: str) -> list[Insight]:
+def get_typed_trends(df: pd.DataFrame, metric: str, type: str, type_id: str) -> list[Insight]:
     insights = []
     type_enum = df[type_id].drop_duplicates()
 
-    for type_value in type_enum:
+    for type_value in type_enum[:VALUE_LIMIT]:
         type_value_equals = df[type_id] == type_value
         df_tv = df.loc[type_value_equals]
 
         # get sales trends
-        metric = 'sales'  # TODO
         window_size = 30
 
         # Assume weekly seasonality
@@ -107,7 +107,7 @@ def get_typed_trends(df: pd.DataFrame, type: str, type_id: str) -> list[Insight]
             )
         del df_tv
 
-    logger.info(f'Added {type} trends')
+    logger.info(f'Added {type} {metric} trends')
     return insights
 
 
@@ -117,7 +117,7 @@ def get_trend(df: pd.DataFrame, colname: str, direction: str, window_size: int, 
     ts = TimeSeriesData(df)
     mkdetector = MKDetector(data=ts, threshold=0.8)
 
-    # detect downwards trend
+    # detect directional trend
     change_points = mkdetector.detector(window_size=window_size, direction=direction, freq=freq)
     end_point = change_points[-1][0].start_time
     start_point = end_point - pd.Timedelta(days=window_size)

@@ -9,7 +9,6 @@ from util import to_weekly, to_yearly, to_monthly, get_ui_and_voice_text
 
 logger = logging.getLogger('COMP')
 
-
 def make_comparison_insight(
         type: str,
         category: str,
@@ -34,25 +33,25 @@ def make_comparison_insight(
 
 def get_comparisons(df: pd.DataFrame) -> list[Insight]:
     insights = []
-    insights += get_global_comparisons(df)
+    insights += get_global_comparisons(df, 'sales')
     return insights
 
 
-def get_global_comparisons(df: pd.DataFrame) -> list[Insight]:
+def get_global_comparisons(df: pd.DataFrame, metric: str) -> list[Insight]:
     insights = []
 
     # get sales weekly
     t_delta = 'month'
-    comp_val, curr_val = get_comparison(df, 'sales', t_delta)
+    comp_val, curr_val = get_comparison(df, metric, t_delta)
     change_percent = ((curr_val / comp_val) - 1) * 100
     insights.append(
         make_comparison_insight(
-            'sales', 'global', 'global',t_delta, change_percent
+            metric, 'global', 'global',t_delta, change_percent
         )
     )
 
     # get sales comparison yearly
-    logger.info('Added global comparisons')
+    logger.info(f'Added global {metric} comparisons')
     return insights
 
 

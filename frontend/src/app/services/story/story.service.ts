@@ -1,22 +1,34 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, map } from 'rxjs';
+import { Injectable, OnDestroy } from '@angular/core';
+import { BehaviorSubject, map, Subscription } from 'rxjs';
 import { StoryItem, Topic } from './story.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StoryService {
+export class StoryService implements OnDestroy {
   private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
 
   private apiUrl = 'http://192.168.2.122:5000/insights';
   private demoHosting = true;
 
+  public storyItems: StoryItem[] = [];
+  private storySub: Subscription
+
   constructor(public http: HttpClient) {
-    // this.apiUrl = 'http://192.168.2.126:5000'
+    this.apiUrl = 'http://192.168.2.126:5000'
+    this.storySub = this.getStoryItems().subscribe((storyItems) => {
+      this.storyItems = storyItems;
+    });
   }
 
-  getStoryItems() {
+  ngOnDestroy(): void {
+    if (this.storySub) {
+      this.storySub.unsubscribe();
+    }
+  }
+
+  public getStoryItems() {
     if (this.demoHosting) {
       return this.http.get<StoryItem[]>("./assets/insights.json");
     } else {
