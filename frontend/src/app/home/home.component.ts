@@ -15,10 +15,15 @@ export class HomeComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
+  storyItems: StoryItem[];
+
   constructor(public unsplash: UnsplashService, public storyService: StoryService) {
   }
 
   ngOnInit(): void {
+    this.storyService.getStoryItems().subscribe((storyItems) => {
+      this.storyItems = storyItems;
+    })
   }
 
   get topics() {

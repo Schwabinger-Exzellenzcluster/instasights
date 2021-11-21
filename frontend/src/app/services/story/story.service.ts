@@ -8,7 +8,7 @@ import { StoryItem, Topic } from './story.model';
   providedIn: 'root'
 })
 export class StoryService implements OnDestroy {
-  private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject(STORY_ITEMS);
+  private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject([]);
 
   private apiUrl = 'http://192.168.2.122:5000/insights';
   private demoHosting = true;
@@ -20,32 +20,36 @@ export class StoryService implements OnDestroy {
 
   constructor(public http: HttpClient) {
     this.apiUrl = 'http://192.168.2.126:5000'
-    this.storySub = this.getStoryItems().subscribe((storyItems) => {
+    this.storySub = this.fetchStoryItems().subscribe((storyItems) => {
       this.storyItems = storyItems;
-      let bests: StoryItem[] = [];
-      for (let topic of Object.values(Topic)) {
-        let best = undefined;
-        for (let item of this.getTopicStory(topic)) {
-          if (!best) {
-            best = item;
-          } else {
-            if (Math.abs(item.impact) > Math.abs(best.impact)) {
-              best = item;
-            }
-          }
-        }
-        bests.push(best);
-      }
-      console.log("hi :" + bests);
+      this._storySubject.next(storyItems);
     });
   }
 
-  public getTopicStory(topic: Topic) {
-    return this.storyItems.filter((storyItem) => {
+  public getTopicStory(storyItems: StoryItem[], topic: Topic) {
+    return storyItems.filter((storyItem) => {
       return storyItem.topic == topic;
     }).sort((a: StoryItem, b: StoryItem) => {
       return compareAsc(a.date, b.date);
     });
+  }
+
+  public getBestStory(storyItems: StoryItem[]) {
+    let bests: StoryItem[] = [];
+    for (let topic of Object.values(Topic)) {
+      let best = undefined;
+      for (let item of this.getTopicStory(storyItems, topic)) {
+        if (!best) {
+          best = item;
+        } else {
+          if (Math.abs(item.impact) > Math.abs(best.impact)) {
+            best = item;
+          }
+        }
+      }
+      bests.push(best);
+    }
+    return bests;
   }
 
   ngOnDestroy(): void {
@@ -54,13 +58,18 @@ export class StoryService implements OnDestroy {
     }
   }
 
-  public getStoryItems() {
+  public fetchStoryItems() {
     if (this.demoHosting) {
       return this.http.get<StoryItem[]>("./assets/insights.json");
     } else {
       return this.http.get<StoryItem[]>(this.apiUrl);
     }
   }
+
+  public getStoryItems() {
+    return this._storySubject.asObservable();
+  }
+
 }
 
 
