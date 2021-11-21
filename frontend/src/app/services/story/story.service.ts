@@ -31,10 +31,10 @@ export class StoryService implements OnDestroy {
           } else {
             if (Math.abs(item.impact) > Math.abs(best.impact)) {
               best = item;
-              bests.push(best);
             }
           }
         }
+        bests.push(best);
       }
       console.log("hi :" + bests);
     });
