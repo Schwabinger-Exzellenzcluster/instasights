@@ -24,6 +24,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   @ViewChild('image') image: ElementRef;
 
+  private topic: string;
   public story: StoryItem[];
   private storySub: Subscription;
 
@@ -40,7 +41,12 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
       this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
-        this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+        this.topic = params.get("topic")
+        if (this.topic == "briefing") {
+          this.story = this.storyService.getBestStory(storyItems);
+        } else {
+          this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+        }
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
           return storyItem.uuid == params.get("storyItemId");
@@ -63,7 +69,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
-    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
+    this.topic = this.topic != "briefing" ? this.story[this.activeStoryItem].topic : "briefing"
+    window.history.replaceState({}, '', `/stories/${this.topic}/${this.story[this.activeStoryItem].uuid}`);
     this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * 1;
 
     this.isLoading = true
@@ -97,7 +104,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
       this.textTimeout = setTimeout(() => {
         this.activeText++;
         this.nextText();
-      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + .75)) * 1000);
+      }, (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 10)) * 1000);
     }
   }
 
@@ -111,21 +118,28 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     return !isNaN(thing) && !isNaN(parseFloat(thing))
   }
 
-  public getIndicatorColor(impact: number) {
-    const opacity = Math.abs(impact);
-    if (impact < 0) {
-      return `rgba(255, 102, 102, ${opacity})`
-    } else if (impact > 0) {
-      return `rgba(102, 255, 204, ${opacity})`
-    } else {
-      return "rgb(90, 142, 194)"
+  public getBackgroundColor(storyItem: StoryItem) {
+    const uuidHash = this.hash(storyItem.uuid)
+    var colour = '#';
+    for (var i = 0; i < 3; i++) {
+      var value = (uuidHash >> (i * 8)) & 0xFF;
+      colour += ('00' + value.toString(16)).substr(-2);
     }
+    return colour;
+  }
+
+  private hash(str: string) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return hash;
   }
 
   public getTextColor(impact: number) {
-    if (impact > 0) {
-      return `rgb(255, 102, 102)`
-    } else if (impact <= 0) {
+    if (impact < 0) {
+      return `rgba(255, 102, 102)`
+    } else if (impact > 0) {
       return `rgb(102, 255, 204)`
     } else {
       return "rgba(255, 102, 102"
@@ -158,6 +172,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   public continue() {
     if (this.hasShared) {
+      this.hasShared = false;
       this.togglePause();
     }
   }

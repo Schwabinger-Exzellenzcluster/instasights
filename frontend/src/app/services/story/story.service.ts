@@ -11,7 +11,7 @@ export class StoryService implements OnDestroy {
   private _storySubject: BehaviorSubject<StoryItem[]> = new BehaviorSubject([]);
 
   private apiUrl = 'http://192.168.2.122:5000/insights';
-  private demoHosting = true;
+  private demoHosting = false;
 
   public storyItems: StoryItem[] = [];
   private storySub: Subscription;
@@ -19,7 +19,7 @@ export class StoryService implements OnDestroy {
   public dailyBriefing: StoryItem[] = [];
 
   constructor(public http: HttpClient) {
-    this.apiUrl = 'http://192.168.2.126:5000'
+    // this.apiUrl = 'http://192.168.2.126:5000'
     this.storySub = this.fetchStoryItems().subscribe((storyItems) => {
       this.storyItems = storyItems;
       this._storySubject.next(storyItems);
