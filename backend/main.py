@@ -1,3 +1,4 @@
+import gc
 import json
 import logging
 
@@ -65,38 +66,40 @@ df_product_hierachy.drop(
 
 df = df_sales.join(df_stores.set_index('store_id'), on='store_id')
 # df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
+del df_sales, df_product_hierachy, df_stores
+gc.collect()
 
 end_date = '2019-10-01'
 before_end_date = df['date'] <= end_date
 
 df_cut = df.loc[before_end_date]
 del df
+gc.collect()
+
 # Adjust city names
-df_cities_mapping = pd.read_csv(
+cities_dict = {row[0]: row[1] for row in pd.read_csv(
     'dataset/augmented_sets/cities_augmented.csv',
     delimiter=';',
     dtype={
         'city_id': 'category',
         'name': 'category'
     }
-)
-cities_dict = { row[0] : row[1] for row in df_cities_mapping.values.tolist()}
-df_sales.replace({'city_id': cities_dict}, inplace=True)
+).values.tolist()}
+df_cut.replace({'city_id': cities_dict}, inplace=True)
 
 # Adjust store names
-df_stores_mapping = pd.read_csv(
+stores_dict = {row[0]: row[1] for row in pd.read_csv(
     'dataset/augmented_sets/cities_augmented.csv',
     delimiter=';',
     dtype={
         'store_id': 'category',
         'name': 'category'
     }
-)
-stores_dict = { row[0] : row[1] for row in df_stores_mapping.values.tolist()}
-df_sales.replace({'store_id': cities_dict}, inplace=True)
+).values.tolist()}
+df_cut.replace({'store_id': cities_dict}, inplace=True)
 
 # Adjust product names and categories
-df_product_mapping =  pd.read_csv(
+df_product_mapping = pd.read_csv(
     'dataset/augmented_sets/products_augmented.csv',
     delimiter=';',
     dtype={
@@ -105,13 +108,16 @@ df_product_mapping =  pd.read_csv(
         'hierarchy1_id': 'category',
     }
 )
-products_dict = {row[0] : row[1] for row in df_product_mapping.values.tolist()}
-df_sales.replace({'product_id': products_dict}, inplace=True)
 
-df_product_mapping.drop(columns=['name'])
-df_sales.join(df_product_mapping.set_index('product_id'), on='product_id')
+products_dict = {row[0]: row[1] for row in df_product_mapping.values.tolist()}
+df_cut.replace({'product_id': products_dict}, inplace=True)
 
-print(df_sales)
+print(df_cut.memory_usage())
+
+df_product_mapping.drop(columns=['name'], inplace=True)
+df_cut.join(df_product_mapping.set_index('product_id'), on='product_id', inplace=True)
+
+print(df_cut)
 
 logging.basicConfig()
 logging.root.setLevel('INFO')
