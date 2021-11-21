@@ -5,6 +5,25 @@
     scroll-behavior: smooth;
     overflow-y: auto;
     overflow-x: hidden;
+    .briefing {
+        background-color: red;
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 0px 10px;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.1s;
+        &:active {
+            transform: scale(0.95);
+        }
+        p {
+            color: #fff;
+            font-weight: bold;
+            margin: 10px;
+            text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.86);
+        }
+    }
     .header {
         display: flex;
         flex-direction: row;
@@ -45,7 +64,7 @@
                     color: #fff;
                     font-weight: bold;
                     margin: 10px;
-                    text-shadow: 0px 0px 16px rgba(0,0,0,0.86);
+                    text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.86);
                 }
             }
         }
