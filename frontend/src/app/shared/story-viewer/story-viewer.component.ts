@@ -24,6 +24,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   @ViewChild('image') image: ElementRef;
 
+  private topic: string;
   public story: StoryItem[];
   private storySub: Subscription;
 
@@ -40,7 +41,12 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
       this.storySub = this.storyService.getStoryItems().subscribe((storyItems) => {
-        this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+        this.topic = params.get("topic")
+        if (this.topic == "briefing") {
+          this.story = this.storyService.getBestStory(storyItems);
+        } else {
+          this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+        }
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
           return storyItem.uuid == params.get("storyItemId");
@@ -63,7 +69,8 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   }
 
   private async nextStoryItem() {
-    window.history.replaceState({}, '', `/stories/${this.story[this.activeStoryItem].topic}/${this.story[this.activeStoryItem].uuid}`);
+    this.topic = this.topic != "briefing" ? this.story[this.activeStoryItem].topic : "briefing"
+    window.history.replaceState({}, '', `/stories/${this.topic}/${this.story[this.activeStoryItem].uuid}`);
     this.story[this.activeStoryItem].duration = this.story[this.activeStoryItem].ui_text.length * 1;
 
     this.isLoading = true
