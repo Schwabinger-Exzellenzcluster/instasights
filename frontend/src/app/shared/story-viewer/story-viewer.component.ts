@@ -34,7 +34,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   private textTimeout: any;
   private storyTimeout: any;
 
-  public showSummary: boolean = false;
+  public showMore: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, public unsplash: UnsplashService, private storyService: StoryService) { }
 

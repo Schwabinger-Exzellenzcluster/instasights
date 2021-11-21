@@ -14,10 +14,11 @@
         </div>
         <app-story-poll *ngIf="story && story[activeStoryItem].poll" [storyItemId]="story[activeStoryItem].uuid">
         </app-story-poll>
-        <ion-icon name="arrow-up" (click)="togglePause(); showSummary = true" [hidden]="showSummary || !story[activeStoryItem].summary"></ion-icon>
-        <div class="summary" *ngIf="story[activeStoryItem].summary" [hidden]="!showSummary">
-            <ion-icon name="close" (click)="togglePause(); showSummary = false"></ion-icon>
-            {{ story[activeStoryItem].summary }}
+        <ion-icon name="arrow-up" (click)="togglePause(); showMore = true" [hidden]="showMore || story == null || !(story[activeStoryItem].summary || story[activeStoryItem].data)"></ion-icon>
+        <div class="details" *ngIf="story != null && (story[activeStoryItem].summary || story[activeStoryItem].data)" [hidden]="!showMore">
+            <ion-icon name="close" (click)="togglePause(); showMore = false"></ion-icon>
+            <div class="summary" *ngIf="story[activeStoryItem].summary">{{ story[activeStoryItem].summary }}</div>
+            <app-chart *ngIf="story[activeStoryItem].data" [storyItemId]="story[activeStoryItem].uuid"></app-chart>
         </div>
     </div>
     <div class="content" [style.background]="getBackgroundColor(story[activeStoryItem])">
