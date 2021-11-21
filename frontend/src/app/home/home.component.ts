@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
-  constructor(public unsplash: UnsplashService, private storyService: StoryService) {
+  constructor(public unsplash: UnsplashService, public storyService: StoryService) {
   }
 
   ngOnInit(): void {
@@ -28,14 +28,6 @@ export class HomeComponent implements OnInit {
       Topic.Finance,
       Topic.News
     ];
-  }
-
-  public getTopicStory(topic: Topic) {
-    return this.storyService.storyItems.filter((storyItem) => {
-      return storyItem.topic == topic;
-    }).sort((a: StoryItem, b: StoryItem) => {
-      return compareAsc(a.date, b.date);
-    });
   }
 
   getIndicatorColor(impact: number) {
