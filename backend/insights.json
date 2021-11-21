@@ -1,15 +1,695 @@
 [
   {
-    "uuid": "52c9635e-de83-4a7b-bfc0-ea4385d501f5",
+    "uuid": "2d7a3d38-2359-4ed7-ac17-4f0cd88bcbde",
+    "topic": "sales",
+    "impact": -2.7525821299314304,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Drugstore goods",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "28%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Month",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Drugstore goods are down 28% this Month",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 6
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 15
+      }
+    }
+  },
+  {
+    "uuid": "0655c058-8319-4694-8509-940d2e7b9001",
+    "topic": "sales",
+    "impact": 3.9560115599645274,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Luxury goods",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "40%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Month",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Luxury goods are up 40% this Month",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 20
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 1
+      }
+    }
+  },
+  {
+    "uuid": "0c7c7bea-9094-430e-94c7-f86867c9af93",
+    "topic": "sales",
+    "impact": 1.4766767371601208,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Magazines",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "15%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Magazines are up 15% this Week",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 5
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 27
+      }
+    }
+  },
+  {
+    "uuid": "e45f34ff-c631-475f-a1df-b1a7a420d722",
+    "topic": "sales",
+    "impact": 1.3442622950819683,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Candy",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "14%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Candy are up 14% this Week",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 23
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 10
+      }
+    }
+  },
+  {
+    "uuid": "675abf37-4bb0-4f42-a04c-80f02a096939",
+    "topic": "sales",
+    "impact": 0.8870967741935477,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Toothpaste",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "9%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Toothpaste are up 9% this Week",
+    "data": null,
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 5
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 9
+      }
+    }
+  },
+  {
+    "uuid": "281620fd-5698-42b4-995a-514634a25a46",
+    "topic": "sales",
+    "impact": -0.0923482849604218,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Tv",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "1%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Tv are down 1% this Week",
+    "data": null,
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 23
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 21
+      }
+    }
+  },
+  {
+    "uuid": "ffdd2d14-f17b-4ffb-9154-3cebea3b7df4",
+    "topic": "sales",
+    "impact": -0.5964912280701751,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Furniture",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "6%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Furniture are down 6% this Week",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 16
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 6
+      }
+    }
+  },
+  {
+    "uuid": "a8c2d84b-a3e7-41f6-8353-d08ee8276737",
+    "topic": "sales",
+    "impact": 9.156734820279226,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Suits",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "92%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Suits are up 92% this Week",
+    "data": null,
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 23
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 8
+      }
+    }
+  },
+  {
+    "uuid": "4eca46f8-7b6a-4873-ae12-0b0c574579e5",
+    "topic": "sales",
+    "impact": 0.1846768155727485,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Electronic devices",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "2%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Electronic devices are up 2% this Week",
+    "data": null,
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 3
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 30
+      }
+    }
+  },
+  {
+    "uuid": "1abe2d26-f0e0-4373-8d06-51d23e608903",
+    "topic": "sales",
+    "impact": 3.2674042886517185,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Personal hygiene products",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "33%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Personal hygiene products are up 33% this Week",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 6
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 23
+      }
+    }
+  },
+  {
+    "uuid": "86eefddb-f5fc-485f-810e-eaa8a35730df",
+    "topic": "sales",
+    "impact": -1.1524163568773238,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Vacuum cleaners",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "12%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Vacuum cleaners are down 12% this Week",
+    "data": null,
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 10
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 9
+      }
+    }
+  },
+  {
+    "uuid": "c12da952-71f2-4d10-b418-0674b82bb451",
+    "topic": "sales",
+    "impact": -1.7088844981748763,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Product",
+        "relevance": 0
+      },
+      {
+        "text": "Phones",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "down",
+        "relevance": 1
+      },
+      {
+        "text": "18%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Product Phones are down 18% this Week",
+    "data": null,
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 25
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 14
+      }
+    }
+  },
+  {
+    "uuid": "0339019e-2384-4718-906d-2fa2c026b1ba",
     "topic": "sales",
     "impact": -2.109836922948747,
     "ui_text": [
       {
-        "text": "National",
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
         "relevance": 0
       },
       {
-        "text": "Sales",
+        "text": "of Global",
+        "relevance": 0
+      },
+      {
+        "text": "Global",
         "relevance": 1
       },
       {
@@ -33,11 +713,134 @@
         "relevance": 0.5
       }
     ],
-    "voice_text": "National Sales are down 22% this Month",
-    "data": null
+    "voice_text": "sales of of Global Global are down 22% this Month",
+    "data": null,
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 2
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 3
+      }
+    }
   },
   {
-    "uuid": "558ba4a0-219b-430e-9c90-8e3ea6f13f70",
+    "uuid": "f92a6a2e-0aa1-4963-9b10-6e514b77714e",
+    "topic": "finance",
+    "impact": 3.6728631077430918,
+    "ui_text": [
+      {
+        "text": "revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Global",
+        "relevance": 0
+      },
+      {
+        "text": "Global",
+        "relevance": 1
+      },
+      {
+        "text": "is",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "37%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Year",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "revenue of of Global Global is up 37% this Year",
+    "data": null,
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 1
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 16
+      }
+    }
+  },
+  {
+    "uuid": "1796594a-6d52-4ca7-8f89-d9c9a1f847b9",
+    "topic": "sales",
+    "impact": 2.155468856657734,
+    "ui_text": [
+      {
+        "text": "sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "of Global",
+        "relevance": 0
+      },
+      {
+        "text": "Global",
+        "relevance": 1
+      },
+      {
+        "text": "are",
+        "relevance": 0
+      },
+      {
+        "text": "up",
+        "relevance": 1
+      },
+      {
+        "text": "22%",
+        "relevance": 1
+      },
+      {
+        "text": "this",
+        "relevance": 0
+      },
+      {
+        "text": "Week",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "sales of of Global Global are up 22% this Week",
+    "data": null,
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 20
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 28
+      }
+    }
+  },
+  {
+    "uuid": "0f0427ac-2fe8-48d0-a795-2eb35603f93b",
     "topic": "finance",
     "impact": -0.5375020868052471,
     "ui_text": [
@@ -200,10 +1003,21 @@
           "y": 459.4988986647372
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 28
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 17
+      }
     }
   },
   {
-    "uuid": "3bdadb01-1ee6-4768-9e27-baafa430a426",
+    "uuid": "ee1b55a1-0495-4e1e-95c0-497e0c0b4fc4",
     "topic": "finance",
     "impact": 2.761646055242275,
     "ui_text": [
@@ -366,10 +1180,21 @@
           "y": 815.3926130536498
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 29
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 8
+      }
     }
   },
   {
-    "uuid": "c3f88875-68b0-449c-8e32-c327e6e4bd76",
+    "uuid": "c39fa89a-1731-4c11-89e8-254241f24dfe",
     "topic": "finance",
     "impact": -1.8605093647703164,
     "ui_text": [
@@ -532,10 +1357,21 @@
           "y": 784.2155042324744
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 3
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 3
+      }
     }
   },
   {
-    "uuid": "57388670-7c47-4667-a392-e4420fb765eb",
+    "uuid": "40df2f97-6ccd-4fb5-ae9d-a37bed659fb9",
     "topic": "finance",
     "impact": -2.249961929804871,
     "ui_text": [
@@ -698,10 +1534,21 @@
           "y": 836.570109449143
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 18
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 24
+      }
     }
   },
   {
-    "uuid": "d9276a24-771a-4f9e-b9af-516a7546f136",
+    "uuid": "e646458c-21f3-4ac7-9ba9-f4fda897e941",
     "topic": "finance",
     "impact": 0.011702489533651494,
     "ui_text": [
@@ -864,10 +1711,21 @@
           "y": 1588.7470563616057
         }
       ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 14
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 26
+      }
     }
   },
   {
-    "uuid": "01919179-2bb2-4f74-84a3-4fa45fed46cf",
+    "uuid": "428a4e05-6e53-4991-b3ec-4b384ea27bd9",
     "topic": "finance",
     "impact": 0.3240225145559439,
     "ui_text": [
@@ -1030,10 +1888,21 @@
           "y": 4385.99578094886
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 27
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 3
+      }
     }
   },
   {
-    "uuid": "b5ccfe84-eb89-4c37-8ae6-9131b00cbf80",
+    "uuid": "730f1831-5270-45c8-bc60-c7d481b29070",
     "topic": "finance",
     "impact": 0.8687958881769564,
     "ui_text": [
@@ -1196,10 +2065,21 @@
           "y": 607.3591830272164
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 7
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 5
+      }
     }
   },
   {
-    "uuid": "4f74c3ee-5ede-4cc7-8f1d-f8f42ef062bf",
+    "uuid": "ba711a05-e590-46df-b3b4-4c74035ed96b",
     "topic": "finance",
     "impact": -1.4923603724161116,
     "ui_text": [
@@ -1362,10 +2242,21 @@
           "y": 4762.559648242206
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 8
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 5
+      }
     }
   },
   {
-    "uuid": "d5361eb4-f51b-4c2f-b7df-9903002e3d26",
+    "uuid": "ea618867-0b94-4251-b89f-b28600d83a87",
     "topic": "finance",
     "impact": 0.7045772874834721,
     "ui_text": [
@@ -1528,10 +2419,21 @@
           "y": 15345.878612367842
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 2
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 29
+      }
     }
   },
   {
-    "uuid": "206fd6b0-ea60-41b7-83de-43cc868046dd",
+    "uuid": "1245b96e-b957-4d8b-9526-6f1d832c61b2",
     "topic": "finance",
     "impact": 1.5381824074480632,
     "ui_text": [
@@ -1694,10 +2596,375 @@
           "y": 837.845115516841
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 2
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 6
+      }
     }
   },
   {
-    "uuid": "082f62c6-5c61-4045-9939-1bbfa7ef2388",
+    "uuid": "e4a63e3e-fbd4-4430-8d6f-f51a79afb5be",
+    "topic": "sales",
+    "impact": -0.8588529851718985,
+    "ui_text": [
+      {
+        "text": "Sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Drugstore goods",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "9%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30Days",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "Sales of Drugstore goods are predicted to fall 9% within 30Days",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-10-02 00:00:00",
+          "y": 6614.830230318864
+        },
+        {
+          "x": "2019-10-03 00:00:00",
+          "y": 6894.173731833478
+        },
+        {
+          "x": "2019-10-04 00:00:00",
+          "y": 7120.935454308083
+        },
+        {
+          "x": "2019-10-05 00:00:00",
+          "y": 8224.365406379009
+        },
+        {
+          "x": "2019-10-06 00:00:00",
+          "y": 8171.452598848947
+        },
+        {
+          "x": "2019-10-07 00:00:00",
+          "y": 7103.425625661382
+        },
+        {
+          "x": "2019-10-08 00:00:00",
+          "y": 6634.968753209412
+        },
+        {
+          "x": "2019-10-09 00:00:00",
+          "y": 6623.627725906096
+        },
+        {
+          "x": "2019-10-10 00:00:00",
+          "y": 6797.0328448276405
+        },
+        {
+          "x": "2019-10-11 00:00:00",
+          "y": 6917.231724922469
+        },
+        {
+          "x": "2019-10-12 00:00:00",
+          "y": 7915.173129066619
+        },
+        {
+          "x": "2019-10-13 00:00:00",
+          "y": 7761.420808563914
+        },
+        {
+          "x": "2019-10-14 00:00:00",
+          "y": 6599.296223668624
+        },
+        {
+          "x": "2019-10-15 00:00:00",
+          "y": 6044.490213611968
+        },
+        {
+          "x": "2019-10-16 00:00:00",
+          "y": 5956.494570794066
+        },
+        {
+          "x": "2019-10-17 00:00:00",
+          "y": 6064.731900978703
+        },
+        {
+          "x": "2019-10-18 00:00:00",
+          "y": 6132.741249316843
+        },
+        {
+          "x": "2019-10-19 00:00:00",
+          "y": 7091.89748211881
+        },
+        {
+          "x": "2019-10-20 00:00:00",
+          "y": 6914.754643914233
+        },
+        {
+          "x": "2019-10-21 00:00:00",
+          "y": 5744.868645926445
+        },
+        {
+          "x": "2019-10-22 00:00:00",
+          "y": 5196.850097154453
+        },
+        {
+          "x": "2019-10-23 00:00:00",
+          "y": 5129.873852365687
+        },
+        {
+          "x": "2019-10-24 00:00:00",
+          "y": 5272.773156423866
+        },
+        {
+          "x": "2019-10-25 00:00:00",
+          "y": 5388.139446164439
+        },
+        {
+          "x": "2019-10-26 00:00:00",
+          "y": 6405.34077205794
+        },
+        {
+          "x": "2019-10-27 00:00:00",
+          "y": 6296.558647271096
+        },
+        {
+          "x": "2019-10-28 00:00:00",
+          "y": 5203.353424795522
+        },
+        {
+          "x": "2019-10-29 00:00:00",
+          "y": 4737.2180297975965
+        },
+        {
+          "x": "2019-10-30 00:00:00",
+          "y": 4755.220575930681
+        },
+        {
+          "x": "2019-10-31 00:00:00",
+          "y": 4984.111685447262
+        }
+      ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 9
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 21
+      }
+    }
+  },
+  {
+    "uuid": "f9c3fa88-6669-49e6-82c4-c616842200ac",
+    "topic": "sales",
+    "impact": -5.816513156192771,
+    "ui_text": [
+      {
+        "text": "Sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Luxury goods",
+        "relevance": 1
+      },
+      {
+        "text": "are predicted to",
+        "relevance": 0
+      },
+      {
+        "text": "fall",
+        "relevance": 1
+      },
+      {
+        "text": "59%",
+        "relevance": 1
+      },
+      {
+        "text": "within",
+        "relevance": 0
+      },
+      {
+        "text": "30Days",
+        "relevance": 0.5
+      }
+    ],
+    "voice_text": "Sales of Luxury goods are predicted to fall 59% within 30Days",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-10-02 00:00:00",
+          "y": 816.7280317974843
+        },
+        {
+          "x": "2019-10-03 00:00:00",
+          "y": 844.1223068354582
+        },
+        {
+          "x": "2019-10-04 00:00:00",
+          "y": 840.20771333141
+        },
+        {
+          "x": "2019-10-05 00:00:00",
+          "y": 1523.8050550078801
+        },
+        {
+          "x": "2019-10-06 00:00:00",
+          "y": 1825.7467600474936
+        },
+        {
+          "x": "2019-10-07 00:00:00",
+          "y": 785.2818895979775
+        },
+        {
+          "x": "2019-10-08 00:00:00",
+          "y": 718.6492295157782
+        },
+        {
+          "x": "2019-10-09 00:00:00",
+          "y": 657.1485728500035
+        },
+        {
+          "x": "2019-10-10 00:00:00",
+          "y": 687.2956638374576
+        },
+        {
+          "x": "2019-10-11 00:00:00",
+          "y": 688.1492113174533
+        },
+        {
+          "x": "2019-10-12 00:00:00",
+          "y": 1374.9673291791823
+        },
+        {
+          "x": "2019-10-13 00:00:00",
+          "y": 1683.4493111364313
+        },
+        {
+          "x": "2019-10-14 00:00:00",
+          "y": 657.1910148209523
+        },
+        {
+          "x": "2019-10-15 00:00:00",
+          "y": 601.2419486631265
+        },
+        {
+          "x": "2019-10-16 00:00:00",
+          "y": 551.2549592912084
+        },
+        {
+          "x": "2019-10-17 00:00:00",
+          "y": 593.0983535991068
+        },
+        {
+          "x": "2019-10-18 00:00:00",
+          "y": 606.1686418319692
+        },
+        {
+          "x": "2019-10-19 00:00:00",
+          "y": 1302.0947692652765
+        },
+        {
+          "x": "2019-10-20 00:00:00",
+          "y": 1621.4122324566129
+        },
+        {
+          "x": "2019-10-21 00:00:00",
+          "y": 612.0680278438657
+        },
+        {
+          "x": "2019-10-22 00:00:00",
+          "y": 567.9600983337394
+        },
+        {
+          "x": "2019-10-23 00:00:00",
+          "y": 529.1630371541885
+        },
+        {
+          "x": "2019-10-24 00:00:00",
+          "y": 580.9943355492477
+        },
+        {
+          "x": "2019-10-25 00:00:00",
+          "y": 603.3092433617741
+        },
+        {
+          "x": "2019-10-26 00:00:00",
+          "y": 1304.24873581437
+        },
+        {
+          "x": "2019-10-27 00:00:00",
+          "y": 1629.3415951356178
+        },
+        {
+          "x": "2019-10-28 00:00:00",
+          "y": 631.0543558692475
+        },
+        {
+          "x": "2019-10-29 00:00:00",
+          "y": 592.3084806940838
+        },
+        {
+          "x": "2019-10-30 00:00:00",
+          "y": 557.7775135312432
+        },
+        {
+          "x": "2019-10-31 00:00:00",
+          "y": 612.4030684201963
+        }
+      ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 28
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 5
+      }
+    }
+  },
+  {
+    "uuid": "316ed8aa-0018-4426-96c9-0b612e00c111",
     "topic": "stock",
     "impact": -3,
     "ui_text": [
@@ -1730,11 +2997,11 @@
         "relevance": 0
       },
       {
-        "text": "30Days",
+        "text": "30 Days",
         "relevance": 0.5
       }
     ],
-    "voice_text": "Stock of  Knobi-vital in Store Anderson branch is predicted to run out within 30Days",
+    "voice_text": "Stock of  Knobi-vital in Store Anderson branch is predicted to run out within 30 Days",
     "data": {
       "time": {
         "0": 1569974400000,
@@ -1801,75 +3068,86 @@
         "29": -1.6703259877
       },
       "fcst_lower": {
-        "0": -5.3576301287,
-        "1": -5.7093736699,
-        "2": -5.314401186,
-        "3": -5.9101089267,
-        "4": -5.2688678187,
-        "5": -5.4244487496,
-        "6": -5.7007140192,
-        "7": -5.5126278316,
-        "8": -5.3257567474,
-        "9": -5.8542369617,
-        "10": -5.4007427642,
-        "11": -5.7309373294,
-        "12": -5.8989540186,
-        "13": -6.1018036342,
-        "14": -5.945081907,
-        "15": -5.8542798809,
-        "16": -5.9318062181,
-        "17": -5.9899668145,
-        "18": -6.1818761636,
-        "19": -6.2531745493,
-        "20": -6.5822058743,
-        "21": -6.2228757904,
-        "22": -6.4884403835,
-        "23": -6.2850982494,
-        "24": -5.9697748686,
-        "25": -6.3793763043,
-        "26": -6.4890737309,
-        "27": -6.3160075584,
-        "28": -6.5659500345,
-        "29": -6.487934465
+        "0": -5.347965213,
+        "1": -5.4934335914,
+        "2": -5.3768947501,
+        "3": -5.6315910798,
+        "4": -5.8607340832,
+        "5": -5.4732355248,
+        "6": -5.9493998121,
+        "7": -5.4896098612,
+        "8": -5.7708746717,
+        "9": -5.5142292894,
+        "10": -5.8946453343,
+        "11": -5.3638818894,
+        "12": -6.0051358564,
+        "13": -6.3102689721,
+        "14": -5.9044830858,
+        "15": -5.4982763516,
+        "16": -6.0550265692,
+        "17": -6.3730596007,
+        "18": -6.3335569594,
+        "19": -6.1354759213,
+        "20": -6.2445175199,
+        "21": -6.0095700463,
+        "22": -6.5940875922,
+        "23": -6.4379488404,
+        "24": -5.8467364996,
+        "25": -6.0765126032,
+        "26": -6.3711979219,
+        "27": -6.3374550684,
+        "28": -6.43203777,
+        "29": -6.3562877279
       },
       "fcst_upper": {
-        "0": 4.3914226234,
-        "1": 4.413631898,
-        "2": 4.33448176,
-        "3": 4.1367227677,
-        "4": 4.295902658,
-        "5": 4.3505631439,
-        "6": 4.3573580652,
-        "7": 4.1406099746,
-        "8": 3.8685029258,
-        "9": 3.9915780648,
-        "10": 3.8491870936,
-        "11": 3.9575907237,
-        "12": 4.0754067535,
-        "13": 3.472016939,
-        "14": 3.7922026053,
-        "15": 3.4170114415,
-        "16": 4.0243698741,
-        "17": 3.7474908324,
-        "18": 3.6501726297,
-        "19": 3.4269205373,
-        "20": 3.6924770622,
-        "21": 3.3900815157,
-        "22": 3.3483462099,
-        "23": 3.6560837535,
-        "24": 3.5691888946,
-        "25": 3.3024296525,
-        "26": 3.2393171609,
-        "27": 3.1553681094,
-        "28": 3.7011736334,
-        "29": 3.2857747381
+        "0": 4.3445349476,
+        "1": 4.1388789307,
+        "2": 4.0500749558,
+        "3": 4.0942031234,
+        "4": 4.018497765,
+        "5": 4.1739089254,
+        "6": 4.5234058705,
+        "7": 4.0379381968,
+        "8": 3.9391092211,
+        "9": 4.266464703,
+        "10": 3.6824873115,
+        "11": 3.7927145369,
+        "12": 3.8767501938,
+        "13": 3.584326011,
+        "14": 4.0669407522,
+        "15": 3.6532046667,
+        "16": 3.5060277965,
+        "17": 3.7081350463,
+        "18": 3.7451467664,
+        "19": 3.8997429038,
+        "20": 3.2566956742,
+        "21": 3.4132556077,
+        "22": 3.5093297565,
+        "23": 3.3101858861,
+        "24": 3.4784884986,
+        "25": 3.1350359002,
+        "26": 3.8897991061,
+        "27": 3.6593222603,
+        "28": 3.2911643724,
+        "29": 3.3990167816
+      }
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 1
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 24
       }
     }
   },
   {
-    "uuid": "43933cb4-2e40-4eb6-80a7-d42c220924d7",
+    "uuid": "03bbe084-aa33-4214-90f5-be134c7ea65f",
     "topic": "sales",
-    "impact": -0.1702274284561356,
+    "impact": -0.8240429070699651,
     "ui_text": [
       {
         "text": "Sales",
@@ -1880,15 +3158,1306 @@
         "relevance": 0
       },
       {
-        "text": "Product group",
-        "relevance": 0.5
-      },
-      {
-        "text": "Drugstore_goods",
+        "text": "Drugstore goods",
         "relevance": 1
       },
       {
         "text": "have been",
+        "relevance": 0
+      },
+      {
+        "text": "falling",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-09-01",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "-24%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Sales of Drugstore goods have been falling since 2019-09-01 for a Total of  -24%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 7242.94
+        },
+        {
+          "x": "2019-09-02 00:00:00",
+          "y": 6508.162
+        },
+        {
+          "x": "2019-09-03 00:00:00",
+          "y": 6412.484
+        },
+        {
+          "x": "2019-09-04 00:00:00",
+          "y": 6102.694
+        },
+        {
+          "x": "2019-09-05 00:00:00",
+          "y": 5972.876
+        },
+        {
+          "x": "2019-09-06 00:00:00",
+          "y": 6546.05
+        },
+        {
+          "x": "2019-09-07 00:00:00",
+          "y": 7591.068
+        },
+        {
+          "x": "2019-09-08 00:00:00",
+          "y": 7773.706
+        },
+        {
+          "x": "2019-09-09 00:00:00",
+          "y": 6607.132
+        },
+        {
+          "x": "2019-09-10 00:00:00",
+          "y": 6055.316
+        },
+        {
+          "x": "2019-09-11 00:00:00",
+          "y": 5856.66
+        },
+        {
+          "x": "2019-09-12 00:00:00",
+          "y": 5566.916
+        },
+        {
+          "x": "2019-09-13 00:00:00",
+          "y": 5784.576
+        },
+        {
+          "x": "2019-09-14 00:00:00",
+          "y": 6385.786
+        },
+        {
+          "x": "2019-09-15 00:00:00",
+          "y": 7207.71
+        },
+        {
+          "x": "2019-09-16 00:00:00",
+          "y": 5819.834
+        },
+        {
+          "x": "2019-09-17 00:00:00",
+          "y": 5569.932
+        },
+        {
+          "x": "2019-09-18 00:00:00",
+          "y": 5127.932
+        },
+        {
+          "x": "2019-09-19 00:00:00",
+          "y": 5304.418
+        },
+        {
+          "x": "2019-09-20 00:00:00",
+          "y": 5264.574
+        },
+        {
+          "x": "2019-09-21 00:00:00",
+          "y": 6481.49
+        },
+        {
+          "x": "2019-09-22 00:00:00",
+          "y": 6597.47
+        },
+        {
+          "x": "2019-09-23 00:00:00",
+          "y": 5196.676
+        },
+        {
+          "x": "2019-09-24 00:00:00",
+          "y": 5190.202
+        },
+        {
+          "x": "2019-09-25 00:00:00",
+          "y": 5114.9
+        },
+        {
+          "x": "2019-09-26 00:00:00",
+          "y": 6601.928
+        },
+        {
+          "x": "2019-09-27 00:00:00",
+          "y": 6636.608
+        },
+        {
+          "x": "2019-09-28 00:00:00",
+          "y": 8105.42
+        },
+        {
+          "x": "2019-09-29 00:00:00",
+          "y": 7946.472
+        },
+        {
+          "x": "2019-09-30 00:00:00",
+          "y": 5586.212
+        },
+        {
+          "x": "2019-10-01 00:00:00",
+          "y": 5452.392
+        }
+      ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 20
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 20
+      }
+    }
+  },
+  {
+    "uuid": "e78c7325-60f4-4ade-ac89-6cc2189b25c4",
+    "topic": "sales",
+    "impact": -1.8997927132586827,
+    "ui_text": [
+      {
+        "text": "Sales",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Luxury goods",
+        "relevance": 1
+      },
+      {
+        "text": "have been",
+        "relevance": 0
+      },
+      {
+        "text": "falling",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-06-08",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "-56%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Sales of Luxury goods have been falling since 2019-06-08 for a Total of  -56%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-06-08 00:00:00",
+          "y": 1456.115
+        },
+        {
+          "x": "2019-06-09 00:00:00",
+          "y": 1866.41
+        },
+        {
+          "x": "2019-06-10 00:00:00",
+          "y": 632.238
+        },
+        {
+          "x": "2019-06-11 00:00:00",
+          "y": 610.71
+        },
+        {
+          "x": "2019-06-12 00:00:00",
+          "y": 533.765
+        },
+        {
+          "x": "2019-06-13 00:00:00",
+          "y": 564.76
+        },
+        {
+          "x": "2019-06-14 00:00:00",
+          "y": 610.86
+        },
+        {
+          "x": "2019-06-15 00:00:00",
+          "y": 1337.0
+        },
+        {
+          "x": "2019-06-16 00:00:00",
+          "y": 1704.415
+        },
+        {
+          "x": "2019-06-17 00:00:00",
+          "y": 542.115
+        },
+        {
+          "x": "2019-06-18 00:00:00",
+          "y": 569.465
+        },
+        {
+          "x": "2019-06-19 00:00:00",
+          "y": 495.473
+        },
+        {
+          "x": "2019-06-20 00:00:00",
+          "y": 607.741
+        },
+        {
+          "x": "2019-06-21 00:00:00",
+          "y": 617.965
+        },
+        {
+          "x": "2019-06-22 00:00:00",
+          "y": 1449.79
+        },
+        {
+          "x": "2019-06-23 00:00:00",
+          "y": 1521.548
+        },
+        {
+          "x": "2019-06-24 00:00:00",
+          "y": 665.262
+        },
+        {
+          "x": "2019-06-25 00:00:00",
+          "y": 503.995
+        },
+        {
+          "x": "2019-06-26 00:00:00",
+          "y": 535.935
+        },
+        {
+          "x": "2019-06-27 00:00:00",
+          "y": 574.2
+        },
+        {
+          "x": "2019-06-28 00:00:00",
+          "y": 636.491
+        },
+        {
+          "x": "2019-06-29 00:00:00",
+          "y": 1418.874
+        },
+        {
+          "x": "2019-06-30 00:00:00",
+          "y": 1632.465
+        },
+        {
+          "x": "2019-07-01 00:00:00",
+          "y": 549.44
+        },
+        {
+          "x": "2019-07-02 00:00:00",
+          "y": 587.775
+        },
+        {
+          "x": "2019-07-03 00:00:00",
+          "y": 590.065
+        },
+        {
+          "x": "2019-07-04 00:00:00",
+          "y": 610.56
+        },
+        {
+          "x": "2019-07-05 00:00:00",
+          "y": 604.226
+        },
+        {
+          "x": "2019-07-06 00:00:00",
+          "y": 1384.385
+        },
+        {
+          "x": "2019-07-07 00:00:00",
+          "y": 1642.68
+        },
+        {
+          "x": "2019-07-08 00:00:00",
+          "y": 626.22
+        }
+      ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 20
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 24
+      }
+    }
+  },
+  {
+    "uuid": "420a4fa4-772b-4f03-9097-508058ef4741",
+    "topic": "finance",
+    "impact": 1.3251402225941906,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Johnson franchise",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "rising",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2018-11-29",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "40%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Johnson franchise has been rising since 2018-11-29 for a Total of  40%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2018-11-29 00:00:00",
+          "y": 454.04
+        },
+        {
+          "x": "2018-11-30 00:00:00",
+          "y": 311.58
+        },
+        {
+          "x": "2018-12-01 00:00:00",
+          "y": 446.91
+        },
+        {
+          "x": "2018-12-02 00:00:00",
+          "y": 493.1
+        },
+        {
+          "x": "2018-12-03 00:00:00",
+          "y": 469.06
+        },
+        {
+          "x": "2018-12-04 00:00:00",
+          "y": 318.21999999999997
+        },
+        {
+          "x": "2018-12-05 00:00:00",
+          "y": 299.81
+        },
+        {
+          "x": "2018-12-06 00:00:00",
+          "y": 263.33
+        },
+        {
+          "x": "2018-12-07 00:00:00",
+          "y": 313.49
+        },
+        {
+          "x": "2018-12-08 00:00:00",
+          "y": 789.2
+        },
+        {
+          "x": "2018-12-09 00:00:00",
+          "y": 670.09
+        },
+        {
+          "x": "2018-12-10 00:00:00",
+          "y": 397.02
+        },
+        {
+          "x": "2018-12-11 00:00:00",
+          "y": 507.03
+        },
+        {
+          "x": "2018-12-12 00:00:00",
+          "y": 418.53999999999996
+        },
+        {
+          "x": "2018-12-13 00:00:00",
+          "y": 430.78
+        },
+        {
+          "x": "2018-12-14 00:00:00",
+          "y": 353.26
+        },
+        {
+          "x": "2018-12-15 00:00:00",
+          "y": 656.9
+        },
+        {
+          "x": "2018-12-16 00:00:00",
+          "y": 686.53
+        },
+        {
+          "x": "2018-12-17 00:00:00",
+          "y": 358.87
+        },
+        {
+          "x": "2018-12-18 00:00:00",
+          "y": 534.04
+        },
+        {
+          "x": "2018-12-19 00:00:00",
+          "y": 317.12
+        },
+        {
+          "x": "2018-12-20 00:00:00",
+          "y": 306.21999999999997
+        },
+        {
+          "x": "2018-12-21 00:00:00",
+          "y": 384.31
+        },
+        {
+          "x": "2018-12-22 00:00:00",
+          "y": 704.61
+        },
+        {
+          "x": "2018-12-23 00:00:00",
+          "y": 941.44
+        },
+        {
+          "x": "2018-12-24 00:00:00",
+          "y": 414.94
+        },
+        {
+          "x": "2018-12-25 00:00:00",
+          "y": 265.09
+        },
+        {
+          "x": "2018-12-26 00:00:00",
+          "y": 301.58
+        },
+        {
+          "x": "2018-12-27 00:00:00",
+          "y": 279.13
+        },
+        {
+          "x": "2018-12-28 00:00:00",
+          "y": 339.56
+        },
+        {
+          "x": "2018-12-29 00:00:00",
+          "y": 634.54
+        }
+      ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 27
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 5
+      }
+    }
+  },
+  {
+    "uuid": "4ae6af72-a2a3-43a4-b5cb-07589488999b",
+    "topic": "finance",
+    "impact": 15.632600331395514,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Anderson branch",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "rising",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-07-18",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "469%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Anderson branch has been rising since 2019-07-18 for a Total of  469%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-07-18 00:00:00",
+          "y": 118.69
+        },
+        {
+          "x": "2019-07-19 00:00:00",
+          "y": 203.96
+        },
+        {
+          "x": "2019-07-20 00:00:00",
+          "y": 213.18
+        },
+        {
+          "x": "2019-07-21 00:00:00",
+          "y": 160.35
+        },
+        {
+          "x": "2019-07-22 00:00:00",
+          "y": 360.90999999999997
+        },
+        {
+          "x": "2019-07-23 00:00:00",
+          "y": 412.77
+        },
+        {
+          "x": "2019-07-24 00:00:00",
+          "y": 178.23
+        },
+        {
+          "x": "2019-07-25 00:00:00",
+          "y": 270.27
+        },
+        {
+          "x": "2019-07-26 00:00:00",
+          "y": 145.39
+        },
+        {
+          "x": "2019-07-27 00:00:00",
+          "y": 171.62
+        },
+        {
+          "x": "2019-07-28 00:00:00",
+          "y": 91.75
+        },
+        {
+          "x": "2019-07-29 00:00:00",
+          "y": 342.61
+        },
+        {
+          "x": "2019-07-30 00:00:00",
+          "y": 226.73
+        },
+        {
+          "x": "2019-07-31 00:00:00",
+          "y": 272.64
+        },
+        {
+          "x": "2019-08-01 00:00:00",
+          "y": 169.38
+        },
+        {
+          "x": "2019-08-02 00:00:00",
+          "y": 173.87
+        },
+        {
+          "x": "2019-08-03 00:00:00",
+          "y": 275.68
+        },
+        {
+          "x": "2019-08-04 00:00:00",
+          "y": 201.64
+        },
+        {
+          "x": "2019-08-05 00:00:00",
+          "y": 174.01
+        },
+        {
+          "x": "2019-08-06 00:00:00",
+          "y": 224.61
+        },
+        {
+          "x": "2019-08-07 00:00:00",
+          "y": 312.69
+        },
+        {
+          "x": "2019-08-08 00:00:00",
+          "y": 116.13000000000001
+        },
+        {
+          "x": "2019-08-09 00:00:00",
+          "y": 461.05
+        },
+        {
+          "x": "2019-08-10 00:00:00",
+          "y": 273.71
+        },
+        {
+          "x": "2019-08-11 00:00:00",
+          "y": 0.0
+        },
+        {
+          "x": "2019-08-12 00:00:00",
+          "y": 0.0
+        },
+        {
+          "x": "2019-08-13 00:00:00",
+          "y": 126.74
+        },
+        {
+          "x": "2019-08-14 00:00:00",
+          "y": 213.28
+        },
+        {
+          "x": "2019-08-15 00:00:00",
+          "y": 440.26
+        },
+        {
+          "x": "2019-08-16 00:00:00",
+          "y": 673.5
+        },
+        {
+          "x": "2019-08-17 00:00:00",
+          "y": 675.32
+        }
+      ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 13
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 11
+      }
+    }
+  },
+  {
+    "uuid": "7fbeb0f3-a97d-4183-8235-118776021f9f",
+    "topic": "finance",
+    "impact": 5.6939794419970635,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Taylor store",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "rising",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-29",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "171%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Taylor store has been rising since 2019-08-29 for a Total of  171%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-08-29 00:00:00",
+          "y": 340.5
+        },
+        {
+          "x": "2019-08-30 00:00:00",
+          "y": 482.0
+        },
+        {
+          "x": "2019-08-31 00:00:00",
+          "y": 427.93
+        },
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 636.72
+        },
+        {
+          "x": "2019-09-02 00:00:00",
+          "y": 467.49
+        },
+        {
+          "x": "2019-09-03 00:00:00",
+          "y": 564.09
+        },
+        {
+          "x": "2019-09-04 00:00:00",
+          "y": 397.97
+        },
+        {
+          "x": "2019-09-05 00:00:00",
+          "y": 351.32
+        },
+        {
+          "x": "2019-09-06 00:00:00",
+          "y": 485.03000000000003
+        },
+        {
+          "x": "2019-09-07 00:00:00",
+          "y": 654.37
+        },
+        {
+          "x": "2019-09-08 00:00:00",
+          "y": 487.57
+        },
+        {
+          "x": "2019-09-09 00:00:00",
+          "y": 681.3000000000001
+        },
+        {
+          "x": "2019-09-10 00:00:00",
+          "y": 684.93
+        },
+        {
+          "x": "2019-09-11 00:00:00",
+          "y": 420.57
+        },
+        {
+          "x": "2019-09-12 00:00:00",
+          "y": 333.72
+        },
+        {
+          "x": "2019-09-13 00:00:00",
+          "y": 349.99
+        },
+        {
+          "x": "2019-09-14 00:00:00",
+          "y": 483.21
+        },
+        {
+          "x": "2019-09-15 00:00:00",
+          "y": 424.27
+        },
+        {
+          "x": "2019-09-16 00:00:00",
+          "y": 584.78
+        },
+        {
+          "x": "2019-09-17 00:00:00",
+          "y": 266.36
+        },
+        {
+          "x": "2019-09-18 00:00:00",
+          "y": 300.41
+        },
+        {
+          "x": "2019-09-19 00:00:00",
+          "y": 532.23
+        },
+        {
+          "x": "2019-09-20 00:00:00",
+          "y": 301.44
+        },
+        {
+          "x": "2019-09-21 00:00:00",
+          "y": 440.6
+        },
+        {
+          "x": "2019-09-22 00:00:00",
+          "y": 454.92
+        },
+        {
+          "x": "2019-09-23 00:00:00",
+          "y": 452.53999999999996
+        },
+        {
+          "x": "2019-09-24 00:00:00",
+          "y": 707.46
+        },
+        {
+          "x": "2019-09-25 00:00:00",
+          "y": 206.23
+        },
+        {
+          "x": "2019-09-26 00:00:00",
+          "y": 428.08
+        },
+        {
+          "x": "2019-09-27 00:00:00",
+          "y": 404.84
+        },
+        {
+          "x": "2019-09-28 00:00:00",
+          "y": 922.14
+        }
+      ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 29
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 21
+      }
+    }
+  },
+  {
+    "uuid": "4998e1a0-b348-4408-864d-56bda1f97bbd",
+    "topic": "finance",
+    "impact": 3.4563497770746445,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Gonzalez franchise",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "rising",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-30",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "104%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Gonzalez franchise has been rising since 2019-08-30 for a Total of  104%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-08-30 00:00:00",
+          "y": 347.65
+        },
+        {
+          "x": "2019-08-31 00:00:00",
+          "y": 698.54
+        },
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 500.56
+        },
+        {
+          "x": "2019-09-02 00:00:00",
+          "y": 453.35
+        },
+        {
+          "x": "2019-09-03 00:00:00",
+          "y": 494.03000000000003
+        },
+        {
+          "x": "2019-09-04 00:00:00",
+          "y": 780.73
+        },
+        {
+          "x": "2019-09-05 00:00:00",
+          "y": 468.06
+        },
+        {
+          "x": "2019-09-06 00:00:00",
+          "y": 505.1
+        },
+        {
+          "x": "2019-09-07 00:00:00",
+          "y": 641.52
+        },
+        {
+          "x": "2019-09-08 00:00:00",
+          "y": 757.63
+        },
+        {
+          "x": "2019-09-09 00:00:00",
+          "y": 292.25
+        },
+        {
+          "x": "2019-09-10 00:00:00",
+          "y": 616.21
+        },
+        {
+          "x": "2019-09-11 00:00:00",
+          "y": 432.27
+        },
+        {
+          "x": "2019-09-12 00:00:00",
+          "y": 449.81
+        },
+        {
+          "x": "2019-09-13 00:00:00",
+          "y": 375.46
+        },
+        {
+          "x": "2019-09-14 00:00:00",
+          "y": 504.17
+        },
+        {
+          "x": "2019-09-15 00:00:00",
+          "y": 427.37
+        },
+        {
+          "x": "2019-09-16 00:00:00",
+          "y": 361.6
+        },
+        {
+          "x": "2019-09-17 00:00:00",
+          "y": 370.67
+        },
+        {
+          "x": "2019-09-18 00:00:00",
+          "y": 200.95
+        },
+        {
+          "x": "2019-09-19 00:00:00",
+          "y": 276.86
+        },
+        {
+          "x": "2019-09-20 00:00:00",
+          "y": 562.87
+        },
+        {
+          "x": "2019-09-21 00:00:00",
+          "y": 548.86
+        },
+        {
+          "x": "2019-09-22 00:00:00",
+          "y": 707.86
+        },
+        {
+          "x": "2019-09-23 00:00:00",
+          "y": 486.45
+        },
+        {
+          "x": "2019-09-24 00:00:00",
+          "y": 282.98
+        },
+        {
+          "x": "2019-09-25 00:00:00",
+          "y": 368.64
+        },
+        {
+          "x": "2019-09-26 00:00:00",
+          "y": 460.03
+        },
+        {
+          "x": "2019-09-27 00:00:00",
+          "y": 504.83
+        },
+        {
+          "x": "2019-09-28 00:00:00",
+          "y": 563.96
+        },
+        {
+          "x": "2019-09-29 00:00:00",
+          "y": 708.13
+        }
+      ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 30
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 5
+      }
+    }
+  },
+  {
+    "uuid": "a9d559a2-83f7-405d-9842-204d84fe34e0",
+    "topic": "finance",
+    "impact": -2.1706540805439523,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Clark store",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "falling",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-09-01",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "-65%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Clark store has been falling since 2019-09-01 for a Total of  -65%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 368.66
+        },
+        {
+          "x": "2019-09-02 00:00:00",
+          "y": 87.37
+        },
+        {
+          "x": "2019-09-03 00:00:00",
+          "y": 186.43
+        },
+        {
+          "x": "2019-09-04 00:00:00",
+          "y": 209.10000000000002
+        },
+        {
+          "x": "2019-09-05 00:00:00",
+          "y": 138.57999999999998
+        },
+        {
+          "x": "2019-09-06 00:00:00",
+          "y": 263.13
+        },
+        {
+          "x": "2019-09-07 00:00:00",
+          "y": 249.92000000000002
+        },
+        {
+          "x": "2019-09-08 00:00:00",
+          "y": 205.37
+        },
+        {
+          "x": "2019-09-09 00:00:00",
+          "y": 191.18
+        },
+        {
+          "x": "2019-09-10 00:00:00",
+          "y": 147.14
+        },
+        {
+          "x": "2019-09-11 00:00:00",
+          "y": 135.37
+        },
+        {
+          "x": "2019-09-12 00:00:00",
+          "y": 134.32999999999998
+        },
+        {
+          "x": "2019-09-13 00:00:00",
+          "y": 231.76999999999998
+        },
+        {
+          "x": "2019-09-14 00:00:00",
+          "y": 331.29
+        },
+        {
+          "x": "2019-09-15 00:00:00",
+          "y": 176.6
+        },
+        {
+          "x": "2019-09-16 00:00:00",
+          "y": 175.32
+        },
+        {
+          "x": "2019-09-17 00:00:00",
+          "y": 286.91
+        },
+        {
+          "x": "2019-09-18 00:00:00",
+          "y": 129.77
+        },
+        {
+          "x": "2019-09-19 00:00:00",
+          "y": 117.88
+        },
+        {
+          "x": "2019-09-20 00:00:00",
+          "y": 122.21000000000001
+        },
+        {
+          "x": "2019-09-21 00:00:00",
+          "y": 191.54000000000002
+        },
+        {
+          "x": "2019-09-22 00:00:00",
+          "y": 280.71
+        },
+        {
+          "x": "2019-09-23 00:00:00",
+          "y": 218.79000000000002
+        },
+        {
+          "x": "2019-09-24 00:00:00",
+          "y": 108.18
+        },
+        {
+          "x": "2019-09-25 00:00:00",
+          "y": 194.47
+        },
+        {
+          "x": "2019-09-26 00:00:00",
+          "y": 124.72
+        },
+        {
+          "x": "2019-09-27 00:00:00",
+          "y": 246.51
+        },
+        {
+          "x": "2019-09-28 00:00:00",
+          "y": 227.61
+        },
+        {
+          "x": "2019-09-29 00:00:00",
+          "y": 148.48
+        },
+        {
+          "x": "2019-09-30 00:00:00",
+          "y": 114.73
+        },
+        {
+          "x": "2019-10-01 00:00:00",
+          "y": 128.59
+        }
+      ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 8
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 26
+      }
+    }
+  },
+  {
+    "uuid": "087fa450-1507-47a9-aa43-78c4a49ca2a4",
+    "topic": "finance",
+    "impact": -0.26555181357178786,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Robinson branch",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
         "relevance": 0
       },
       {
@@ -1908,149 +4477,160 @@
         "relevance": 0
       },
       {
-        "text": "-5%",
+        "text": "-7%",
         "relevance": 1
       }
     ],
-    "voice_text": "Sales of Product group Drugstore_goods have been falling since 2019-08-02 for a Total of  -5%",
+    "voice_text": "Revenue of Robinson branch has been falling since 2019-08-02 for a Total of  -7%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
           "x": "2019-08-02 00:00:00",
-          "y": 7632.73
+          "y": 172.22
         },
         {
           "x": "2019-08-03 00:00:00",
-          "y": 8455.278
+          "y": 130.12
         },
         {
           "x": "2019-08-04 00:00:00",
-          "y": 7769.702
+          "y": 235.13
         },
         {
           "x": "2019-08-05 00:00:00",
-          "y": 7036.004
+          "y": 163.16
         },
         {
           "x": "2019-08-06 00:00:00",
-          "y": 6705.812
+          "y": 212.22
         },
         {
           "x": "2019-08-07 00:00:00",
-          "y": 6724.156
+          "y": 84.22999999999999
         },
         {
           "x": "2019-08-08 00:00:00",
-          "y": 7282.92
+          "y": 159.06
         },
         {
           "x": "2019-08-09 00:00:00",
-          "y": 8390.346
+          "y": 291.65
         },
         {
           "x": "2019-08-10 00:00:00",
-          "y": 10568.278
+          "y": 231.8
         },
         {
           "x": "2019-08-11 00:00:00",
-          "y": 5677.432
+          "y": 87.59
         },
         {
           "x": "2019-08-12 00:00:00",
-          "y": 7258.986
+          "y": 193.64
         },
         {
           "x": "2019-08-13 00:00:00",
-          "y": 7246.022
+          "y": 140.27
         },
         {
           "x": "2019-08-14 00:00:00",
-          "y": 7371.066
+          "y": 113.28999999999999
         },
         {
           "x": "2019-08-15 00:00:00",
-          "y": 6778.536
+          "y": 154.61
         },
         {
           "x": "2019-08-16 00:00:00",
-          "y": 12909.234
+          "y": 400.08000000000004
         },
         {
           "x": "2019-08-17 00:00:00",
-          "y": 12719.518
+          "y": 206.45
         },
         {
           "x": "2019-08-18 00:00:00",
-          "y": 7479.558
+          "y": 187.41
         },
         {
           "x": "2019-08-19 00:00:00",
-          "y": 6643.214
+          "y": 74.44
         },
         {
           "x": "2019-08-20 00:00:00",
-          "y": 23470.682
+          "y": 2431.78
         },
         {
           "x": "2019-08-21 00:00:00",
-          "y": 14639.128
+          "y": 101.12
         },
         {
           "x": "2019-08-22 00:00:00",
-          "y": 6891.14
+          "y": 70.6
         },
         {
           "x": "2019-08-23 00:00:00",
-          "y": 7282.206
+          "y": 164.68
         },
         {
           "x": "2019-08-24 00:00:00",
-          "y": 7710.31
+          "y": 145.55
         },
         {
           "x": "2019-08-25 00:00:00",
-          "y": 7525.836
+          "y": 283.24
         },
         {
           "x": "2019-08-26 00:00:00",
-          "y": 6859.372
+          "y": 225.22
         },
         {
           "x": "2019-08-27 00:00:00",
-          "y": 6347.584
+          "y": 153.88
         },
         {
           "x": "2019-08-28 00:00:00",
-          "y": 6698.01
+          "y": 219.41
         },
         {
           "x": "2019-08-29 00:00:00",
-          "y": 6352.1
+          "y": 242.13
         },
         {
           "x": "2019-08-30 00:00:00",
-          "y": 7294.264
+          "y": 157.85000000000002
         },
         {
           "x": "2019-08-31 00:00:00",
-          "y": 7425.038
+          "y": 229.59
         },
         {
           "x": "2019-09-01 00:00:00",
-          "y": 7242.94
+          "y": 158.5
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 11
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 29
+      }
     }
   },
   {
-    "uuid": "fd4f7ed5-45da-41dc-8bfd-aefa4d379cba",
-    "topic": "sales",
-    "impact": 0.13294310686364405,
+    "uuid": "5a441e2e-804c-452d-86e9-7da7fafc6927",
+    "topic": "finance",
+    "impact": -1.1408295868935059,
     "ui_text": [
       {
-        "text": "Sales",
+        "text": "Revenue",
         "relevance": 1
       },
       {
@@ -2058,15 +4638,381 @@
         "relevance": 0
       },
       {
-        "text": "Product group",
-        "relevance": 0.5
-      },
-      {
-        "text": "Luxury",
+        "text": "Nelson store",
         "relevance": 1
       },
       {
-        "text": "have been",
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "falling",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-01-12",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "-34%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Nelson store has been falling since 2019-01-12 for a Total of  -34%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-01-12 00:00:00",
+          "y": 1185.5700000000002
+        },
+        {
+          "x": "2019-01-13 00:00:00",
+          "y": 621.04
+        },
+        {
+          "x": "2019-01-14 00:00:00",
+          "y": 468.54
+        },
+        {
+          "x": "2019-01-15 00:00:00",
+          "y": 294.58
+        },
+        {
+          "x": "2019-01-16 00:00:00",
+          "y": 309.65999999999997
+        },
+        {
+          "x": "2019-01-17 00:00:00",
+          "y": 750.0
+        },
+        {
+          "x": "2019-01-18 00:00:00",
+          "y": 412.65
+        },
+        {
+          "x": "2019-01-19 00:00:00",
+          "y": 797.83
+        },
+        {
+          "x": "2019-01-20 00:00:00",
+          "y": 545.8199999999999
+        },
+        {
+          "x": "2019-01-21 00:00:00",
+          "y": 402.54
+        },
+        {
+          "x": "2019-01-22 00:00:00",
+          "y": 457.77
+        },
+        {
+          "x": "2019-01-23 00:00:00",
+          "y": 474.54
+        },
+        {
+          "x": "2019-01-24 00:00:00",
+          "y": 308.85
+        },
+        {
+          "x": "2019-01-25 00:00:00",
+          "y": 868.1500000000001
+        },
+        {
+          "x": "2019-01-26 00:00:00",
+          "y": 648.9399999999999
+        },
+        {
+          "x": "2019-01-27 00:00:00",
+          "y": 843.35
+        },
+        {
+          "x": "2019-01-28 00:00:00",
+          "y": 704.35
+        },
+        {
+          "x": "2019-01-29 00:00:00",
+          "y": 963.67
+        },
+        {
+          "x": "2019-01-30 00:00:00",
+          "y": 914.35
+        },
+        {
+          "x": "2019-01-31 00:00:00",
+          "y": 788.28
+        },
+        {
+          "x": "2019-02-01 00:00:00",
+          "y": 449.55
+        },
+        {
+          "x": "2019-02-02 00:00:00",
+          "y": 1280.95
+        },
+        {
+          "x": "2019-02-03 00:00:00",
+          "y": 1015.78
+        },
+        {
+          "x": "2019-02-04 00:00:00",
+          "y": 614.6999999999999
+        },
+        {
+          "x": "2019-02-05 00:00:00",
+          "y": 304.2
+        },
+        {
+          "x": "2019-02-06 00:00:00",
+          "y": 271.23
+        },
+        {
+          "x": "2019-02-07 00:00:00",
+          "y": 275.8
+        },
+        {
+          "x": "2019-02-08 00:00:00",
+          "y": 686.08
+        },
+        {
+          "x": "2019-02-09 00:00:00",
+          "y": 1222.33
+        },
+        {
+          "x": "2019-02-10 00:00:00",
+          "y": 841.25
+        },
+        {
+          "x": "2019-02-11 00:00:00",
+          "y": 779.81
+        }
+      ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 4
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 10
+      }
+    }
+  },
+  {
+    "uuid": "d504446c-8d3a-4908-9ad8-00bd7f1a5c2a",
+    "topic": "finance",
+    "impact": -0.9530462347933362,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Turner store",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "falling",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-02",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "-28%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Turner store has been falling since 2019-08-02 for a Total of  -28%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-08-02 00:00:00",
+          "y": 407.99
+        },
+        {
+          "x": "2019-08-03 00:00:00",
+          "y": 617.09
+        },
+        {
+          "x": "2019-08-04 00:00:00",
+          "y": 529.5
+        },
+        {
+          "x": "2019-08-05 00:00:00",
+          "y": 649.38
+        },
+        {
+          "x": "2019-08-06 00:00:00",
+          "y": 464.47
+        },
+        {
+          "x": "2019-08-07 00:00:00",
+          "y": 416.48
+        },
+        {
+          "x": "2019-08-08 00:00:00",
+          "y": 866.38
+        },
+        {
+          "x": "2019-08-09 00:00:00",
+          "y": 778.2
+        },
+        {
+          "x": "2019-08-10 00:00:00",
+          "y": 928.74
+        },
+        {
+          "x": "2019-08-11 00:00:00",
+          "y": 780.15
+        },
+        {
+          "x": "2019-08-12 00:00:00",
+          "y": 749.25
+        },
+        {
+          "x": "2019-08-13 00:00:00",
+          "y": 676.23
+        },
+        {
+          "x": "2019-08-14 00:00:00",
+          "y": 421.19
+        },
+        {
+          "x": "2019-08-15 00:00:00",
+          "y": 715.76
+        },
+        {
+          "x": "2019-08-16 00:00:00",
+          "y": 1291.8899999999999
+        },
+        {
+          "x": "2019-08-17 00:00:00",
+          "y": 1502.23
+        },
+        {
+          "x": "2019-08-18 00:00:00",
+          "y": 323.61
+        },
+        {
+          "x": "2019-08-19 00:00:00",
+          "y": 378.66
+        },
+        {
+          "x": "2019-08-20 00:00:00",
+          "y": 3657.9
+        },
+        {
+          "x": "2019-08-21 00:00:00",
+          "y": 3379.95
+        },
+        {
+          "x": "2019-08-22 00:00:00",
+          "y": 748.77
+        },
+        {
+          "x": "2019-08-23 00:00:00",
+          "y": 670.5
+        },
+        {
+          "x": "2019-08-24 00:00:00",
+          "y": 595.6899999999999
+        },
+        {
+          "x": "2019-08-25 00:00:00",
+          "y": 635.34
+        },
+        {
+          "x": "2019-08-26 00:00:00",
+          "y": 546.44
+        },
+        {
+          "x": "2019-08-27 00:00:00",
+          "y": 561.66
+        },
+        {
+          "x": "2019-08-28 00:00:00",
+          "y": 605.18
+        },
+        {
+          "x": "2019-08-29 00:00:00",
+          "y": 537.53
+        },
+        {
+          "x": "2019-08-30 00:00:00",
+          "y": 409.37
+        },
+        {
+          "x": "2019-08-31 00:00:00",
+          "y": 273.58
+        },
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 291.34000000000003
+        }
+      ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 25
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 27
+      }
+    }
+  },
+  {
+    "uuid": "1802ea1b-6dc7-4ccb-8738-f38448db87d5",
+    "topic": "finance",
+    "impact": 0.6780573008501581,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Torres franchise",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
         "relevance": 0
       },
       {
@@ -2078,7 +5024,7 @@
         "relevance": 0
       },
       {
-        "text": "2018-10-31",
+        "text": "2019-09-01",
         "relevance": 0.5
       },
       {
@@ -2086,144 +5032,340 @@
         "relevance": 0
       },
       {
-        "text": "4%",
+        "text": "21%",
         "relevance": 1
       }
     ],
-    "voice_text": "Sales of Product group Luxury have been rising since 2018-10-31 for a Total of  4%",
+    "voice_text": "Revenue of Torres franchise has been rising since 2019-09-01 for a Total of  21%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
-          "x": "2018-10-31 00:00:00",
-          "y": 693.956
+          "x": "2019-09-01 00:00:00",
+          "y": 402.67
         },
         {
-          "x": "2018-11-01 00:00:00",
-          "y": 696.822
+          "x": "2019-09-02 00:00:00",
+          "y": 332.73
         },
         {
-          "x": "2018-11-02 00:00:00",
-          "y": 694.215
+          "x": "2019-09-03 00:00:00",
+          "y": 211.32999999999998
         },
         {
-          "x": "2018-11-03 00:00:00",
-          "y": 1845.35
+          "x": "2019-09-04 00:00:00",
+          "y": 317.52
         },
         {
-          "x": "2018-11-04 00:00:00",
-          "y": 2308.534
+          "x": "2019-09-05 00:00:00",
+          "y": 502.41
         },
         {
-          "x": "2018-11-05 00:00:00",
-          "y": 668.542
+          "x": "2019-09-06 00:00:00",
+          "y": 479.83
         },
         {
-          "x": "2018-11-06 00:00:00",
-          "y": 698.054
+          "x": "2019-09-07 00:00:00",
+          "y": 433.8
         },
         {
-          "x": "2018-11-07 00:00:00",
-          "y": 668.058
+          "x": "2019-09-08 00:00:00",
+          "y": 385.44
         },
         {
-          "x": "2018-11-08 00:00:00",
-          "y": 685.227
+          "x": "2019-09-09 00:00:00",
+          "y": 282.85
         },
         {
-          "x": "2018-11-09 00:00:00",
-          "y": 682.117
+          "x": "2019-09-10 00:00:00",
+          "y": 347.0
         },
         {
-          "x": "2018-11-10 00:00:00",
-          "y": 1895.108
+          "x": "2019-09-11 00:00:00",
+          "y": 529.82
         },
         {
-          "x": "2018-11-11 00:00:00",
-          "y": 2266.917
+          "x": "2019-09-12 00:00:00",
+          "y": 433.5
         },
         {
-          "x": "2018-11-12 00:00:00",
-          "y": 708.456
+          "x": "2019-09-13 00:00:00",
+          "y": 347.52
         },
         {
-          "x": "2018-11-13 00:00:00",
-          "y": 710.951
+          "x": "2019-09-14 00:00:00",
+          "y": 469.73
         },
         {
-          "x": "2018-11-14 00:00:00",
-          "y": 805.648
+          "x": "2019-09-15 00:00:00",
+          "y": 432.59
         },
         {
-          "x": "2018-11-15 00:00:00",
-          "y": 737.938
+          "x": "2019-09-16 00:00:00",
+          "y": 482.37
         },
         {
-          "x": "2018-11-16 00:00:00",
-          "y": 795.1
+          "x": "2019-09-17 00:00:00",
+          "y": 313.97
         },
         {
-          "x": "2018-11-17 00:00:00",
-          "y": 1961.342
+          "x": "2019-09-18 00:00:00",
+          "y": 218.16
         },
         {
-          "x": "2018-11-18 00:00:00",
-          "y": 2438.245
+          "x": "2019-09-19 00:00:00",
+          "y": 342.69
         },
         {
-          "x": "2018-11-19 00:00:00",
-          "y": 777.28
+          "x": "2019-09-20 00:00:00",
+          "y": 249.98
         },
         {
-          "x": "2018-11-20 00:00:00",
-          "y": 791.163
+          "x": "2019-09-21 00:00:00",
+          "y": 445.94
         },
         {
-          "x": "2018-11-21 00:00:00",
-          "y": 689.363
+          "x": "2019-09-22 00:00:00",
+          "y": 376.19
         },
         {
-          "x": "2018-11-22 00:00:00",
-          "y": 660.36
+          "x": "2019-09-23 00:00:00",
+          "y": 344.01
         },
         {
-          "x": "2018-11-23 00:00:00",
-          "y": 789.189
+          "x": "2019-09-24 00:00:00",
+          "y": 235.99
         },
         {
-          "x": "2018-11-24 00:00:00",
-          "y": 1849.414
+          "x": "2019-09-25 00:00:00",
+          "y": 288.58
         },
         {
-          "x": "2018-11-25 00:00:00",
-          "y": 2343.854
+          "x": "2019-09-26 00:00:00",
+          "y": 477.54999999999995
         },
         {
-          "x": "2018-11-26 00:00:00",
-          "y": 646.373
+          "x": "2019-09-27 00:00:00",
+          "y": 327.08
         },
         {
-          "x": "2018-11-27 00:00:00",
-          "y": 695.856
+          "x": "2019-09-28 00:00:00",
+          "y": 0.0
         },
         {
-          "x": "2018-11-28 00:00:00",
-          "y": 669.146
+          "x": "2019-09-29 00:00:00",
+          "y": 451.51
         },
         {
-          "x": "2018-11-29 00:00:00",
-          "y": 720.715
+          "x": "2019-09-30 00:00:00",
+          "y": 505.48
         },
         {
-          "x": "2018-11-30 00:00:00",
-          "y": 721.633
+          "x": "2019-10-01 00:00:00",
+          "y": 484.58
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 12
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 4
+      }
     }
   },
   {
-    "uuid": "66dd435a-225e-4a40-913a-dd8d439ba95a",
+    "uuid": "79101da2-7c7f-4a20-be09-0088e4c78e36",
+    "topic": "finance",
+    "impact": 7.8478911965434275,
+    "ui_text": [
+      {
+        "text": "Revenue",
+        "relevance": 1
+      },
+      {
+        "text": "of",
+        "relevance": 0
+      },
+      {
+        "text": "Parker branch",
+        "relevance": 1
+      },
+      {
+        "text": "has been",
+        "relevance": 0
+      },
+      {
+        "text": "rising",
+        "relevance": 1
+      },
+      {
+        "text": "since",
+        "relevance": 0
+      },
+      {
+        "text": "2019-08-30",
+        "relevance": 0.5
+      },
+      {
+        "text": "for a Total of ",
+        "relevance": 0
+      },
+      {
+        "text": "236%",
+        "relevance": 1
+      }
+    ],
+    "voice_text": "Revenue of Parker branch has been rising since 2019-08-30 for a Total of  236%",
+    "data": {
+      "xLabel": "time",
+      "yLabel": "value",
+      "data": [
+        {
+          "x": "2019-08-30 00:00:00",
+          "y": 1018.35
+        },
+        {
+          "x": "2019-08-31 00:00:00",
+          "y": 959.84
+        },
+        {
+          "x": "2019-09-01 00:00:00",
+          "y": 1030.96
+        },
+        {
+          "x": "2019-09-02 00:00:00",
+          "y": 596.92
+        },
+        {
+          "x": "2019-09-03 00:00:00",
+          "y": 669.6
+        },
+        {
+          "x": "2019-09-04 00:00:00",
+          "y": 726.08
+        },
+        {
+          "x": "2019-09-05 00:00:00",
+          "y": 869.95
+        },
+        {
+          "x": "2019-09-06 00:00:00",
+          "y": 594.17
+        },
+        {
+          "x": "2019-09-07 00:00:00",
+          "y": 862.79
+        },
+        {
+          "x": "2019-09-08 00:00:00",
+          "y": 1092.1200000000001
+        },
+        {
+          "x": "2019-09-09 00:00:00",
+          "y": 1109.3
+        },
+        {
+          "x": "2019-09-10 00:00:00",
+          "y": 1061.19
+        },
+        {
+          "x": "2019-09-11 00:00:00",
+          "y": 560.67
+        },
+        {
+          "x": "2019-09-12 00:00:00",
+          "y": 602.04
+        },
+        {
+          "x": "2019-09-13 00:00:00",
+          "y": 760.6999999999999
+        },
+        {
+          "x": "2019-09-14 00:00:00",
+          "y": 854.02
+        },
+        {
+          "x": "2019-09-15 00:00:00",
+          "y": 969.6
+        },
+        {
+          "x": "2019-09-16 00:00:00",
+          "y": 704.64
+        },
+        {
+          "x": "2019-09-17 00:00:00",
+          "y": 566.4499999999999
+        },
+        {
+          "x": "2019-09-18 00:00:00",
+          "y": 596.53
+        },
+        {
+          "x": "2019-09-19 00:00:00",
+          "y": 596.29
+        },
+        {
+          "x": "2019-09-20 00:00:00",
+          "y": 512.63
+        },
+        {
+          "x": "2019-09-21 00:00:00",
+          "y": 1826.27
+        },
+        {
+          "x": "2019-09-22 00:00:00",
+          "y": 978.4499999999999
+        },
+        {
+          "x": "2019-09-23 00:00:00",
+          "y": 535.55
+        },
+        {
+          "x": "2019-09-24 00:00:00",
+          "y": 514.07
+        },
+        {
+          "x": "2019-09-25 00:00:00",
+          "y": 537.29
+        },
+        {
+          "x": "2019-09-26 00:00:00",
+          "y": 1425.1399999999999
+        },
+        {
+          "x": "2019-09-27 00:00:00",
+          "y": 1124.67
+        },
+        {
+          "x": "2019-09-28 00:00:00",
+          "y": 1327.24
+        },
+        {
+          "x": "2019-09-29 00:00:00",
+          "y": 3415.9199999999996
+        }
+      ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 7
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 5
+      }
+    }
+  },
+  {
+    "uuid": "3e9c0c20-093d-4cbb-b315-02a268388b41",
     "topic": "stock",
     "impact": 0.528969444082236,
     "ui_text": [
@@ -2234,10 +5376,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Magazines",
@@ -2268,7 +5406,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Magazines has been rising since 2019-07-25 for a Total of  16%",
+    "voice_text": "Stock of Magazines has been rising since 2019-07-25 for a Total of  16%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -2398,10 +5536,21 @@
           "y": 8886.0
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 7
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 4
+      }
     }
   },
   {
-    "uuid": "a926f6ff-f2a0-4df4-982f-80ef331b4fcf",
+    "uuid": "16e60178-b51f-49f6-b324-46983b2ade26",
     "topic": "stock",
     "impact": 0.15909655001240974,
     "ui_text": [
@@ -2412,10 +5561,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Candy",
@@ -2446,7 +5591,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Candy has been rising since 2019-05-27 for a Total of  5%",
+    "voice_text": "Stock of Candy has been rising since 2019-05-27 for a Total of  5%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -2576,12 +5721,23 @@
           "y": 14071.0
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 21
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 9
+      }
     }
   },
   {
-    "uuid": "9acdbd00-4f2e-42ff-b8cc-41d41082e968",
+    "uuid": "ec7b1d4c-775e-4548-a7b7-d21dfb737c79",
     "topic": "stock",
-    "impact": 0.014695306881780853,
+    "impact": -0.39396189062113324,
     "ui_text": [
       {
         "text": "Stock",
@@ -2590,10 +5746,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Toothpaste",
@@ -2604,7 +5756,7 @@
         "relevance": 0
       },
       {
-        "text": "rising",
+        "text": "falling",
         "relevance": 1
       },
       {
@@ -2612,7 +5764,7 @@
         "relevance": 0
       },
       {
-        "text": "2019-05-08",
+        "text": "2019-09-01",
         "relevance": 0.5
       },
       {
@@ -2620,146 +5772,157 @@
         "relevance": 0
       },
       {
-        "text": "1%",
+        "text": "-11%",
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Toothpaste has been rising since 2019-05-08 for a Total of  1%",
+    "voice_text": "Stock of Toothpaste has been falling since 2019-09-01 for a Total of  -11%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
-          "x": "2019-05-08 00:00:00",
-          "y": 21322.0
+          "x": "2019-09-01 00:00:00",
+          "y": 13470.0
         },
         {
-          "x": "2019-05-09 00:00:00",
-          "y": 21899.0
+          "x": "2019-09-02 00:00:00",
+          "y": 13376.0
         },
         {
-          "x": "2019-05-10 00:00:00",
-          "y": 22125.0
+          "x": "2019-09-03 00:00:00",
+          "y": 13319.0
         },
         {
-          "x": "2019-05-11 00:00:00",
-          "y": 22580.0
+          "x": "2019-09-04 00:00:00",
+          "y": 13381.0
         },
         {
-          "x": "2019-05-12 00:00:00",
-          "y": 22197.0
+          "x": "2019-09-05 00:00:00",
+          "y": 13308.0
         },
         {
-          "x": "2019-05-13 00:00:00",
-          "y": 22223.0
+          "x": "2019-09-06 00:00:00",
+          "y": 13228.0
         },
         {
-          "x": "2019-05-14 00:00:00",
-          "y": 22285.0
+          "x": "2019-09-07 00:00:00",
+          "y": 13207.0
         },
         {
-          "x": "2019-05-15 00:00:00",
-          "y": 22409.0
+          "x": "2019-09-08 00:00:00",
+          "y": 13094.0
         },
         {
-          "x": "2019-05-16 00:00:00",
-          "y": 22646.0
+          "x": "2019-09-09 00:00:00",
+          "y": 13050.0
         },
         {
-          "x": "2019-05-17 00:00:00",
-          "y": 22558.0
+          "x": "2019-09-10 00:00:00",
+          "y": 12970.0
         },
         {
-          "x": "2019-05-18 00:00:00",
-          "y": 22627.0
+          "x": "2019-09-11 00:00:00",
+          "y": 12946.0
         },
         {
-          "x": "2019-05-19 00:00:00",
-          "y": 22339.0
+          "x": "2019-09-12 00:00:00",
+          "y": 13167.0
         },
         {
-          "x": "2019-05-20 00:00:00",
-          "y": 22079.0
+          "x": "2019-09-13 00:00:00",
+          "y": 13100.0
         },
         {
-          "x": "2019-05-21 00:00:00",
-          "y": 21965.0
+          "x": "2019-09-14 00:00:00",
+          "y": 13079.0
         },
         {
-          "x": "2019-05-22 00:00:00",
-          "y": 22060.0
+          "x": "2019-09-15 00:00:00",
+          "y": 12922.0
         },
         {
-          "x": "2019-05-23 00:00:00",
-          "y": 22201.0
+          "x": "2019-09-16 00:00:00",
+          "y": 12900.0
         },
         {
-          "x": "2019-05-24 00:00:00",
-          "y": 22434.0
+          "x": "2019-09-17 00:00:00",
+          "y": 12838.0
         },
         {
-          "x": "2019-05-25 00:00:00",
-          "y": 22522.0
+          "x": "2019-09-18 00:00:00",
+          "y": 12797.0
         },
         {
-          "x": "2019-05-26 00:00:00",
-          "y": 22326.0
+          "x": "2019-09-19 00:00:00",
+          "y": 12568.0
         },
         {
-          "x": "2019-05-27 00:00:00",
-          "y": 22535.0
+          "x": "2019-09-20 00:00:00",
+          "y": 12527.0
         },
         {
-          "x": "2019-05-28 00:00:00",
-          "y": 22557.0
+          "x": "2019-09-21 00:00:00",
+          "y": 12534.0
         },
         {
-          "x": "2019-05-29 00:00:00",
-          "y": 22676.0
+          "x": "2019-09-22 00:00:00",
+          "y": 12335.0
         },
         {
-          "x": "2019-05-30 00:00:00",
-          "y": 22322.0
+          "x": "2019-09-23 00:00:00",
+          "y": 12288.0
         },
         {
-          "x": "2019-05-31 00:00:00",
-          "y": 22259.0
+          "x": "2019-09-24 00:00:00",
+          "y": 12181.0
         },
         {
-          "x": "2019-06-01 00:00:00",
-          "y": 22095.0
+          "x": "2019-09-25 00:00:00",
+          "y": 12183.0
         },
         {
-          "x": "2019-06-02 00:00:00",
-          "y": 22099.0
+          "x": "2019-09-26 00:00:00",
+          "y": 12127.0
         },
         {
-          "x": "2019-06-03 00:00:00",
-          "y": 21942.0
+          "x": "2019-09-27 00:00:00",
+          "y": 12096.0
         },
         {
-          "x": "2019-06-04 00:00:00",
-          "y": 21709.0
+          "x": "2019-09-28 00:00:00",
+          "y": 12061.0
         },
         {
-          "x": "2019-06-05 00:00:00",
-          "y": 21603.0
+          "x": "2019-09-29 00:00:00",
+          "y": 11909.0
         },
         {
-          "x": "2019-06-06 00:00:00",
-          "y": 21549.0
+          "x": "2019-09-30 00:00:00",
+          "y": 11866.0
         },
         {
-          "x": "2019-06-07 00:00:00",
-          "y": 21416.0
+          "x": "2019-10-01 00:00:00",
+          "y": 11878.0
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 17
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 19
+      }
     }
   },
   {
-    "uuid": "26644dba-0825-4965-abf9-09789d8e5729",
+    "uuid": "b4ea7c31-2189-4e26-b593-855b1e87c3a9",
     "topic": "stock",
-    "impact": 0.014561339643247203,
+    "impact": -0.31115136661516324,
     "ui_text": [
       {
         "text": "Stock",
@@ -2768,10 +5931,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Tv",
@@ -2782,7 +5941,7 @@
         "relevance": 0
       },
       {
-        "text": "rising",
+        "text": "falling",
         "relevance": 1
       },
       {
@@ -2790,7 +5949,7 @@
         "relevance": 0
       },
       {
-        "text": "2018-12-08",
+        "text": "2019-08-20",
         "relevance": 0.5
       },
       {
@@ -2798,146 +5957,157 @@
         "relevance": 0
       },
       {
-        "text": "1%",
+        "text": "-9%",
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Tv has been rising since 2018-12-08 for a Total of  1%",
+    "voice_text": "Stock of Tv has been falling since 2019-08-20 for a Total of  -9%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
-          "x": "2018-12-08 00:00:00",
-          "y": 16482.0
+          "x": "2019-08-20 00:00:00",
+          "y": 18769.0
         },
         {
-          "x": "2018-12-09 00:00:00",
-          "y": 15384.0
+          "x": "2019-08-21 00:00:00",
+          "y": 19240.0
         },
         {
-          "x": "2018-12-10 00:00:00",
-          "y": 15330.0
+          "x": "2019-08-22 00:00:00",
+          "y": 19677.0
         },
         {
-          "x": "2018-12-11 00:00:00",
-          "y": 16246.0
+          "x": "2019-08-23 00:00:00",
+          "y": 19557.0
         },
         {
-          "x": "2018-12-12 00:00:00",
-          "y": 17094.0
+          "x": "2019-08-24 00:00:00",
+          "y": 19322.0
         },
         {
-          "x": "2018-12-13 00:00:00",
-          "y": 17458.0
+          "x": "2019-08-25 00:00:00",
+          "y": 17991.0
         },
         {
-          "x": "2018-12-14 00:00:00",
-          "y": 18675.0
+          "x": "2019-08-26 00:00:00",
+          "y": 17296.0
         },
         {
-          "x": "2018-12-15 00:00:00",
-          "y": 18543.0
+          "x": "2019-08-27 00:00:00",
+          "y": 17218.0
         },
         {
-          "x": "2018-12-16 00:00:00",
-          "y": 17738.0
+          "x": "2019-08-28 00:00:00",
+          "y": 17743.0
         },
         {
-          "x": "2018-12-17 00:00:00",
-          "y": 17449.0
+          "x": "2019-08-29 00:00:00",
+          "y": 17895.0
         },
         {
-          "x": "2018-12-18 00:00:00",
-          "y": 18907.0
+          "x": "2019-08-30 00:00:00",
+          "y": 17252.0
         },
         {
-          "x": "2018-12-19 00:00:00",
-          "y": 19656.0
+          "x": "2019-08-31 00:00:00",
+          "y": 16793.0
         },
         {
-          "x": "2018-12-20 00:00:00",
-          "y": 20048.0
+          "x": "2019-09-01 00:00:00",
+          "y": 15629.0
         },
         {
-          "x": "2018-12-21 00:00:00",
-          "y": 21059.0
+          "x": "2019-09-02 00:00:00",
+          "y": 14891.0
         },
         {
-          "x": "2018-12-22 00:00:00",
-          "y": 21059.0
+          "x": "2019-09-03 00:00:00",
+          "y": 15152.0
         },
         {
-          "x": "2018-12-23 00:00:00",
-          "y": 20297.0
+          "x": "2019-09-04 00:00:00",
+          "y": 17157.0
         },
         {
-          "x": "2018-12-24 00:00:00",
-          "y": 20758.0
+          "x": "2019-09-05 00:00:00",
+          "y": 17718.0
         },
         {
-          "x": "2018-12-25 00:00:00",
-          "y": 21733.0
+          "x": "2019-09-06 00:00:00",
+          "y": 17838.0
         },
         {
-          "x": "2018-12-26 00:00:00",
-          "y": 22836.0
+          "x": "2019-09-07 00:00:00",
+          "y": 17795.0
         },
         {
-          "x": "2018-12-27 00:00:00",
-          "y": 22771.0
+          "x": "2019-09-08 00:00:00",
+          "y": 16639.0
         },
         {
-          "x": "2018-12-28 00:00:00",
-          "y": 22933.0
+          "x": "2019-09-09 00:00:00",
+          "y": 16350.0
         },
         {
-          "x": "2018-12-29 00:00:00",
-          "y": 22303.0
+          "x": "2019-09-10 00:00:00",
+          "y": 16406.0
         },
         {
-          "x": "2018-12-30 00:00:00",
-          "y": 20830.0
+          "x": "2019-09-11 00:00:00",
+          "y": 17062.0
         },
         {
-          "x": "2018-12-31 00:00:00",
-          "y": 18222.0
+          "x": "2019-09-12 00:00:00",
+          "y": 17615.0
         },
         {
-          "x": "2019-01-01 00:00:00",
-          "y": 18222.0
+          "x": "2019-09-13 00:00:00",
+          "y": 17419.0
         },
         {
-          "x": "2019-01-02 00:00:00",
-          "y": 17213.0
+          "x": "2019-09-14 00:00:00",
+          "y": 17377.0
         },
         {
-          "x": "2019-01-03 00:00:00",
-          "y": 17433.0
+          "x": "2019-09-15 00:00:00",
+          "y": 16390.0
         },
         {
-          "x": "2019-01-04 00:00:00",
-          "y": 17523.0
+          "x": "2019-09-16 00:00:00",
+          "y": 16036.0
         },
         {
-          "x": "2019-01-05 00:00:00",
-          "y": 17339.0
+          "x": "2019-09-17 00:00:00",
+          "y": 16281.0
         },
         {
-          "x": "2019-01-06 00:00:00",
-          "y": 17339.0
+          "x": "2019-09-18 00:00:00",
+          "y": 16838.0
         },
         {
-          "x": "2019-01-07 00:00:00",
-          "y": 16554.0
+          "x": "2019-09-19 00:00:00",
+          "y": 17017.0
         }
       ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 17
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 23
+      }
     }
   },
   {
-    "uuid": "06dabee2-24f4-4c35-b7af-4cc3ae71d6bc",
+    "uuid": "e12c8162-6afa-4267-9057-7498671c7a03",
     "topic": "stock",
-    "impact": 0.035326219363640554,
+    "impact": -0.1733757062146894,
     "ui_text": [
       {
         "text": "Stock",
@@ -2946,10 +6116,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Furniture",
@@ -2960,7 +6126,7 @@
         "relevance": 0
       },
       {
-        "text": "rising",
+        "text": "falling",
         "relevance": 1
       },
       {
@@ -2968,7 +6134,7 @@
         "relevance": 0
       },
       {
-        "text": "2018-09-19",
+        "text": "2019-09-01",
         "relevance": 0.5
       },
       {
@@ -2976,144 +6142,155 @@
         "relevance": 0
       },
       {
-        "text": "2%",
+        "text": "-5%",
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Furniture has been rising since 2018-09-19 for a Total of  2%",
+    "voice_text": "Stock of Furniture has been falling since 2019-09-01 for a Total of  -5%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
-          "x": "2018-09-19 00:00:00",
-          "y": 13682.0
+          "x": "2019-09-01 00:00:00",
+          "y": 9440.0
         },
         {
-          "x": "2018-09-20 00:00:00",
-          "y": 13931.0
+          "x": "2019-09-02 00:00:00",
+          "y": 9427.0
         },
         {
-          "x": "2018-09-21 00:00:00",
-          "y": 14393.0
+          "x": "2019-09-03 00:00:00",
+          "y": 9378.0
         },
         {
-          "x": "2018-09-22 00:00:00",
-          "y": 14671.0
+          "x": "2019-09-04 00:00:00",
+          "y": 9461.0
         },
         {
-          "x": "2018-09-23 00:00:00",
-          "y": 14664.0
+          "x": "2019-09-05 00:00:00",
+          "y": 9415.0
         },
         {
-          "x": "2018-09-24 00:00:00",
-          "y": 14761.0
+          "x": "2019-09-06 00:00:00",
+          "y": 9337.0
         },
         {
-          "x": "2018-09-25 00:00:00",
-          "y": 15226.0
+          "x": "2019-09-07 00:00:00",
+          "y": 9284.0
         },
         {
-          "x": "2018-09-26 00:00:00",
-          "y": 15435.0
+          "x": "2019-09-08 00:00:00",
+          "y": 9141.0
         },
         {
-          "x": "2018-09-27 00:00:00",
-          "y": 15815.0
+          "x": "2019-09-09 00:00:00",
+          "y": 9045.0
         },
         {
-          "x": "2018-09-28 00:00:00",
-          "y": 16218.0
+          "x": "2019-09-10 00:00:00",
+          "y": 9148.0
         },
         {
-          "x": "2018-09-29 00:00:00",
-          "y": 16156.0
+          "x": "2019-09-11 00:00:00",
+          "y": 9152.0
         },
         {
-          "x": "2018-09-30 00:00:00",
-          "y": 15826.0
+          "x": "2019-09-12 00:00:00",
+          "y": 9168.0
         },
         {
-          "x": "2018-10-01 00:00:00",
-          "y": 15784.0
+          "x": "2019-09-13 00:00:00",
+          "y": 9180.0
         },
         {
-          "x": "2018-10-02 00:00:00",
-          "y": 15873.0
+          "x": "2019-09-14 00:00:00",
+          "y": 9168.0
         },
         {
-          "x": "2018-10-03 00:00:00",
-          "y": 16316.0
+          "x": "2019-09-15 00:00:00",
+          "y": 8949.0
         },
         {
-          "x": "2018-10-04 00:00:00",
-          "y": 16739.0
+          "x": "2019-09-16 00:00:00",
+          "y": 8909.0
         },
         {
-          "x": "2018-10-05 00:00:00",
-          "y": 16997.0
+          "x": "2019-09-17 00:00:00",
+          "y": 8827.0
         },
         {
-          "x": "2018-10-06 00:00:00",
-          "y": 17106.0
+          "x": "2019-09-18 00:00:00",
+          "y": 8878.0
         },
         {
-          "x": "2018-10-07 00:00:00",
-          "y": 17086.0
+          "x": "2019-09-19 00:00:00",
+          "y": 8858.0
         },
         {
-          "x": "2018-10-08 00:00:00",
-          "y": 17097.0
+          "x": "2019-09-20 00:00:00",
+          "y": 9036.0
         },
         {
-          "x": "2018-10-09 00:00:00",
-          "y": 17328.0
+          "x": "2019-09-21 00:00:00",
+          "y": 9042.0
         },
         {
-          "x": "2018-10-10 00:00:00",
-          "y": 17487.0
+          "x": "2019-09-22 00:00:00",
+          "y": 8927.0
         },
         {
-          "x": "2018-10-11 00:00:00",
-          "y": 17753.0
+          "x": "2019-09-23 00:00:00",
+          "y": 9041.0
         },
         {
-          "x": "2018-10-12 00:00:00",
-          "y": 17754.0
+          "x": "2019-09-24 00:00:00",
+          "y": 9070.0
         },
         {
-          "x": "2018-10-13 00:00:00",
-          "y": 15381.0
+          "x": "2019-09-25 00:00:00",
+          "y": 9054.0
         },
         {
-          "x": "2018-10-14 00:00:00",
-          "y": 14091.0
+          "x": "2019-09-26 00:00:00",
+          "y": 9084.0
         },
         {
-          "x": "2018-10-15 00:00:00",
-          "y": 13931.0
+          "x": "2019-09-27 00:00:00",
+          "y": 9004.0
         },
         {
-          "x": "2018-10-16 00:00:00",
-          "y": 13729.0
+          "x": "2019-09-28 00:00:00",
+          "y": 9067.0
         },
         {
-          "x": "2018-10-17 00:00:00",
-          "y": 13692.0
+          "x": "2019-09-29 00:00:00",
+          "y": 8947.0
         },
         {
-          "x": "2018-10-18 00:00:00",
-          "y": 13910.0
+          "x": "2019-09-30 00:00:00",
+          "y": 8766.0
         },
         {
-          "x": "2018-10-19 00:00:00",
-          "y": 13827.0
+          "x": "2019-10-01 00:00:00",
+          "y": 8949.0
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 2
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 17
+      }
     }
   },
   {
-    "uuid": "520e2f85-3fbf-45d2-a96c-0fa0a428b5f4",
+    "uuid": "322f64a9-2066-4ffa-92fc-afa7a7c8d66d",
     "topic": "stock",
     "impact": 0.47515168549887504,
     "ui_text": [
@@ -3124,10 +6301,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Suits",
@@ -3158,7 +6331,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Suits has been rising since 2019-09-01 for a Total of  15%",
+    "voice_text": "Stock of Suits has been rising since 2019-09-01 for a Total of  15%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -3288,10 +6461,21 @@
           "y": 12357.418
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 26
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 3
+      }
     }
   },
   {
-    "uuid": "acf5e2f7-c228-4a54-acb9-8a3e73092464",
+    "uuid": "04a09ee5-63ef-49ee-9b0b-04ad66ec46b4",
     "topic": "stock",
     "impact": 0.1969222743870628,
     "ui_text": [
@@ -3302,10 +6486,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Electronic devices",
@@ -3336,7 +6516,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Electronic devices has been rising since 2019-08-26 for a Total of  6%",
+    "voice_text": "Stock of Electronic devices has been rising since 2019-08-26 for a Total of  6%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -3466,10 +6646,21 @@
           "y": 21656.0
         }
       ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 15
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 13
+      }
     }
   },
   {
-    "uuid": "0f27fc22-94ed-4e3f-9b76-2d0185945880",
+    "uuid": "a37ef31d-c6bb-4f7d-9698-36d4b6061602",
     "topic": "stock",
     "impact": 0.274764283801953,
     "ui_text": [
@@ -3480,10 +6671,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Personal hygiene products",
@@ -3514,7 +6701,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Personal hygiene products has been rising since 2019-07-25 for a Total of  9%",
+    "voice_text": "Stock of Personal hygiene products has been rising since 2019-07-25 for a Total of  9%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -3644,12 +6831,23 @@
           "y": 16288.056
         }
       ]
+    },
+    "poll": {
+      "question": "Does this require immediate action?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 20
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 25
+      }
     }
   },
   {
-    "uuid": "adac8464-c4d6-41d3-b56e-a7929154143c",
+    "uuid": "99d099da-875f-4692-ba49-e79a79f1784c",
     "topic": "stock",
-    "impact": -0.09813092683284712,
+    "impact": -0.1699757177546065,
     "ui_text": [
       {
         "text": "Stock",
@@ -3658,10 +6856,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Vacuum cleaners",
@@ -3680,7 +6874,7 @@
         "relevance": 0
       },
       {
-        "text": "2018-12-07",
+        "text": "2019-08-15",
         "relevance": 0.5
       },
       {
@@ -3688,144 +6882,155 @@
         "relevance": 0
       },
       {
-        "text": "-2%",
+        "text": "-5%",
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Vacuum cleaners has been falling since 2018-12-07 for a Total of  -2%",
+    "voice_text": "Stock of Vacuum cleaners has been falling since 2019-08-15 for a Total of  -5%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
       "data": [
         {
-          "x": "2018-12-07 00:00:00",
-          "y": 18173.0
+          "x": "2019-08-15 00:00:00",
+          "y": 7001.0
         },
         {
-          "x": "2018-12-08 00:00:00",
-          "y": 18173.0
+          "x": "2019-08-16 00:00:00",
+          "y": 6918.0
         },
         {
-          "x": "2018-12-09 00:00:00",
-          "y": 18055.0
+          "x": "2019-08-17 00:00:00",
+          "y": 6872.0
         },
         {
-          "x": "2018-12-10 00:00:00",
-          "y": 18074.0
+          "x": "2019-08-18 00:00:00",
+          "y": 6809.0
         },
         {
-          "x": "2018-12-11 00:00:00",
-          "y": 18817.0
+          "x": "2019-08-19 00:00:00",
+          "y": 6771.0
         },
         {
-          "x": "2018-12-12 00:00:00",
-          "y": 18991.0
+          "x": "2019-08-20 00:00:00",
+          "y": 6759.0
         },
         {
-          "x": "2018-12-13 00:00:00",
-          "y": 19235.0
+          "x": "2019-08-21 00:00:00",
+          "y": 6803.0
         },
         {
-          "x": "2018-12-14 00:00:00",
-          "y": 19061.0
+          "x": "2019-08-22 00:00:00",
+          "y": 6817.0
         },
         {
-          "x": "2018-12-15 00:00:00",
-          "y": 19118.0
+          "x": "2019-08-23 00:00:00",
+          "y": 6770.0
         },
         {
-          "x": "2018-12-16 00:00:00",
-          "y": 18928.0
+          "x": "2019-08-24 00:00:00",
+          "y": 6747.0
         },
         {
-          "x": "2018-12-17 00:00:00",
-          "y": 18938.0
+          "x": "2019-08-25 00:00:00",
+          "y": 6662.0
         },
         {
-          "x": "2018-12-18 00:00:00",
-          "y": 19698.0
+          "x": "2019-08-26 00:00:00",
+          "y": 6619.0
         },
         {
-          "x": "2018-12-19 00:00:00",
-          "y": 20026.0
+          "x": "2019-08-27 00:00:00",
+          "y": 6583.0
         },
         {
-          "x": "2018-12-20 00:00:00",
-          "y": 20503.0
+          "x": "2019-08-28 00:00:00",
+          "y": 6605.0
         },
         {
-          "x": "2018-12-21 00:00:00",
-          "y": 20556.0
+          "x": "2019-08-29 00:00:00",
+          "y": 6623.0
         },
         {
-          "x": "2018-12-22 00:00:00",
-          "y": 20556.0
+          "x": "2019-08-30 00:00:00",
+          "y": 6577.0
         },
         {
-          "x": "2018-12-23 00:00:00",
-          "y": 20958.0
+          "x": "2019-08-31 00:00:00",
+          "y": 6519.0
         },
         {
-          "x": "2018-12-24 00:00:00",
-          "y": 20747.0
+          "x": "2019-09-01 00:00:00",
+          "y": 6394.0
         },
         {
-          "x": "2018-12-25 00:00:00",
-          "y": 20581.0
+          "x": "2019-09-02 00:00:00",
+          "y": 6347.0
         },
         {
-          "x": "2018-12-26 00:00:00",
-          "y": 20774.0
+          "x": "2019-09-03 00:00:00",
+          "y": 6341.0
         },
         {
-          "x": "2018-12-27 00:00:00",
-          "y": 21147.0
+          "x": "2019-09-04 00:00:00",
+          "y": 6410.0
         },
         {
-          "x": "2018-12-28 00:00:00",
-          "y": 20964.0
+          "x": "2019-09-05 00:00:00",
+          "y": 6683.0
         },
         {
-          "x": "2018-12-29 00:00:00",
-          "y": 20635.0
+          "x": "2019-09-06 00:00:00",
+          "y": 6768.0
         },
         {
-          "x": "2018-12-30 00:00:00",
-          "y": 20107.0
+          "x": "2019-09-07 00:00:00",
+          "y": 6728.0
         },
         {
-          "x": "2018-12-31 00:00:00",
-          "y": 18150.0
+          "x": "2019-09-08 00:00:00",
+          "y": 6623.0
         },
         {
-          "x": "2019-01-01 00:00:00",
-          "y": 18150.0
+          "x": "2019-09-09 00:00:00",
+          "y": 6615.0
         },
         {
-          "x": "2019-01-02 00:00:00",
-          "y": 17744.0
+          "x": "2019-09-10 00:00:00",
+          "y": 6643.0
         },
         {
-          "x": "2019-01-03 00:00:00",
-          "y": 17956.0
+          "x": "2019-09-11 00:00:00",
+          "y": 6621.0
         },
         {
-          "x": "2019-01-04 00:00:00",
-          "y": 17813.0
+          "x": "2019-09-12 00:00:00",
+          "y": 6664.0
         },
         {
-          "x": "2019-01-05 00:00:00",
-          "y": 17638.0
+          "x": "2019-09-13 00:00:00",
+          "y": 6617.0
         },
         {
-          "x": "2019-01-06 00:00:00",
-          "y": 17638.0
+          "x": "2019-09-14 00:00:00",
+          "y": 6644.0
         }
       ]
+    },
+    "poll": {
+      "question": "Should this be discussed in today's meeting?",
+      "answerA": {
+        "text": "Yes",
+        "votes": 18
+      },
+      "answerB": {
+        "text": "No",
+        "votes": 9
+      }
     }
   },
   {
-    "uuid": "53df1424-f8bc-4bad-a033-8286d615f09c",
+    "uuid": "ccc23bcb-0ac8-46ad-9cac-327a69347857",
     "topic": "stock",
     "impact": 1.778740087610385,
     "ui_text": [
@@ -3836,10 +7041,6 @@
       {
         "text": "of",
         "relevance": 0
-      },
-      {
-        "text": "Product group",
-        "relevance": 0.5
       },
       {
         "text": "Phones",
@@ -3870,7 +7071,7 @@
         "relevance": 1
       }
     ],
-    "voice_text": "Stock of Product group Phones has been rising since 2019-08-10 for a Total of  54%",
+    "voice_text": "Stock of Phones has been rising since 2019-08-10 for a Total of  54%",
     "data": {
       "xLabel": "time",
       "yLabel": "value",
@@ -4000,6 +7201,17 @@
           "y": 7547.0
         }
       ]
+    },
+    "poll": {
+      "question": "When does this need to be addressed?",
+      "answerA": {
+        "text": "within a week",
+        "votes": 17
+      },
+      "answerB": {
+        "text": "Sometime later",
+        "votes": 17
+      }
     }
   }
 ]

@@ -1,4 +1,3 @@
-import json
 import logging
 import math
 
@@ -14,7 +13,7 @@ logger = logging.getLogger('TRENDS')
 
 
 def make_trend_insight(
-        type: str,
+        metric: str,
         category: str,
         item: str,
         window_size: int,
@@ -23,11 +22,10 @@ def make_trend_insight(
         data_frame: pd.DataFrame
 ):
     positive = change_percent >= 0
-    ui_text = [UiTextItem(type.capitalize(), 1),
-               'of',
-               UiTextItem(category.capitalize(), 0.5),
+    ui_text = [UiTextItem(metric.capitalize(), 1),
+               ('of ' + category.capitalize()) if category != 'product group' else 'of',
                UiTextItem(item.capitalize(), 1),
-                ('have' if type.endswith('s') else 'has') + ' been',
+               ('have' if metric.endswith('s') else 'has') + ' been',
                UiTextItem('rising', 1) if positive else UiTextItem('falling', 1),
                'since',
                UiTextItem(str(start_point.date()), 0.5),
@@ -37,7 +35,7 @@ def make_trend_insight(
 
     # impact depends on change severity
     return Insight(
-        type,
+        metric,
         change_percent / 30,
         ui_text,
         voice_text,
@@ -48,6 +46,7 @@ def make_trend_insight(
 def get_trends(df: pd.DataFrame) -> list[Insight]:
     insights = []
     insights += get_typed_trends(df, 'sales', 'product group', 'hierarchy1_id')
+    insights += get_typed_trends(df, 'revenue', 'store', 'store_id')
     insights += get_typed_trends(df, 'stock', 'product', 'product_id')
     return insights
 
@@ -81,7 +80,7 @@ def get_typed_trends(df: pd.DataFrame, metric: str, type: str, type_id: str) -> 
         )
         change_percent_u = to_change_percent(start_val, end_val)
 
-        if change_percent_u > change_percent_d:
+        if abs(change_percent_u) > abs(change_percent_d) and start_point_u:
             insights.append(
                 make_trend_insight(
                     metric,
@@ -93,7 +92,7 @@ def get_typed_trends(df: pd.DataFrame, metric: str, type: str, type_id: str) -> 
                     df_snippet_u
                 )
             )
-        else:
+        elif start_point_d:
             insights.append(
                 make_trend_insight(
                     metric,
@@ -119,6 +118,8 @@ def get_trend(df: pd.DataFrame, colname: str, direction: str, window_size: int, 
 
     # detect directional trend
     change_points = mkdetector.detector(window_size=window_size, direction=direction, freq=freq)
+    if len(change_points) == 0:
+        return None, 1, None, 1, None
     end_point = change_points[-1][0].start_time
     start_point = end_point - pd.Timedelta(days=window_size)
     end_val = df.loc[df['time'] == end_point]['value'].values[0]
