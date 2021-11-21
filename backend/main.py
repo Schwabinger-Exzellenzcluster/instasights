@@ -47,7 +47,7 @@ df_sales = pd.read_csv(
 )
 # Drop unused columns
 df_sales.drop(
-    columns=['promo_type_1', 'promo_type_2', 'promo_bin_2', 'promo_discount_2', 'promo_discount_type_2'],
+    columns=['promo_type_1', 'promo_type_2', 'promo_bin_1' ,'promo_bin_2', 'promo_discount_2', 'promo_discount_type_2'],
     inplace=True
 )
 
@@ -68,7 +68,7 @@ df_product_hierachy = pd.read_csv(
 )
 
 df_product_hierachy.drop(
-    columns=['hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
+    columns=['product_length', 'product_depth', 'product_width', 'hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
     inplace=True
 )
 
@@ -76,7 +76,6 @@ logger.info('Parsed product hierarchy data')
 
 
 df = df_sales.join(df_stores.set_index('store_id'), on='store_id')
-# df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
 del df_sales, df_stores
 gc.collect()
 
@@ -89,7 +88,7 @@ gc.collect()
 
 logger.info('Joined and Cut sales data')
 
-# Adjust city names
+# Adjusted city names
 cities_dict = {row[0]: row[1] for row in pd.read_csv(
     'dataset/augmented_sets/cities_augmented.csv',
     delimiter=';',
@@ -98,23 +97,23 @@ cities_dict = {row[0]: row[1] for row in pd.read_csv(
         'name': 'category'
     }
 ).values.tolist()}
-df_cut.replace(to_replace=cities_dict, inplace=True)
+df_cut['city_id'] = df_cut['city_id'].map(cities_dict)
 logger.info('Parsed augmented city data')
 
 
-# Adjust store names
+# Adjusted store names
 stores_dict = {row[0]: row[1] for row in pd.read_csv(
-    'dataset/augmented_sets/cities_augmented.csv',
+    'dataset/augmented_sets/stores_augmented.csv',
     delimiter=';',
     dtype={
         'store_id': 'category',
         'name': 'category'
     }
 ).values.tolist()}
-df_cut.replace(to_replace=stores_dict, inplace=True)
+df_cut['store_id'] = df_cut['store_id'].map(stores_dict)
 logger.info('Parsed augmented store data')
 
-# Adjust product names and categories
+# Adjusted product names and categories
 df_product_mapping = pd.read_csv(
     'dataset/augmented_sets/products_augmented.csv',
     delimiter=';',
@@ -124,24 +123,25 @@ df_product_mapping = pd.read_csv(
         'hierarchy1_id': 'category',
     }
 )
-
-h1_index = df_product_hierachy.columns.get_loc('hierarchy1_id')
 products_dict = {row[0]: row[1] for row in df_product_mapping.values.tolist()}
+
+# Calculate hierarchy mapping
+h1_index = df_product_hierachy.columns.get_loc('hierarchy1_id')
 categories_dict = {row[0]: row[2] for row in df_product_mapping.values.tolist()}
 old_categories_dict = {row[0]: row[h1_index] for row in df_product_hierachy.values.tolist()}
-
-print(old_categories_dict)
-print(categories_dict)
-
 new_categories_dict = {old_categories_dict[key] : categories_dict[key] for key in old_categories_dict}
-print(new_categories_dict)
 
-df_product_mapping.drop(columns=['name'], inplace=True)
+# Remap categories and join
+df_product_hierachy['hierarchy1_id'] = df_product_hierachy['hierarchy1_id'].map(new_categories_dict)
+df_cut = df_cut.join(df_product_hierachy.set_index('product_id'), on='product_id')
+
+# Remap product id
+df_cut['product_id'] = df_cut['product_id'].map(products_dict)
 
 logger.info('Parsed augmented product data')
+logger.info('Parsing finished')
 
 print(df_cut)
-logger.info('Parsing finished')
 
 insights = []
 # add different insights
@@ -159,6 +159,7 @@ insights = list(
         insights
     )
 )
+
 print(insights)
 with open('insights.json', 'w') as f:
     f.write(json.dumps(insights))
@@ -172,7 +173,7 @@ def hello_world():
 @app.route('/insights')
 def get_insights():
     res = json.dumps(insights + json.load(open('dataset/news/small_news.json')))
-    return
+    return res
 
 
 @app.route('/insights/market')
