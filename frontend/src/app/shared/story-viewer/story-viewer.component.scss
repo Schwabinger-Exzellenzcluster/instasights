@@ -1,3 +1,10 @@
+.skip {
+  position: fixed;
+  background-color: yellow;
+  height: 100%;
+  width: 50%;
+}
+
 @keyframes growHorizontally {
   from {
     width: 0%;

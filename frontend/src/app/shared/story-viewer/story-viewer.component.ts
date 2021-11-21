@@ -45,7 +45,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
         if (this.topic == "briefing") {
           this.story = this.storyService.getBestStory(storyItems);
         } else {
-          this.story = this.storyService.getTopicStory(storyItems, <Topic> params.get("topic"))
+          this.story = this.storyService.getTopicStory(storyItems, <Topic>params.get("topic"))
         }
 
         this.activeStoryItem = this.story.findIndex((storyItem) => {
@@ -110,7 +110,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   public getTimeInterval() {
     let val = this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1);
-    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1)/2) + "s"
+    return (this.story[this.activeStoryItem].duration / (this.story[this.activeStoryItem].ui_text.length + 1) / 2) + "s"
   }
 
   public isNumber(_thing): boolean {
@@ -131,7 +131,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
   private hash(str: string) {
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
-       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
     }
     return hash;
   }
@@ -170,10 +170,42 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
     return ui_texts.flatMap(e => e.text).join(' ')
   }
 
-  public continue() {
+  public continue(event: any) {
+    let middle = window.innerWidth / 2;
+    // console.log((event.x < middle) ? "left" : "right");
     if (this.hasShared) {
       this.hasShared = false;
-      this.togglePause();
+      // this.togglePause();
+    } else {
+      if (event.y > 75) {
+        if (event.x > middle) {
+          this.skip();
+        } else {
+          this.back();
+        }
+      }
+    }
+  }
+
+  public back() {
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
+    if (this.activeStoryItem > 0) {
+      this.activeStoryItem--;
+      this.nextStoryItem();
+    } else {
+      this.activeText = 0;
+    }
+  }
+
+  public skip() {
+    clearTimeout(this.textTimeout);
+    clearTimeout(this.storyTimeout);
+    if (this.activeStoryItem < this.story.length - 1) {
+      this.activeStoryItem++;
+      this.nextStoryItem();
+    } else {
+      this.activeText = this.story[this.activeStoryItem].ui_text.length - 1;
     }
   }
 }

@@ -1,5 +1,5 @@
 <div class="story-viewer">
-    <div class="overlay" (click)="continue()">
+    <div class="overlay" (click)="continue($event)">
         <div class="header">
             <div class="timeline">
                 <div class="timeline-item" *ngFor="let item of story; let i = index"
