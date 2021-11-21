@@ -11,8 +11,12 @@
         <span class="title">{{ topic | uppercase }}</span>
         <hr class="solid">
         <div class="story-previews">
-            <div class="story-preview" *ngFor="let item of storyService.getTopicStory(storyItems, topic); let i = index" [routerLink]="'stories/' + topic + '/' + item.uuid" [style.background-color]="getIndicatorColor(item.impact)">
-                <p>{{ toOneString(item.ui_text) }}</p>
+            <div class="story-preview" *ngFor="let item of storyService.getTopicStory(storyItems, topic); let i = index"
+                [routerLink]="'stories/' + topic + '/' + item.uuid"
+                [style.background-image]="'url(' + unsplash.getImageUrl(item) + ')'">
+                <div class="background" [style.background-image]="'linear-gradient(-180deg, ' + getIndicatorLightColor(item.impact) + ', ' + getIndicatorColor(item.impact) + ')'">
+                    <p>{{ toOneString(item.ui_text) }}</p>
+                </div>
             </div>
         </div>
     </div>
