@@ -13,6 +13,10 @@ from trends import get_trends
 app = Flask(__name__)
 CORS(app)
 
+logging.basicConfig()
+logging.root.setLevel('INFO')
+logger = logging.getLogger('MAIN')
+
 # Read in CSV dataset
 df_stores = pd.read_csv(
     'dataset/turkish_retail_data/store_cities.csv',
@@ -23,6 +27,8 @@ df_stores = pd.read_csv(
         'city_id': 'category'
     }
 )
+
+logger.info('Parsed stores data')
 
 df_sales = pd.read_csv(
     'dataset/turkish_retail_data/sales.csv',
@@ -45,6 +51,8 @@ df_sales.drop(
     inplace=True
 )
 
+logger.info('Parsed sales data')
+
 df_product_hierachy = pd.read_csv(
     'dataset/turkish_retail_data/product_hierarchy.csv',
     delimiter=',',
@@ -60,13 +68,16 @@ df_product_hierachy = pd.read_csv(
 )
 
 df_product_hierachy.drop(
-    columns=['hierarchy1_id', 'hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
+    columns=['hierarchy2_id', 'hierarchy3_id', 'hierarchy4_id', 'hierarchy5_id', 'cluster_id'],
     inplace=True
 )
 
+logger.info('Parsed product hierarchy data')
+
+
 df = df_sales.join(df_stores.set_index('store_id'), on='store_id')
 # df = df.join(df_product_hierachy.set_index('product_id'), on='product_id')
-del df_sales, df_product_hierachy, df_stores
+del df_sales, df_stores
 gc.collect()
 
 end_date = '2019-10-01'
@@ -75,6 +86,8 @@ before_end_date = df['date'] <= end_date
 df_cut = df.loc[before_end_date]
 del df
 gc.collect()
+
+logger.info('Joined and Cut sales data')
 
 # Adjust city names
 cities_dict = {row[0]: row[1] for row in pd.read_csv(
@@ -85,7 +98,9 @@ cities_dict = {row[0]: row[1] for row in pd.read_csv(
         'name': 'category'
     }
 ).values.tolist()}
-df_cut.replace({'city_id': cities_dict}, inplace=True)
+df_cut.replace(to_replace=cities_dict, inplace=True)
+logger.info('Parsed augmented city data')
+
 
 # Adjust store names
 stores_dict = {row[0]: row[1] for row in pd.read_csv(
@@ -96,7 +111,8 @@ stores_dict = {row[0]: row[1] for row in pd.read_csv(
         'name': 'category'
     }
 ).values.tolist()}
-df_cut.replace({'store_id': cities_dict}, inplace=True)
+df_cut.replace(to_replace=stores_dict, inplace=True)
+logger.info('Parsed augmented store data')
 
 # Adjust product names and categories
 df_product_mapping = pd.read_csv(
@@ -109,20 +125,23 @@ df_product_mapping = pd.read_csv(
     }
 )
 
+h1_index = df_product_hierachy.columns.get_loc('hierarchy1_id')
 products_dict = {row[0]: row[1] for row in df_product_mapping.values.tolist()}
-df_cut.replace({'product_id': products_dict}, inplace=True)
+categories_dict = {row[0]: row[2] for row in df_product_mapping.values.tolist()}
+old_categories_dict = {row[0]: row[h1_index] for row in df_product_hierachy.values.tolist()}
 
-print(df_cut.memory_usage())
+print(old_categories_dict)
+print(categories_dict)
 
+new_categories_dict = {old_categories_dict[key] : categories_dict[key] for key in old_categories_dict}
+print(new_categories_dict)
+
+df_cut[hierarchy]
 df_product_mapping.drop(columns=['name'], inplace=True)
-df_cut.join(df_product_mapping.set_index('product_id'), on='product_id', inplace=True)
+
+logger.info('Parsed augmented product data')
 
 print(df_cut)
-
-logging.basicConfig()
-logging.root.setLevel('INFO')
-logger = logging.getLogger('MAIN')
-
 logger.info('Parsing finished')
 
 insights = []
@@ -153,7 +172,8 @@ def hello_world():
 
 @app.route('/insights')
 def get_insights():
-    return json.dumps(insights + json.load(open('dataset/news/small_news.json')))
+    res = json.dumps(insights + json.load(open('dataset/news/small_news.json')))
+    return
 
 
 @app.route('/insights/market')
