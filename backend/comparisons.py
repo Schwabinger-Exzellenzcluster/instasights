@@ -69,8 +69,8 @@ def get_national_comparisons(df: pd.DataFrame, metric: str, t_delta: str) -> lis
     comp_val, curr_val = get_comparison(df, metric, t_delta)
     change_percent = to_change_percent(comp_val, curr_val)
     insights.append(
-        make_comparison_insight(
-            metric, 'global', 'global', t_delta, change_percent
+        make_national_comparison_insight(
+            metric, t_delta, change_percent
         )
     )
 
@@ -91,7 +91,7 @@ def get_typed_comparisons(df: pd.DataFrame, metric: str, t_delta: str, type: str
         comp_val, end_val = get_comparison(df_tv, metric, t_delta)
         change_percent = to_change_percent(comp_val, end_val)
         insights.append(
-            make_national_comparison_insight(metric, t_delta, change_percent)
+            make_comparison_insight(metric, type, type_value, t_delta, change_percent)
         )
 
     logger.info(f'Added {type} {metric} comparisons for {t_delta}')
