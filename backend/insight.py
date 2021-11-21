@@ -1,3 +1,4 @@
+import random
 import uuid
 
 
@@ -36,4 +37,50 @@ class Insight:
         )
         if d['topic'] == 'revenue':
             d['topic'] = 'finance'
+
+        # Add random question
+        questions = [
+            {
+                'question': 'Should this be discussed in today\'s meeting?',
+                'answerA': {
+                    'text': 'Yes',
+                    'votes': random.randint(1, 30)
+                },
+                'answerB': {
+                    'text': 'No',
+                    'votes': random.randint(1, 30)
+                }
+
+            },
+            {
+                'question': 'Does this require immediate action?',
+                'answerA': {
+                    'text': 'Yes',
+                    'votes': random.randint(1, 30)
+                },
+                'answerB': {
+                    'text': 'No',
+                    'votes': random.randint(1, 30)
+                }
+
+            },
+            {
+                'question': 'When does this need to be addressed?',
+                'answerA': {
+                    'text': 'within a week',
+                    'votes': random.randint(1, 30)
+                },
+                'answerB': {
+                    'text': 'Sometime later',
+                    'votes': random.randint(1, 30)
+                }
+
+            }
+        ]
+
+        if random.choice([0,1]) == 0:
+            d['poll'] = random.choice(questions)
+        else:
+            d['poll'] = None
+
         return d

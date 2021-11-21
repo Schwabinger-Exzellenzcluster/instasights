@@ -172,6 +172,7 @@ export class StoryViewerComponent implements OnInit, OnDestroy {
 
   public continue() {
     if (this.hasShared) {
+      this.hasShared = false;
       this.togglePause();
     }
   }

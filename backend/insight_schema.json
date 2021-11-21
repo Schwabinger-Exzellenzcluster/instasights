@@ -8,5 +8,21 @@
     }
   ],
   "voice_text": "Hello World!",
-  "impact": -2
+  "impact": -2,
+  "data": {
+    "labelX" : "time",
+    "labelY" : "abc",
+    ""
+  },
+  "poll" : {
+    "question": "bla bla bla?",
+    "answerA": {
+      "text": "option1",
+      "votes": 123
+    },
+    "answerB": {
+     "text": "option2",
+      "votes": 234
+    }
+  }
 }

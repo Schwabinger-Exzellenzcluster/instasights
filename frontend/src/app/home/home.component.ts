@@ -35,14 +35,25 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  getIndicatorColor(impact: number) {
+  getIndicatorLightColor(impact: number) {
     const opacity = Math.abs(impact);
     if (impact < 0) {
       return `rgba(255, 102, 102, ${opacity})`
     } else if (impact > 0) {
       return `rgba(102, 255, 204, ${opacity})`
     } else {
-      return "rgb(153, 204, 255)"
+      return `rgba(153, 204, 255, ${opacity})`
+    }
+  }
+
+  getIndicatorColor(impact: number) {
+    const opacity = .9;
+    if (impact < 0) {
+      return `rgba(255, 102, 102, ${opacity})`
+    } else if (impact > 0) {
+      return `rgba(102, 255, 204, ${opacity})`
+    } else {
+      return `rgba(153, 204, 255, ${opacity})`
     }
   }
 
