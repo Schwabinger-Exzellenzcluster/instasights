@@ -1,5 +1,3 @@
-![gallery](https://user-images.githubusercontent.com/23716586/143298527-0a6236bd-2628-4009-bde1-d5c0403243ca.jpg)
-
 ![grafik](https://user-images.githubusercontent.com/23716586/143298832-6e8b7692-48d3-4a28-be31-e8e00ddda4f1.png)
 
 [Winning submission](https://devpost.com/software/instasights) for the **SAP challenge** "Business Analytics meets Generation Z" at [hackaTUM 2021](https://hackatum21.devpost.com/submissions/search?utf8=%E2%9C%93&prize_filter%5Bprizes%5D%5B%5D=50427).
